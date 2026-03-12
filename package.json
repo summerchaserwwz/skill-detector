@@ -1,0 +1,21 @@
+{
+  "name": "skill-detector",
+  "version": "1.0.0",
+  "description": "聚合 ClawHub 与 Skills.sh 下载榜单的 Skill 探测器",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "export:static": "node scripts/export-static-data.js"
+  },
+  "keywords": [
+    "skills",
+    "leaderboard",
+    "clawhub",
+    "skills.sh",
+    "detector"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.1.2"
+  }
+}

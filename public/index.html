@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Detector · ClawHub × Skills.sh</title>
+    <meta
+      name="description"
+      content="聚合 ClawHub 与 Skills.sh 下载榜单，按方向整理 Skill，并用交互卡片方式展示名称、作者、分类、链接、下载量与介绍。"
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles.css?v=1" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand-block" href="#top">
+          <div class="brand-mark">SD</div>
+          <div>
+            <div class="brand-name">Skill Detector</div>
+            <div class="brand-subtitle">ClawHub × Skills.sh 下载榜探测器</div>
+          </div>
+        </a>
+        <nav class="topnav">
+          <a href="#overview">概览</a>
+          <a href="#controls">筛选</a>
+          <a href="#leaderboard">榜单</a>
+          <a href="#gallery">卡片</a>
+        </nav>
+      </header>
+
+      <section id="top" class="hero panel">
+        <div class="hero-main">
+          <div class="hero-pills">
+            <span class="hero-pill">Open Skill Radar</span>
+            <span class="hero-pill subtle">Source synced</span>
+          </div>
+          <h1 class="hero-title">
+            把 <span class="title-accent">ClawHub</span> 与 <span class="title-accent secondary">Skills.sh</span>
+            下载榜，整理成真正好用的 Skill 地图。
+          </h1>
+          <p class="hero-subtitle">
+            支持来源筛选、TopN 自选、方向归类、关键词搜索、跨榜单识别，并用更完整的交互卡片展示名称、作者、分类、链接、下载量与介绍。
+          </p>
+          <div class="hero-actions">
+            <button id="refreshButton" class="primary-button">刷新榜单</button>
+            <a class="ghost-button" href="#controls">开始筛选</a>
+          </div>
+          <div class="signal-strip" id="signalStrip"></div>
+        </div>
+        <aside class="hero-aside panel panel-elevated">
+          <div class="aside-label">榜单状态</div>
+          <div class="aside-row"><span>数据源</span><strong>ClawHub / Skills.sh</strong></div>
+          <div class="aside-row"><span>默认视图</span><strong>综合总榜</strong></div>
+          <div class="aside-row"><span>方向分组</span><strong id="dominantCategory">计算中…</strong></div>
+          <div class="aside-row"><span>最近更新</span><strong id="lastUpdated">加载中…</strong></div>
+          <div class="aside-note">卡片支持悬停高亮、关键词过滤、跨源识别与一键跳转。</div>
+        </aside>
+      </section>
+
+      <section id="overview" class="overview-grid"></section>
+
+      <section id="controls" class="control-panel panel">
+        <div class="control-head">
+          <div>
+            <div class="eyebrow">Controls</div>
+            <h2>筛选与排序</h2>
+          </div>
+          <div class="head-note">默认按下载量降序，支持综合榜与单源切换。</div>
+        </div>
+        <div class="control-grid">
+          <label class="field">
+            <span>来源</span>
+            <div class="segmented" id="sourceSwitcher">
+              <button class="segment is-active" data-source="all">综合</button>
+              <button class="segment" data-source="clawhub">ClawHub</button>
+              <button class="segment" data-source="skillssh">Skills.sh</button>
+            </div>
+          </label>
+          <label class="field">
+            <span>TopN</span>
+            <select id="topNSelect">
+              <option value="6">Top 6</option>
+              <option value="12" selected>Top 12</option>
+              <option value="24">Top 24</option>
+              <option value="36">Top 36</option>
+              <option value="48">Top 48</option>
+            </select>
+          </label>
+          <label class="field field-search">
+            <span>搜索</span>
+            <input id="searchInput" type="search" placeholder="搜名称 / 作者 / 分类 / 简介" />
+          </label>
+        </div>
+        <div class="category-strip" id="categoryStrip"></div>
+      </section>
+
+      <section id="leaderboard" class="panel leaderboard-panel">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Leaderboard</div>
+            <h2>下载榜泳道</h2>
+          </div>
+          <div id="leaderboardMeta" class="section-meta"></div>
+        </div>
+        <div id="leaderboardList" class="leaderboard-list"></div>
+      </section>
+
+      <section class="panel direction-panel">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Directions</div>
+            <h2>不同方向的 Skill</h2>
+          </div>
+          <div class="section-meta">按简介与名称自动归类，可继续在上方筛选。</div>
+        </div>
+        <div id="directionGrid" class="direction-grid"></div>
+      </section>
+
+      <main id="gallery" class="panel gallery-panel">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Cards</div>
+            <h2>交互卡片</h2>
+          </div>
+          <div class="section-meta">点击卡片右上角可直达原 Skill 页面。</div>
+        </div>
+        <div id="cards" class="cards"></div>
+        <div id="emptyState" class="empty-state hidden">没有匹配结果，试试切换来源、缩短关键词或改看更大的 TopN。</div>
+      </main>
+    </div>
+
+    <template id="metricTemplate"><article class="metric-card panel panel-elevated"><div class="metric-label"></div><div class="metric-value"></div><div class="metric-note"></div></article></template>
+    <template id="leaderboardTemplate"><article class="leader-row panel-elevated"><div class="leader-rank"></div><div class="leader-main"><div class="leader-head"><div><h3 class="leader-title"></h3><div class="leader-meta"></div></div><div class="leader-value"></div></div><div class="leader-progress-track"><div class="leader-progress-bar"></div></div></div></article></template>
+    <template id="directionTemplate"><article class="direction-card panel panel-elevated"><div class="direction-head"><h3 class="direction-title"></h3><span class="direction-badge"></span></div><div class="direction-metrics"></div></article></template>
+    <template id="cardTemplate"><article class="skill-card panel panel-elevated" tabindex="0"><div class="skill-glow"></div><div class="skill-topline"><div class="skill-rank"></div><div class="skill-badges"></div><a class="skill-link" target="_blank" rel="noreferrer">查看</a></div><div class="skill-body"><div class="skill-title-row"><h3 class="skill-title"></h3><div class="skill-downloads"></div></div><div class="skill-author"></div><p class="skill-description"></p></div><div class="skill-footer"><div class="skill-stats"></div><div class="skill-tags"></div></div></article></template>
+    <script src="./app.js?v=1"></script>
+  </body>
+</html>
