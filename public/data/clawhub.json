@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-03-12T05:45:35.409Z",
+  "generatedAt": "2026-03-12T05:59:18.590Z",
   "source": "clawhub",
   "topN": 48,
   "maxPerSource": 48,
@@ -799,7 +799,7 @@
       "stars": 16,
       "summary": "Transcribe YouTube videos to text by extracting captions and subtitles directly from the video URL using yt-dlp without audio pro…",
       "description": "Transcribe YouTube videos to text by extracting captions and subtitles directly from the video URL using yt-dlp without audio processing.",
-      "updatedAt": "2026-03-11T11:06:51.438Z",
+      "updatedAt": "2026-03-12T05:51:57.477Z",
       "ownerHandle": "YoavRez",
       "ownerDisplayName": "Yoav",
       "moderation": {
@@ -811,8 +811,8 @@
           "suspicious.vt_suspicious"
         ],
         "summary": "Detected: suspicious.llm_suspicious, suspicious.vt_suspicious",
-        "engineVersion": "v2.0.0",
-        "updatedAt": 1773227211438
+        "engineVersion": "v2.1.1",
+        "updatedAt": 1773294717477
       },
       "category": "多媒体与音视频",
       "domain": "法律合规",
@@ -1056,9 +1056,9 @@
       "name": "Himalaya",
       "source": "ClawHub",
       "sourceKey": "clawhub",
-      "author": "",
+      "author": "lamelas",
       "publisher": "himalaya",
-      "link": "https://clawhub.ai/himalaya",
+      "link": "https://clawhub.ai/lamelas/himalaya",
       "downloads": 26090,
       "installsAllTime": 950,
       "installsCurrent": 934,
@@ -1066,7 +1066,9 @@
       "summary": "CLI to manage emails via IMAP/SMTP. Use `himalaya` to list, read, write, reply, forward, search, and organize emails from the ter…",
       "description": "CLI to manage emails via IMAP/SMTP. Use `himalaya` to list, read, write, reply, forward, search, and organize emails from the terminal. Supports multiple accounts and message composition with MML (MIME Meta Language).",
       "updatedAt": "2026-02-26T00:30:36.042Z",
-      "detailError": "429 Too Many Requests for https://wry-manatee-359.convex.site/api/v1/skills/himalaya: Rate limit exceeded",
+      "ownerHandle": "lamelas",
+      "ownerDisplayName": "André Lamelas",
+      "moderation": null,
       "category": "搜索与信息检索",
       "domain": "通用场景",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",

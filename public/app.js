@@ -29,6 +29,8 @@ const heroMiniSource = document.querySelector('#heroMiniSource');
 const heroMiniCategory = document.querySelector('#heroMiniCategory');
 const heroMiniProgress = document.querySelector('#heroMiniProgress');
 
+const rankPalette = ['#ff7a59', '#a879ff', '#5ca6ff', '#46c98e', '#f4b84a', '#7bd2ff', '#ff8fb1', '#4fd1c5', '#f97316', '#94a3ff'];
+
 const categoryPalette = {
   '前端与设计': { color: '#7dd3fc', soft: 'rgba(125, 211, 252, 0.12)' },
   'AI Agent 能力增强': { color: '#a78bfa', soft: 'rgba(167, 139, 250, 0.12)' },
@@ -119,8 +121,7 @@ function getFilteredItems() {
         .toLowerCase();
       return haystack.includes(query);
     })
-    .sort((a, b) => b.downloads - a.downloads || a.name.localeCompare(b.name, 'zh-CN'))
-    .slice(0, state.topN);
+    .sort((a, b) => b.downloads - a.downloads || a.name.localeCompare(b.name, 'zh-CN'));
 }
 
 function createMetaLink(label, value, href = '', className = '') {
@@ -233,16 +234,17 @@ function renderHeroOverview(allItems, visibleItems, directions) {
 function renderInsights() {
   const allItems = state.source === 'all' ? state.items : state.items.filter((item) => item.sourceKey === state.source);
   const visibleItems = getFilteredItems();
+  const cardsItems = visibleItems.slice(0, state.topN);
   const directions = buildDirections(allItems);
   const domains = buildDomains(allItems);
-  const topItem = visibleItems[0];
+  const topItem = cardsItems[0];
   const sourceCount = new Set(allItems.map((item) => item.source)).size;
   const crossCount = allItems.filter((item) => item.crossListed).length;
 
   renderHeroOverview(allItems, visibleItems, directions);
 
   insightNote.textContent = topItem
-    ? `当前展示 ${visibleItems.length} 个技能，热门方向是「${directions[0]?.category || '通用工具'}」，榜首是「${topItem.name}」，下载量约 ${formatCompact(topItem.downloads)}。`
+    ? `当前展示 ${cardsItems.length} 个技能，热门方向是「${directions[0]?.category || '通用工具'}」，榜首是「${topItem.name}」，下载量约 ${formatCompact(topItem.downloads)}。`
     : '当前没有匹配结果，请切换来源、TopN 或关键词。';
 
   const cards = [
@@ -300,7 +302,7 @@ function renderInsights() {
 }
 
 function renderRankBars() {
-  const items = getFilteredItems().slice(0, 6);
+  const items = getFilteredItems().slice(0, 10);
   rankBarsElement.innerHTML = '';
 
   if (!items.length) {
@@ -313,10 +315,10 @@ function renderRankBars() {
   rankIntroElement.textContent = `当前展示 ${scopeText} Top ${items.length}，按下载量降序排列。`;
 
   items.forEach((item, index) => {
-    const theme = getCategoryTheme(item.category);
+    const color = rankPalette[index % rankPalette.length];
     const row = document.createElement('article');
     row.className = 'rank-bar-card';
-    row.style.setProperty('--rank-color', theme.color);
+    row.style.setProperty('--rank-color', color);
     row.innerHTML = `
       <div class="rank-bar-index">#${index + 1}</div>
       <div class="rank-bar-main">
@@ -336,7 +338,7 @@ function renderRankBars() {
 }
 
 function renderCards() {
-  const items = getFilteredItems();
+  const items = getFilteredItems().slice(0, state.topN);
   cardsElement.innerHTML = '';
 
   if (!items.length) {
@@ -359,7 +361,6 @@ function renderCards() {
     const rank = fragment.querySelector('.rank');
     const badge = fragment.querySelector('.stars-today');
     const what = fragment.querySelector('.summary-what');
-    const zh = fragment.querySelector('.summary-zh');
     const who = fragment.querySelector('.summary-who');
     const highlight = fragment.querySelector('.summary-highlight');
     const metaGrid = fragment.querySelector('.meta-grid');
@@ -386,7 +387,6 @@ function renderCards() {
     badge.textContent = `${formatCompact(item.downloads)} 下载`;
 
     what.textContent = buildChineseIntro(item);
-    zh.textContent = item.description || item.summary || '暂无英文原始介绍';
     who.innerHTML = `作者：<a class="inline-link" href="${item.link}" target="_blank" rel="noreferrer">${escapeHtml(item.author || 'Unknown')}</a> · 来源：${escapeHtml(item.source)}`;
     highlight.textContent = item.crossListed
       ? `双榜上榜 · ${item.crossSources.join(' / ')} · 领域：${item.domain || '通用场景'}`
