@@ -1,0 +1,1014 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Detector · Linear Prototype</title>
+    <meta name="description" content="Skill Detector 的 Linear 风格 HTML 原型图。" />
+    <style>
+      :root {
+        --bg: #f7f8fb;
+        --panel: rgba(255, 255, 255, 0.82);
+        --panel-strong: #ffffff;
+        --border: rgba(19, 23, 33, 0.08);
+        --border-strong: rgba(19, 23, 33, 0.12);
+        --text: #101218;
+        --text-soft: #5e6678;
+        --text-dim: #8b93a7;
+        --brand: #5e6ad2;
+        --brand-soft: rgba(94, 106, 210, 0.1);
+        --success: #33b074;
+        --orange: #ef8f32;
+        --red: #f26d6d;
+        --shadow: 0 20px 60px rgba(24, 32, 56, 0.08);
+        --radius-xl: 28px;
+        --radius-lg: 22px;
+        --radius-md: 16px;
+        --radius-sm: 12px;
+        --max: 1280px;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at top center, rgba(94, 106, 210, 0.1), transparent 30%),
+          linear-gradient(180deg, #fbfbfd 0%, #f4f6fa 100%);
+      }
+
+      a { color: inherit; text-decoration: none; }
+      button, input, select { font: inherit; }
+
+      .shell {
+        width: min(var(--max), calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 22px 0 56px;
+      }
+
+      .glass,
+      .panel {
+        background: var(--panel);
+        backdrop-filter: blur(16px);
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+
+      .topbar {
+        position: sticky;
+        top: 14px;
+        z-index: 30;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 12px 16px;
+        border-radius: 20px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .brand-icon {
+        width: 36px;
+        height: 36px;
+        display: grid;
+        place-items: center;
+        border-radius: 11px;
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        background: linear-gradient(135deg, #5e6ad2, #7f89e8);
+      }
+
+      .brand-title {
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .brand-subtitle,
+      .subtle,
+      .meta,
+      .helper,
+      .row-sub,
+      .detail-copy,
+      .stat-label,
+      .chip.soft {
+        color: var(--text-soft);
+      }
+
+      .brand-subtitle { font-size: 12px; }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .nav-link,
+      .ghost-btn,
+      .filter-chip,
+      .tab,
+      .detail-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        height: 36px;
+        padding: 0 14px;
+        border-radius: 12px;
+        border: 1px solid transparent;
+        color: #30384a;
+        background: transparent;
+        transition: 160ms ease;
+        cursor: pointer;
+      }
+
+      .nav-link:hover,
+      .ghost-btn:hover,
+      .filter-chip:hover,
+      .tab:hover,
+      .detail-action:hover {
+        background: rgba(255, 255, 255, 0.78);
+        border-color: var(--border);
+      }
+
+      .topbar-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .primary-btn {
+        height: 38px;
+        padding: 0 16px;
+        border: 1px solid rgba(94, 106, 210, 0.18);
+        border-radius: 12px;
+        color: white;
+        background: linear-gradient(180deg, #5e6ad2, #5662c6);
+        box-shadow: 0 10px 20px rgba(94, 106, 210, 0.18);
+        cursor: pointer;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(380px, 0.9fr);
+        gap: 18px;
+        margin-top: 18px;
+      }
+
+      .hero-card,
+      .hero-preview,
+      .toolbar,
+      .stats-grid,
+      .main-grid,
+      .list-card,
+      .detail-card,
+      .direction-card,
+      .footer-note {
+        border-radius: 24px;
+      }
+
+      .hero-card,
+      .hero-preview,
+      .toolbar,
+      .list-card,
+      .detail-card,
+      .direction-card,
+      .footer-note {
+        padding: 24px;
+      }
+
+      .hero-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--brand);
+        background: var(--brand-soft);
+      }
+
+      .hero-title {
+        margin: 16px 0 12px;
+        font-size: clamp(36px, 5vw, 64px);
+        line-height: 1.02;
+        letter-spacing: -0.05em;
+      }
+
+      .hero-title .muted {
+        display: block;
+        color: #6a7387;
+      }
+
+      .hero-copy {
+        max-width: 680px;
+        margin: 0 0 18px;
+        font-size: 16px;
+        line-height: 1.8;
+        color: var(--text-soft);
+      }
+
+      .hero-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .hero-preview {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .preview-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 18px;
+      }
+
+      .preview-window {
+        padding: 16px;
+        border-radius: 18px;
+        background: linear-gradient(180deg, #fcfcfe, #f4f6fb);
+        border: 1px solid rgba(19, 23, 33, 0.06);
+      }
+
+      .preview-toolbar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #d7ddea;
+      }
+
+      .preview-search {
+        flex: 1;
+        height: 34px;
+        border-radius: 10px;
+        background: white;
+        border: 1px solid rgba(19, 23, 33, 0.07);
+      }
+
+      .preview-pane {
+        display: grid;
+        grid-template-columns: 110px minmax(0, 1fr);
+        gap: 14px;
+      }
+
+      .preview-sidebar,
+      .preview-main {
+        border-radius: 14px;
+        background: white;
+        border: 1px solid rgba(19, 23, 33, 0.07);
+      }
+
+      .preview-sidebar {
+        min-height: 220px;
+        padding: 12px;
+      }
+
+      .preview-main {
+        padding: 14px;
+      }
+
+      .preview-line,
+      .preview-pill,
+      .preview-row,
+      .preview-bar {
+        border-radius: 10px;
+        background: #eef2f8;
+      }
+
+      .preview-line { height: 12px; margin-bottom: 10px; }
+      .preview-line.short { width: 56%; }
+      .preview-line.mid { width: 72%; }
+      .preview-pill { height: 26px; width: 78px; margin-bottom: 10px; }
+      .preview-row { height: 72px; margin-top: 12px; }
+      .preview-bar { height: 8px; margin-top: 12px; }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .stat-card {
+        padding: 18px;
+        border-radius: 20px;
+      }
+
+      .stat-value {
+        margin-top: 10px;
+        font-size: 28px;
+        font-weight: 750;
+        letter-spacing: -0.03em;
+      }
+
+      .stat-label {
+        font-size: 13px;
+      }
+
+      .toolbar {
+        margin-top: 18px;
+      }
+
+      .toolbar-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .toolbar-head h2,
+      .section-head h2,
+      .row-title,
+      .detail-title,
+      .direction-title {
+        margin: 0;
+      }
+
+      .toolbar-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 170px 1fr;
+        gap: 12px;
+        margin-top: 16px;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .field label {
+        font-size: 13px;
+        font-weight: 600;
+        color: #3e4658;
+      }
+
+      .input,
+      .select,
+      .tab-group {
+        height: 46px;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        background: white;
+      }
+
+      .input,
+      .select {
+        width: 100%;
+        padding: 0 14px;
+        color: var(--text);
+      }
+
+      .tab-group {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 4px;
+      }
+
+      .tab.active {
+        color: var(--brand);
+        background: var(--brand-soft);
+      }
+
+      .toolbar-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+      }
+
+      .filter-chip {
+        height: 34px;
+        border-color: var(--border);
+        background: white;
+      }
+
+      .filter-chip.active {
+        color: var(--brand);
+        border-color: rgba(94, 106, 210, 0.18);
+        background: var(--brand-soft);
+      }
+
+      .main-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.64fr);
+        gap: 18px;
+        margin-top: 18px;
+      }
+
+      .section-head,
+      .row-head,
+      .detail-head,
+      .direction-head,
+      .detail-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .list {
+        display: grid;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 64px minmax(0, 1fr) 100px;
+        gap: 14px;
+        align-items: center;
+        padding: 16px;
+        border-radius: 18px;
+        border: 1px solid transparent;
+        background: rgba(255, 255, 255, 0.5);
+        transition: 160ms ease;
+      }
+
+      .row:hover,
+      .row.active {
+        border-color: rgba(94, 106, 210, 0.16);
+        background: white;
+        box-shadow: 0 8px 24px rgba(20, 28, 46, 0.06);
+      }
+
+      .rank-pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        font-size: 18px;
+        font-weight: 750;
+        color: var(--row-accent, var(--brand));
+        background: color-mix(in srgb, var(--row-accent, var(--brand)) 12%, white);
+      }
+
+      .row-title {
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .row-sub {
+        margin-top: 4px;
+        font-size: 13px;
+      }
+
+      .bar-track {
+        width: 100%;
+        height: 10px;
+        margin-top: 12px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: #eef2f8;
+      }
+
+      .bar-fill {
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, var(--row-accent, var(--brand)), color-mix(in srgb, var(--row-accent, var(--brand)) 76%, white));
+      }
+
+      .download {
+        text-align: right;
+        font-size: 22px;
+        font-weight: 750;
+        letter-spacing: -0.03em;
+      }
+
+      .detail-card {
+        position: sticky;
+        top: 88px;
+        height: fit-content;
+      }
+
+      .detail-head {
+        margin-bottom: 16px;
+      }
+
+      .detail-title {
+        font-size: 28px;
+        letter-spacing: -0.04em;
+      }
+
+      .detail-source {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        height: 28px;
+        padding: 0 10px;
+        border-radius: 999px;
+        color: var(--brand);
+        background: var(--brand-soft);
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .detail-copy {
+        margin: 0 0 18px;
+        line-height: 1.8;
+      }
+
+      .detail-meta-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      .meta-card {
+        padding: 14px;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.7);
+      }
+
+      .meta-card strong {
+        display: block;
+        margin-top: 8px;
+        font-size: 18px;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        height: 32px;
+        padding: 0 12px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 600;
+        border: 1px solid var(--border);
+        background: white;
+      }
+
+      .detail-actions {
+        justify-content: flex-start;
+      }
+
+      .detail-action.primary {
+        color: white;
+        border-color: rgba(94, 106, 210, 0.18);
+        background: linear-gradient(180deg, #5e6ad2, #5662c6);
+      }
+
+      .directions {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .direction-card {
+        padding: 18px;
+      }
+
+      .direction-badge {
+        display: inline-flex;
+        align-items: center;
+        height: 28px;
+        padding: 0 10px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--brand);
+        background: var(--brand-soft);
+      }
+
+      .footer-note {
+        margin-top: 18px;
+        padding: 18px 20px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 1100px) {
+        .hero,
+        .main-grid,
+        .toolbar-grid,
+        .stats-grid,
+        .directions {
+          grid-template-columns: 1fr;
+        }
+
+        .detail-card {
+          position: static;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .shell {
+          width: min(var(--max), calc(100vw - 18px));
+        }
+
+        .topbar,
+        .toolbar-head,
+        .section-head,
+        .row-head,
+        .detail-head,
+        .direction-head {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .nav,
+        .topbar-actions {
+          flex-wrap: wrap;
+        }
+
+        .row {
+          grid-template-columns: 1fr;
+        }
+
+        .download {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar glass">
+        <div class="brand">
+          <div class="brand-icon">SD</div>
+          <div>
+            <div class="brand-title">Skill Detector</div>
+            <div class="brand-subtitle">Linear 风格 HTML 原型</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a class="nav-link" href="#prototype-list">榜单</a>
+          <a class="nav-link" href="#prototype-detail">详情</a>
+          <a class="nav-link" href="#prototype-directions">方向</a>
+        </nav>
+        <div class="topbar-actions">
+          <button class="ghost-btn">切换来源</button>
+          <button class="primary-btn">进入正式重构</button>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-card glass">
+          <div class="hero-kicker">Prototype / Linear-like</div>
+          <h1 class="hero-title">
+            更克制、更精密，
+            <span class="muted">像 Linear 一样把技能榜做成产品界面。</span>
+          </h1>
+          <p class="hero-copy">
+            这个原型不追求花哨，而是先把层级、节奏、留白、信息密度和交互状态理顺。
+            首页重点只保留四件事：看榜、筛选、理解一个技能、切换方向。
+          </p>
+          <div class="hero-actions">
+            <button class="primary-btn">预览榜单样式</button>
+            <button class="ghost-btn">查看卡片信息层</button>
+          </div>
+        </div>
+
+        <div class="hero-preview glass">
+          <div class="preview-top">
+            <div>
+              <div class="brand-title">界面预览</div>
+              <div class="brand-subtitle">更像真正产品，而不是活动海报</div>
+            </div>
+            <div class="detail-source">Prototype</div>
+          </div>
+          <div class="preview-window">
+            <div class="preview-toolbar">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="preview-search"></div>
+            </div>
+            <div class="preview-pane">
+              <div class="preview-sidebar">
+                <div class="preview-pill"></div>
+                <div class="preview-line"></div>
+                <div class="preview-line short"></div>
+                <div class="preview-line"></div>
+                <div class="preview-line mid"></div>
+              </div>
+              <div class="preview-main">
+                <div class="preview-line mid"></div>
+                <div class="preview-line short"></div>
+                <div class="preview-row"></div>
+                <div class="preview-bar"></div>
+                <div class="preview-row"></div>
+                <div class="preview-bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card glass">
+          <div class="stat-label">当前视图</div>
+          <div class="stat-value">Top 12</div>
+        </article>
+        <article class="stat-card glass">
+          <div class="stat-label">来源组合</div>
+          <div class="stat-value">2 个</div>
+        </article>
+        <article class="stat-card glass">
+          <div class="stat-label">主导方向</div>
+          <div class="stat-value">Agent</div>
+        </article>
+        <article class="stat-card glass">
+          <div class="stat-label">双榜重合</div>
+          <div class="stat-value">9</div>
+        </article>
+      </section>
+
+      <section class="toolbar glass">
+        <div class="toolbar-head">
+          <div>
+            <div class="brand-title">筛选条原型</div>
+            <div class="helper">像 Linear 那样克制、明确、低噪音。</div>
+          </div>
+          <div class="helper">把交互密度集中在一行，不要花里胡哨。</div>
+        </div>
+        <div class="toolbar-grid">
+          <div class="field">
+            <label>来源</label>
+            <div class="tab-group">
+              <button class="tab active">综合</button>
+              <button class="tab">ClawHub</button>
+              <button class="tab">Skills.sh</button>
+            </div>
+          </div>
+          <div class="field">
+            <label>TopN</label>
+            <select class="select">
+              <option>Top 12</option>
+              <option>Top 24</option>
+              <option>Top 48</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>搜索</label>
+            <input class="input" placeholder="搜索技能、作者、方向" />
+          </div>
+        </div>
+        <div class="toolbar-tags">
+          <button class="filter-chip active">全部方向</button>
+          <button class="filter-chip">Agent 增强</button>
+          <button class="filter-chip">搜索与检索</button>
+          <button class="filter-chip">前端与设计</button>
+          <button class="filter-chip">浏览器自动化</button>
+          <button class="filter-chip">知识库与数据</button>
+        </div>
+      </section>
+
+      <section class="main-grid">
+        <section id="prototype-list" class="list-card glass">
+          <div class="section-head">
+            <div>
+              <h2>榜单主列表</h2>
+              <div class="helper">下载量是第一视觉重点，名称和作者第二，简介先隐藏。</div>
+            </div>
+            <div class="helper">显示前 12 个技能</div>
+          </div>
+
+          <div class="list" id="list"></div>
+        </section>
+
+        <aside id="prototype-detail" class="detail-card glass">
+          <div class="detail-head">
+            <div>
+              <div class="detail-source" id="detail-source">ClawHub</div>
+              <h2 class="detail-title" id="detail-title">Find Skills</h2>
+            </div>
+          </div>
+          <p class="detail-copy" id="detail-copy">
+            帮用户快速发现并安装可复用的 agent skill。适合放在产品入口、命令面板或新手引导里，作为“能力发现层”。
+          </p>
+
+          <div class="detail-meta-grid">
+            <div class="meta-card">
+              <div class="meta">作者</div>
+              <strong id="detail-author">JimLiuxinghai</strong>
+            </div>
+            <div class="meta-card">
+              <div class="meta">分类</div>
+              <strong id="detail-category">搜索与信息检索</strong>
+            </div>
+            <div class="meta-card">
+              <div class="meta">下载量</div>
+              <strong id="detail-downloads">17.0 万</strong>
+            </div>
+            <div class="meta-card">
+              <div class="meta">双榜状态</div>
+              <strong id="detail-cross">双榜重合</strong>
+            </div>
+          </div>
+
+          <div class="chips" id="detail-chips">
+            <span class="chip">双榜上榜</span>
+            <span class="chip soft">作者可信</span>
+            <span class="chip soft">适合做首页入口</span>
+          </div>
+
+          <div class="detail-actions">
+            <a class="detail-action primary" href="#">查看原 Skill</a>
+            <a class="detail-action" href="#prototype-directions">看相似方向</a>
+          </div>
+        </aside>
+      </section>
+
+      <section id="prototype-directions" class="directions">
+        <article class="direction-card glass">
+          <div class="direction-head">
+            <h3 class="direction-title">Agent 增强</h3>
+            <span class="direction-badge">14 个</span>
+          </div>
+          <p class="detail-copy">优先展示自我改进、任务流、记忆、工作流编排等技能。</p>
+        </article>
+        <article class="direction-card glass">
+          <div class="direction-head">
+            <h3 class="direction-title">搜索与检索</h3>
+            <span class="direction-badge">9 个</span>
+          </div>
+          <p class="detail-copy">偏发现、网页搜索、文档检索、查找安装能力的技能集合。</p>
+        </article>
+        <article class="direction-card glass">
+          <div class="direction-head">
+            <h3 class="direction-title">前端与设计</h3>
+            <span class="direction-badge">11 个</span>
+          </div>
+          <p class="detail-copy">保留视觉精致感，但不让设计语言压过信息本身。</p>
+        </article>
+        <article class="direction-card glass">
+          <div class="direction-head">
+            <h3 class="direction-title">浏览器自动化</h3>
+            <span class="direction-badge">7 个</span>
+          </div>
+          <p class="detail-copy">适合做单独场景页，也适合在总榜中作为稳定高频分类出现。</p>
+        </article>
+      </section>
+
+      <div class="footer-note glass">
+        这个原型的核心目标：更像 Linear 的“产品界面”，而不是“宣传海报”。如果这个方向对了，下一步我就把正式页重构成这一套。
+      </div>
+    </div>
+
+    <script>
+      const sampleSkills = [
+        {
+          rank: 1,
+          name: 'Find Skills',
+          source: 'ClawHub',
+          author: 'JimLiuxinghai',
+          category: '搜索与信息检索',
+          downloads: '17.0 万',
+          ratio: 100,
+          accent: '#5e6ad2',
+          description: '帮用户快速发现并安装可复用的 agent skill，适合作为能力发现层。',
+          chips: ['双榜上榜', '高频入口', '新手友好'],
+        },
+        {
+          rank: 2,
+          name: 'self-improving-agent',
+          source: 'ClawHub',
+          author: 'pskoett',
+          category: 'Agent 增强',
+          downloads: '17.4 万',
+          ratio: 96,
+          accent: '#7d64d8',
+          description: '让代理记录失误、学习策略和纠偏经验，用于持续改进。',
+          chips: ['高复用', '工作流核心', '双榜重合'],
+        },
+        {
+          rank: 3,
+          name: 'web-design-guidelines',
+          source: 'Skills.sh',
+          author: 'vercel-labs',
+          category: '前端与设计',
+          downloads: '15.5 万',
+          ratio: 88,
+          accent: '#4b9eff',
+          description: '网页设计规范类技能，适合落地页面结构、视觉层级和组件节奏。',
+          chips: ['页面搭建', '设计规范'],
+        },
+        {
+          rank: 4,
+          name: 'Agent Browser',
+          source: 'ClawHub',
+          author: 'steipete',
+          category: '浏览器自动化',
+          downloads: '10.9 万',
+          ratio: 72,
+          accent: '#27b27e',
+          description: '偏浏览器自动化和页面操控，适合需要真实网页交互的任务。',
+          chips: ['高频执行', '自动化'],
+        },
+        {
+          rank: 5,
+          name: 'ontology',
+          source: 'ClawHub',
+          author: 'oswalpalash',
+          category: '知识库与数据',
+          downloads: '9.4 万',
+          ratio: 62,
+          accent: '#f0a03a',
+          description: '偏结构化知识图谱和长周期记忆，非常适合做 agent memory 层。',
+          chips: ['长期记忆', '数据结构'],
+        },
+        {
+          rank: 6,
+          name: 'summarize',
+          source: 'Skills.sh',
+          author: 'vercel-labs',
+          category: '写作与内容处理',
+          downloads: '13.1 万',
+          ratio: 81,
+          accent: '#f26d6d',
+          description: '总结 URL、文档、PDF、图片和音频，是很稳的内容处理基建能力。',
+          chips: ['内容处理', '高频通用'],
+        },
+      ];
+
+      const list = document.getElementById('list');
+      const detail = {
+        source: document.getElementById('detail-source'),
+        title: document.getElementById('detail-title'),
+        copy: document.getElementById('detail-copy'),
+        author: document.getElementById('detail-author'),
+        category: document.getElementById('detail-category'),
+        downloads: document.getElementById('detail-downloads'),
+        cross: document.getElementById('detail-cross'),
+        chips: document.getElementById('detail-chips'),
+      };
+
+      function renderDetail(item) {
+        detail.source.textContent = item.source;
+        detail.title.textContent = item.name;
+        detail.copy.textContent = item.description;
+        detail.author.textContent = item.author;
+        detail.category.textContent = item.category;
+        detail.downloads.textContent = item.downloads;
+        detail.cross.textContent = item.chips.includes('双榜重合') || item.chips.includes('双榜上榜') ? '双榜重合' : '单源上榜';
+        detail.chips.innerHTML = item.chips.map((chip) => `<span class="chip">${chip}</span>`).join('');
+      }
+
+      sampleSkills.forEach((item, index) => {
+        const row = document.createElement('button');
+        row.className = `row ${index === 0 ? 'active' : ''}`;
+        row.type = 'button';
+        row.style.setProperty('--row-accent', item.accent);
+        row.innerHTML = `
+          <div class="rank-pill">#${item.rank}</div>
+          <div>
+            <div class="row-head">
+              <div>
+                <div class="row-title">${item.name}</div>
+                <div class="row-sub">${item.author} · ${item.source} · ${item.category}</div>
+              </div>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill" style="width:${item.ratio}%"></div>
+            </div>
+          </div>
+          <div class="download">${item.downloads}</div>
+        `;
+
+        row.addEventListener('click', () => {
+          [...list.querySelectorAll('.row')].forEach((node) => node.classList.remove('active'));
+          row.classList.add('active');
+          renderDetail(item);
+        });
+
+        list.appendChild(row);
+      });
+
+      renderDetail(sampleSkills[0]);
+    </script>
+  </body>
+</html>
