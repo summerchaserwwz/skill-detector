@@ -8,8 +8,8 @@
       name="description"
       content="参考 github-trending-daily-tool 风格的 Skill 下载榜，聚合 ClawHub 与 Skills.sh，支持 TopN、搜索、分类与卡片浏览。"
     />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=3" />
-    <link rel="stylesheet" href="./styles.css?v=3" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=4" />
+    <link rel="stylesheet" href="./styles.css?v=4" />
   </head>
   <body data-page="skills">
     <div class="page-shell">
@@ -38,20 +38,59 @@
             <span class="title-white">下载榜</span>
           </h1>
           <p class="hero-subtitle">
-            聚合 ClawHub 与 Skills.sh 下载榜，自动归类成不同方向的 Skill。
-            支持来源切换、TopN 自选、关键词搜索、双榜重合识别与技能卡片浏览。
+            聚合 ClawHub 与 Skills.sh 下载榜，自动归类成不同方向的 Skill，支持来源切换、TopN 自选、关键词搜索、双榜重合识别与技能卡片浏览。
           </p>
           <div class="hero-actions">
             <button id="heroRefreshButton" class="primary-button compact-button large-button">刷新榜单</button>
             <a class="secondary-button compact-button large-button" href="#toolbarSection">开始筛选</a>
           </div>
         </div>
+
+        <aside class="hero-side">
+          <div class="hero-side-card hero-side-overview">
+            <div class="hero-side-head">
+              <span class="hero-side-label">榜单概览</span>
+              <span id="generatedAt" class="hero-side-time"></span>
+            </div>
+            <div class="hero-side-metrics">
+              <div class="hero-metric">
+                <span class="hero-metric-label">技能数</span>
+                <strong id="heroMetricSkills">--</strong>
+              </div>
+              <div class="hero-metric">
+                <span class="hero-metric-label">双榜重合</span>
+                <strong id="heroMetricCross">--</strong>
+              </div>
+              <div class="hero-metric">
+                <span class="hero-metric-label">热门方向</span>
+                <strong id="heroMetricCategory">--</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-side-card hero-side-preview">
+            <div class="hero-mini-window">
+              <div class="hero-mini-toolbar">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="hero-mini-sheet">
+                <div class="hero-mini-badge-row">
+                  <span id="heroMiniSource" class="hero-mini-badge source">聚合</span>
+                  <span id="heroMiniCategory" class="hero-mini-badge category">全部方向</span>
+                </div>
+                <div class="hero-mini-line hero-mini-line-title"></div>
+                <div class="hero-mini-line"></div>
+                <div class="hero-mini-line short"></div>
+                <div class="hero-mini-progress"><div id="heroMiniProgress" class="hero-mini-progress-fill"></div></div>
+              </div>
+            </div>
+          </div>
+        </aside>
       </section>
 
       <section class="insights-panel">
         <div class="insights-head">
           <h2>今日洞察</h2>
-          <div id="generatedAt" class="insights-time"></div>
         </div>
         <section class="summary-card">
           <div class="summary-card-label">榜单摘要</div>
@@ -64,7 +103,6 @@
         <div class="toolbar-head">
           <div>
             <h2>筛选面板</h2>
-            <div class="toolbar-subtitle">保留参考项目的深色产品页气质，只做必要交互。</div>
           </div>
           <button id="refreshButton" class="primary-button compact-button">刷新</button>
         </div>
@@ -72,7 +110,7 @@
           <label class="control-block control-source">
             <span class="control-label">来源</span>
             <div id="sourceSwitcher" class="segmented-control">
-              <button type="button" class="segment-button active" data-source="all">综合</button>
+              <button type="button" class="segment-button active" data-source="all">聚合</button>
               <button type="button" class="segment-button" data-source="clawhub">ClawHub</button>
               <button type="button" class="segment-button" data-source="skillssh">Skills.sh</button>
             </div>
@@ -89,7 +127,10 @@
           </label>
           <label class="control-block control-search">
             <span class="control-label">搜索</span>
-            <input id="searchInput" class="text-control" type="search" placeholder="搜名称 / 作者 / 分类 / 介绍" />
+            <div class="search-shell">
+              <span class="search-icon">⌕</span>
+              <input id="searchInput" class="text-control" type="search" placeholder="搜索技能名 / 作者 / 分类 / 介绍" />
+            </div>
           </label>
         </div>
         <div id="categoryStrip" class="language-chips"></div>
@@ -110,15 +151,29 @@
 
     <template id="cardTemplate">
       <article class="card" tabindex="0">
-        <div class="preview-link pseudo-preview">
-          <div class="pseudo-preview-head">
-            <span class="preview-source-badge"></span>
-            <span class="preview-category-badge"></span>
+        <a class="preview-link pseudo-preview" target="_blank" rel="noreferrer">
+          <div class="pseudo-window-toolbar">
+            <span></span><span></span><span></span>
           </div>
-          <div class="preview-title-line"></div>
-          <div class="preview-sub-line short"></div>
-          <div class="preview-progress-track"><div class="preview-progress-fill"></div></div>
-        </div>
+          <div class="pseudo-window-sheet">
+            <div class="pseudo-preview-head">
+              <span class="preview-source-badge"></span>
+              <span class="preview-category-badge"></span>
+            </div>
+            <div class="preview-artboard">
+              <div class="preview-poster">
+                <div class="preview-poster-title"></div>
+                <div class="preview-poster-line"></div>
+                <div class="preview-poster-line short"></div>
+              </div>
+              <div class="preview-side-stack">
+                <div class="preview-side-card"></div>
+                <div class="preview-side-card small"></div>
+              </div>
+            </div>
+            <div class="preview-progress-track"><div class="preview-progress-fill"></div></div>
+          </div>
+        </a>
         <div class="card-head">
           <div>
             <div class="rank"></div>
@@ -136,6 +191,6 @@
       </article>
     </template>
 
-    <script src="./app.js?v=3"></script>
+    <script src="./app.js?v=4"></script>
   </body>
 </html>

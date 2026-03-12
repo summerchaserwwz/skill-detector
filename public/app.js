@@ -20,6 +20,30 @@ const insightsGrid = document.querySelector('#insightsGrid');
 const insightNote = document.querySelector('#insightNote');
 const generatedAtElement = document.querySelector('#generatedAt');
 const emptyState = document.querySelector('#emptyState');
+const heroMetricSkills = document.querySelector('#heroMetricSkills');
+const heroMetricCross = document.querySelector('#heroMetricCross');
+const heroMetricCategory = document.querySelector('#heroMetricCategory');
+const heroMiniSource = document.querySelector('#heroMiniSource');
+const heroMiniCategory = document.querySelector('#heroMiniCategory');
+const heroMiniProgress = document.querySelector('#heroMiniProgress');
+
+const categoryPalette = {
+  '前端与设计': { color: '#7dd3fc', soft: 'rgba(125, 211, 252, 0.12)' },
+  'AI Agent 能力增强': { color: '#a78bfa', soft: 'rgba(167, 139, 250, 0.12)' },
+  '搜索与信息检索': { color: '#60a5fa', soft: 'rgba(96, 165, 250, 0.12)' },
+  '知识库与数据': { color: '#5eead4', soft: 'rgba(94, 234, 212, 0.12)' },
+  '通用工具': { color: '#f59e0b', soft: 'rgba(245, 158, 11, 0.12)' },
+  '写作与内容处理': { color: '#f472b6', soft: 'rgba(244, 114, 182, 0.12)' },
+  '运维与工程效率': { color: '#34d399', soft: 'rgba(52, 211, 153, 0.12)' },
+  '协作与系统集成': { color: '#c084fc', soft: 'rgba(192, 132, 252, 0.12)' },
+  '多媒体与音视频': { color: '#fb7185', soft: 'rgba(251, 113, 133, 0.12)' },
+  '安全与质量': { color: '#f97316', soft: 'rgba(249, 115, 22, 0.12)' },
+  '浏览器自动化': { color: '#22c55e', soft: 'rgba(34, 197, 94, 0.12)' },
+};
+
+function getCategoryTheme(category = '') {
+  return categoryPalette[category] || { color: '#60a5fa', soft: 'rgba(96, 165, 250, 0.12)' };
+}
 
 function formatCompact(value) {
   if (value == null) return '—';
@@ -72,11 +96,7 @@ async function loadPayload(forceRefresh = false) {
 function buildDirections(items) {
   const map = new Map();
   for (const item of items) {
-    const current = map.get(item.category) || {
-      category: item.category,
-      count: 0,
-      downloads: 0,
-    };
+    const current = map.get(item.category) || { category: item.category, count: 0, downloads: 0 };
     current.count += 1;
     current.downloads += item.downloads || 0;
     map.set(item.category, current);
@@ -84,7 +104,7 @@ function buildDirections(items) {
   return [...map.values()].sort((a, b) => b.downloads - a.downloads || b.count - a.count);
 }
 
-function getVisibleItems() {
+function getFilteredItems() {
   const query = state.query.trim().toLowerCase();
   return state.items
     .filter((item) => (state.source === 'all' ? true : item.sourceKey === state.source))
@@ -126,9 +146,7 @@ function renderSourceButtons() {
 }
 
 function renderCategoryChips() {
-  const sourceItems = state.source === 'all'
-    ? state.items
-    : state.items.filter((item) => item.sourceKey === state.source);
+  const sourceItems = state.source === 'all' ? state.items : state.items.filter((item) => item.sourceKey === state.source);
   const directions = buildDirections(sourceItems);
   categoryStrip.innerHTML = '';
 
@@ -143,10 +161,13 @@ function renderCategoryChips() {
   categoryStrip.appendChild(allChip);
 
   directions.forEach((direction) => {
+    const theme = getCategoryTheme(direction.category);
     const chip = document.createElement('button');
     chip.type = 'button';
-    chip.className = `language-chip ${state.category === direction.category ? 'active' : ''}`;
+    chip.className = `language-chip category-chip ${state.category === direction.category ? 'active' : ''}`;
     chip.textContent = `${direction.category} · ${direction.count}`;
+    chip.style.setProperty('--chip-color', theme.color);
+    chip.style.setProperty('--chip-soft', theme.soft);
     chip.addEventListener('click', () => {
       state.category = direction.category;
       renderPage();
@@ -155,20 +176,38 @@ function renderCategoryChips() {
   });
 }
 
-function renderInsights() {
-  const allItems = state.items;
-  const sourceItems = state.source === 'all'
-    ? allItems
-    : allItems.filter((item) => item.sourceKey === state.source);
-  const visibleItems = getVisibleItems();
-  const directions = buildDirections(sourceItems);
-  const sourceCount = new Set(sourceItems.map((item) => item.source)).size;
-  const crossCount = sourceItems.filter((item) => item.crossListed).length;
+function renderHeroOverview(allItems, visibleItems, directions) {
   const topItem = visibleItems[0];
+  const crossCount = allItems.filter((item) => item.crossListed).length;
 
   if (generatedAtElement) {
     generatedAtElement.textContent = `更新于 ${formatTime(state.payload?.generatedAt)}`;
   }
+
+  if (heroMetricSkills) heroMetricSkills.textContent = `${allItems.length}`;
+  if (heroMetricCross) heroMetricCross.textContent = `${crossCount}`;
+  if (heroMetricCategory) heroMetricCategory.textContent = directions[0]?.category || '通用工具';
+
+  if (heroMiniSource) {
+    heroMiniSource.textContent = state.source === 'all' ? '聚合' : state.source === 'clawhub' ? 'ClawHub' : 'Skills.sh';
+  }
+  if (heroMiniCategory) {
+    heroMiniCategory.textContent = state.category === 'all' ? directions[0]?.category || '全部方向' : state.category;
+  }
+  if (heroMiniProgress) {
+    heroMiniProgress.style.width = `${topItem ? Math.max(22, Math.min(100, (topItem.downloads / Math.max(...visibleItems.map((item) => item.downloads || 0), 1)) * 100)) : 28}%`;
+  }
+}
+
+function renderInsights() {
+  const allItems = state.source === 'all' ? state.items : state.items.filter((item) => item.sourceKey === state.source);
+  const visibleItems = getFilteredItems();
+  const directions = buildDirections(allItems);
+  const topItem = visibleItems[0];
+  const sourceCount = new Set(allItems.map((item) => item.source)).size;
+  const crossCount = allItems.filter((item) => item.crossListed).length;
+
+  renderHeroOverview(allItems, visibleItems, directions);
 
   insightNote.textContent = topItem
     ? `当前展示 ${visibleItems.length} 个技能，热门方向是「${directions[0]?.category || '通用工具'}」，榜首是「${topItem.name}」，下载量约 ${formatCompact(topItem.downloads)}。`
@@ -177,9 +216,10 @@ function renderInsights() {
   const cards = [
     {
       title: '规模概览',
+      tone: 'blue',
       content: `
         <ul class="insight-list">
-          <li>当前来源覆盖 <strong>${sourceItems.length}</strong> 个技能</li>
+          <li>当前来源覆盖 <strong>${allItems.length}</strong> 个技能</li>
           <li>来源数 <strong>${sourceCount}</strong></li>
           <li>双榜重合 <strong>${crossCount}</strong></li>
         </ul>
@@ -187,6 +227,7 @@ function renderInsights() {
     },
     {
       title: '方向聚类',
+      tone: 'green',
       content: `
         <ul class="insight-list">
           ${directions.slice(0, 4).map((item) => `<li>${escapeHtml(item.category)} · <strong>${item.count}</strong></li>`).join('')}
@@ -195,9 +236,10 @@ function renderInsights() {
     },
     {
       title: '当前筛选',
+      tone: 'gold',
       content: `
         <ul class="insight-list">
-          <li>来源：<strong>${state.source === 'all' ? '综合' : state.source}</strong></li>
+          <li>来源：<strong>${state.source === 'all' ? '聚合' : state.source}</strong></li>
           <li>TopN：<strong>${state.topN}</strong></li>
           <li>分类：<strong>${escapeHtml(state.category === 'all' ? '全部方向' : state.category)}</strong></li>
         </ul>
@@ -208,6 +250,8 @@ function renderInsights() {
   insightsGrid.innerHTML = '';
   cards.forEach((item) => {
     const fragment = insightTemplate.content.cloneNode(true);
+    const card = fragment.querySelector('.insight-card');
+    card.dataset.tone = item.tone;
     fragment.querySelector('.insight-title').textContent = item.title;
     fragment.querySelector('.insight-content').innerHTML = item.content;
     insightsGrid.appendChild(fragment);
@@ -215,7 +259,7 @@ function renderInsights() {
 }
 
 function renderCards() {
-  const items = getVisibleItems();
+  const items = getFilteredItems();
   cardsElement.innerHTML = '';
 
   if (!items.length) {
@@ -227,8 +271,10 @@ function renderCards() {
   const maxDownloads = Math.max(...items.map((item) => item.downloads || 0), 1);
 
   items.forEach((item, index) => {
+    const theme = getCategoryTheme(item.category);
     const fragment = cardTemplate.content.cloneNode(true);
     const card = fragment.querySelector('.card');
+    const previewLink = fragment.querySelector('.preview-link');
     const previewSourceBadge = fragment.querySelector('.preview-source-badge');
     const previewCategoryBadge = fragment.querySelector('.preview-category-badge');
     const previewProgressFill = fragment.querySelector('.preview-progress-fill');
@@ -241,9 +287,18 @@ function renderCards() {
     const metaGrid = fragment.querySelector('.meta-grid');
     const topics = fragment.querySelector('.topics');
 
+    card.style.setProperty('--card-accent', theme.color);
+    card.style.setProperty('--card-accent-soft', theme.soft);
+
+    previewLink.href = item.link;
     previewSourceBadge.textContent = item.source;
     previewCategoryBadge.textContent = item.category;
+    previewSourceBadge.style.setProperty('--badge-color', theme.color);
+    previewSourceBadge.style.setProperty('--badge-soft', theme.soft);
+    previewCategoryBadge.style.setProperty('--badge-color', theme.color);
+    previewCategoryBadge.style.setProperty('--badge-soft', 'rgba(255,255,255,0.08)');
     previewProgressFill.style.width = `${Math.max(16, ((item.downloads || 0) / maxDownloads) * 100)}%`;
+    previewProgressFill.style.background = `linear-gradient(90deg, ${theme.color}, color-mix(in srgb, ${theme.color} 70%, white))`;
 
     rank.textContent = `第 ${index + 1} 名`;
     repoLink.href = item.link;
@@ -251,7 +306,7 @@ function renderCards() {
     badge.textContent = `${formatCompact(item.downloads)} 下载`;
 
     what.textContent = item.description || item.summary || '暂无介绍';
-    who.textContent = `作者：${item.author || 'Unknown'} · 来源：${item.source}`;
+    who.innerHTML = `作者：<a class="inline-link" href="${item.link}" target="_blank" rel="noreferrer">${escapeHtml(item.author || 'Unknown')}</a> · 来源：${escapeHtml(item.source)}`;
     highlight.textContent = item.crossListed
       ? `双榜上榜 · ${item.crossSources.join(' / ')}`
       : `分类：${item.category}`;
@@ -260,27 +315,21 @@ function renderCards() {
     metaGrid.appendChild(createMetaLink('作者', item.author || 'Unknown'));
     metaGrid.appendChild(createMetaLink('总下载', formatCompact(item.downloads)));
     metaGrid.appendChild(createMetaLink('全部安装', formatCompact(item.installsAllTime)));
-    if (item.installsCurrent != null) {
-      metaGrid.appendChild(createMetaLink('当前安装', formatCompact(item.installsCurrent)));
-    }
-    if (item.stars != null) {
-      metaGrid.appendChild(createMetaLink('Stars', formatCompact(item.stars)));
-    }
-    if (item.updatedAt) {
-      metaGrid.appendChild(createMetaLink('更新时间', formatTime(item.updatedAt)));
-    }
+    if (item.installsCurrent != null) metaGrid.appendChild(createMetaLink('当前安装', formatCompact(item.installsCurrent)));
+    if (item.stars != null) metaGrid.appendChild(createMetaLink('Stars', formatCompact(item.stars)));
     metaGrid.appendChild(createMetaLink('链接', '打开原页', item.link, 'meta-link'));
 
     const tags = [];
     if (item.crossListed) tags.push('双榜上榜');
-    if (item.sourceKey === 'clawhub') tags.push('ClawHub');
-    if (item.sourceKey === 'skillssh') tags.push('Skills.sh');
+    tags.push(item.source);
     tags.push(item.category);
 
     tags.forEach((tag) => {
       const pill = document.createElement('span');
       pill.className = 'topic-pill';
       pill.textContent = tag;
+      pill.style.setProperty('--topic-color', theme.color);
+      pill.style.setProperty('--topic-soft', theme.soft);
       topics.appendChild(pill);
     });
 
