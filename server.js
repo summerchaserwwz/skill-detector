@@ -432,6 +432,28 @@ async function serveStaticFile(requestPath, response) {
   }
 }
 
+async function readStaticPayloadFallback(source = 'all', topN = 48) {
+  const fileMap = {
+    all: 'leaderboard.json',
+    clawhub: 'clawhub.json',
+    skillssh: 'skillssh.json',
+  };
+
+  const fileName = fileMap[source] || fileMap.all;
+  const filePath = path.join(PUBLIC_DIR, 'data', fileName);
+  const raw = await fs.readFile(filePath, 'utf8');
+  const payload = JSON.parse(raw);
+
+  return {
+    ...payload,
+    source,
+    topN,
+    fallback: true,
+    fallbackReason: 'remote-rate-limited',
+    items: (payload.items || []).slice(0, topN),
+  };
+}
+
 function parseNumberParam(value, fallback) {
   const numeric = Number(value);
   return Number.isFinite(numeric) ? numeric : fallback;
@@ -443,11 +465,18 @@ function createServer() {
       const requestUrl = new URL(request.url, `http://${request.headers.host || `localhost:${PORT}`}`);
 
       if (requestUrl.pathname === '/api/leaderboard') {
-        const payload = await getLeaderboardData({
-          source: requestUrl.searchParams.get('source') || 'all',
-          topN: parseNumberParam(requestUrl.searchParams.get('topN'), 48),
-          maxPerSource: parseNumberParam(requestUrl.searchParams.get('maxPerSource'), 48),
-        });
+        const source = requestUrl.searchParams.get('source') || 'all';
+        const topN = parseNumberParam(requestUrl.searchParams.get('topN'), 48);
+        const maxPerSource = parseNumberParam(requestUrl.searchParams.get('maxPerSource'), 48);
+        let payload;
+
+        try {
+          payload = await getLeaderboardData({ source, topN, maxPerSource });
+        } catch (error) {
+          payload = await readStaticPayloadFallback(source, topN);
+          payload.warning = error instanceof Error ? error.message : String(error);
+        }
+
         response.writeHead(200, {
           'Content-Type': 'application/json; charset=utf-8',
           'Cache-Control': 'no-cache',
