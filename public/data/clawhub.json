@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-03-12T03:55:13.192Z",
+  "generatedAt": "2026-03-12T05:45:35.409Z",
   "source": "clawhub",
   "topN": 48,
   "maxPerSource": 48,
@@ -14,10 +14,10 @@
       "author": "pskoett",
       "publisher": "self-improving-agent",
       "link": "https://clawhub.ai/pskoett/self-improving-agent",
-      "downloads": 176632,
-      "installsAllTime": 2630,
-      "installsCurrent": 2528,
-      "stars": 1813,
+      "downloads": 177641,
+      "installsAllTime": 2651,
+      "installsCurrent": 2549,
+      "stars": 1814,
       "summary": "Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpect…",
       "description": "Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Clau...",
       "updatedAt": "2026-03-11T12:01:48.805Z",
@@ -25,8 +25,9 @@
       "ownerDisplayName": "pskoett",
       "moderation": null,
       "category": "AI Agent 能力增强",
+      "domain": "金融投资",
       "chineseIntro": "一个偏 Agent 能力增强的技能，适合自我改进、任务编排、反思和智能体工作流。",
-      "progress": 92.0041256842345,
+      "progress": 92.03084710730222,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -41,10 +42,10 @@
       "author": "JimLiuxinghai",
       "publisher": "find-skills",
       "link": "https://clawhub.ai/JimLiuxinghai/find-skills",
-      "downloads": 172454,
-      "installsAllTime": 2438,
-      "installsCurrent": 2397,
-      "stars": 731,
+      "downloads": 173473,
+      "installsAllTime": 2452,
+      "installsCurrent": 2411,
+      "stars": 735,
       "summary": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a ski…",
       "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used…",
       "updatedAt": "2026-03-07T14:31:18.086Z",
@@ -52,8 +53,9 @@
       "ownerDisplayName": "JimLiuxinghai",
       "moderation": null,
       "category": "搜索与信息检索",
+      "domain": "通用场景",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 91.8218373602745,
+      "progress": 91.85007829685841,
       "crossListed": true,
       "crossSources": [
         "ClawHub",
@@ -69,9 +71,9 @@
       "author": "steipete",
       "publisher": "summarize",
       "link": "https://clawhub.ai/steipete/summarize",
-      "downloads": 133285,
-      "installsAllTime": 2913,
-      "installsCurrent": 2864,
+      "downloads": 134010,
+      "installsAllTime": 2928,
+      "installsCurrent": 2879,
       "stars": 521,
       "summary": "Summarize URLs or files with the summarize CLI (web, PDFs, images, audio, YouTube).",
       "description": "Summarize URLs or files with the summarize CLI (web, PDFs, images, audio, YouTube).",
@@ -80,8 +82,9 @@
       "ownerDisplayName": "Peter Steinberger",
       "moderation": null,
       "category": "写作与内容处理",
+      "domain": "内容媒体",
       "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
-      "progress": 89.85989411686721,
+      "progress": 89.8849366698476,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -96,9 +99,9 @@
       "author": "TheSethRose",
       "publisher": "agent-browser",
       "link": "https://clawhub.ai/TheSethRose/agent-browser",
-      "downloads": 110514,
-      "installsAllTime": 1901,
-      "installsCurrent": 1858,
+      "downloads": 111013,
+      "installsAllTime": 1910,
+      "installsCurrent": 1867,
       "stars": 502,
       "summary": "A fast Rust-based headless browser automation CLI with Node.js fallback that enables AI agents to navigate, click, type, and snap…",
       "description": "A fast Rust-based headless browser automation CLI with Node.js fallback that enables AI agents to navigate, click, type, and snapshot pages via structured commands.",
@@ -117,8 +120,9 @@
         "updatedAt": 1773284512741
       },
       "category": "搜索与信息检索",
+      "domain": "通用场景",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 88.43323938180444,
+      "progress": 88.4515382888264,
       "crossListed": true,
       "crossSources": [
         "ClawHub",
@@ -134,10 +138,10 @@
       "author": "steipete",
       "publisher": "gog",
       "link": "https://clawhub.ai/steipete/gog",
-      "downloads": 104684,
-      "installsAllTime": 2166,
-      "installsCurrent": 2109,
-      "stars": 702,
+      "downloads": 104911,
+      "installsAllTime": 2169,
+      "installsCurrent": 2112,
+      "stars": 703,
       "summary": "Google Workspace CLI for Gmail, Calendar, Drive, Contacts, Sheets, and Docs.",
       "description": "Google Workspace CLI for Gmail, Calendar, Drive, Contacts, Sheets, and Docs.",
       "updatedAt": "2026-02-27T08:14:13.316Z",
@@ -145,8 +149,9 @@
       "ownerDisplayName": "Peter Steinberger",
       "moderation": null,
       "category": "协作与系统集成",
+      "domain": "办公协作",
       "chineseIntro": "一个偏外部系统集成的技能，适合连接协作工具、业务系统和第三方服务。",
-      "progress": 88.02053681776583,
+      "progress": 88.0211019548901,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -161,9 +166,9 @@
       "author": "steipete",
       "publisher": "github",
       "link": "https://clawhub.ai/steipete/github",
-      "downloads": 97262,
-      "installsAllTime": 2342,
-      "installsCurrent": 2300,
+      "downloads": 97561,
+      "installsAllTime": 2349,
+      "installsCurrent": 2307,
       "stars": 318,
       "summary": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced q…",
       "description": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.",
@@ -172,8 +177,9 @@
       "ownerDisplayName": "Peter Steinberger",
       "moderation": null,
       "category": "运维与工程效率",
+      "domain": "办公协作",
       "chineseIntro": "一个偏工程效率和运维流程的技能，适合部署、自动化、脚本和基础设施工作。",
-      "progress": 87.46054505026922,
+      "progress": 87.46808943943786,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -188,9 +194,9 @@
       "author": "oswalpalash",
       "publisher": "ontology",
       "link": "https://clawhub.ai/oswalpalash/ontology",
-      "downloads": 95286,
-      "installsAllTime": 189,
-      "installsCurrent": 177,
+      "downloads": 95529,
+      "installsAllTime": 190,
+      "installsCurrent": 178,
       "stars": 238,
       "summary": "Typed knowledge graph for structured agent memory and composable skills. Use when creating/querying entities (Person, Project, Ta…",
       "description": "Typed knowledge graph for structured agent memory and composable skills. Use when creating/querying entities (Person, Project, Task, Event, Document), linkin...",
@@ -199,8 +205,9 @@
       "ownerDisplayName": "oswalpalash",
       "moderation": null,
       "category": "搜索与信息检索",
+      "domain": "通用场景",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 87.30424350829048,
+      "progress": 87.3078381750629,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -215,9 +222,9 @@
       "author": "halthelobster",
       "publisher": "proactive-agent",
       "link": "https://clawhub.ai/halthelobster/proactive-agent",
-      "downloads": 86981,
-      "installsAllTime": 1192,
-      "installsCurrent": 1161,
+      "downloads": 87330,
+      "installsAllTime": 1199,
+      "installsCurrent": 1168,
       "stars": 510,
       "summary": "Transform AI agents from task-followers into proactive partners that anticipate needs and continuously improve. Now with WAL Prot…",
       "description": "Transform AI agents from task-followers into proactive partners that anticipate needs and continuously improve. Now with WAL Protocol, Working Buffer, Autonomous Crons, and battle-tested patterns. Part of the Hal Stack…",
@@ -226,8 +233,9 @@
       "ownerDisplayName": "halthelobster",
       "moderation": null,
       "category": "AI Agent 能力增强",
+      "domain": "通用场景",
       "chineseIntro": "一个偏 Agent 能力增强的技能，适合自我改进、任务编排、反思和智能体工作流。",
-      "progress": 86.60980747864738,
+      "progress": 86.62462364723179,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -242,9 +250,9 @@
       "author": "steipete",
       "publisher": "weather",
       "link": "https://clawhub.ai/steipete/weather",
-      "downloads": 83452,
-      "installsAllTime": 2012,
-      "installsCurrent": 1977,
+      "downloads": 83748,
+      "installsAllTime": 2020,
+      "installsCurrent": 1985,
       "stars": 266,
       "summary": "Get current weather and forecasts (no API key required).",
       "description": "Get current weather and forecasts (no API key required).",
@@ -253,8 +261,9 @@
       "ownerDisplayName": "Peter Steinberger",
       "moderation": null,
       "category": "前端与设计",
+      "domain": "通用场景",
       "chineseIntro": "一个偏前端页面与设计规范的技能，适合做界面搭建、视觉优化和组件实现。",
-      "progress": 86.29440903278758,
+      "progress": 86.30575205984003,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -269,10 +278,10 @@
       "author": "spclaudehome",
       "publisher": "skill-vetter",
       "link": "https://clawhub.ai/spclaudehome/skill-vetter",
-      "downloads": 68094,
-      "installsAllTime": 1170,
-      "installsCurrent": 1159,
-      "stars": 277,
+      "downloads": 68797,
+      "installsAllTime": 1182,
+      "installsCurrent": 1171,
+      "stars": 278,
       "summary": "Security-first skill vetting for AI agents. Use before installing any skill from ClawdHub, GitHub, or other sources. Checks for r…",
       "description": "Security-first skill vetting for AI agents. Use before installing any skill from ClawdHub, GitHub, or other sources. Checks for red flags, permission scope, and suspicious patterns.",
       "updatedAt": "2026-02-26T00:30:36.042Z",
@@ -280,8 +289,9 @@
       "ownerDisplayName": "spclaudehome",
       "moderation": null,
       "category": "AI Agent 能力增强",
+      "domain": "法律合规",
       "chineseIntro": "一个偏 Agent 能力增强的技能，适合自我改进、任务编排、反思和智能体工作流。",
-      "progress": 84.74565503436608,
+      "progress": 84.80852046500735,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -296,9 +306,9 @@
       "author": "steipete",
       "publisher": "sonoscli",
       "link": "https://clawhub.ai/steipete/sonoscli",
-      "downloads": 54786,
-      "installsAllTime": 1703,
-      "installsCurrent": 1643,
+      "downloads": 54870,
+      "installsAllTime": 1706,
+      "installsCurrent": 1646,
       "stars": 37,
       "summary": "Control Sonos speakers (discover/status/play/volume/group).",
       "description": "Control Sonos speakers (discover/status/play/volume/group).",
@@ -307,8 +317,9 @@
       "ownerDisplayName": "Peter Steinberger",
       "moderation": null,
       "category": "搜索与信息检索",
+      "domain": "通用场景",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 83.08974891261842,
+      "progress": 83.08637894944016,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -323,9 +334,9 @@
       "author": "ivangdavila",
       "publisher": "self-improving",
       "link": "https://clawhub.ai/ivangdavila/self-improving",
-      "downloads": 53295,
-      "installsAllTime": 658,
-      "installsCurrent": 631,
+      "downloads": 53713,
+      "installsAllTime": 660,
+      "installsCurrent": 633,
       "stars": 254,
       "summary": "Self-reflection + Self-criticism + Self-learning + Self-organizing memory. Agent evaluates its own work, catches mistakes, and im…",
       "description": "Self-reflection + Self-criticism + Self-learning + Self-organizing memory. Agent evaluates its own work, catches mistakes, and improves permanently. Use when...",
@@ -334,8 +345,9 @@
       "ownerDisplayName": "Iván",
       "moderation": null,
       "category": "知识库与数据",
+      "domain": "教育培训",
       "chineseIntro": "一个偏知识库、数据库或结构化数据处理的技能，适合记忆、检索和数据工作流。",
-      "progress": 82.8796361646753,
+      "progress": 82.92412100518544,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -350,9 +362,9 @@
       "author": "steipete",
       "publisher": "nano-pdf",
       "link": "https://clawhub.ai/steipete/nano-pdf",
-      "downloads": 52070,
-      "installsAllTime": 1345,
-      "installsCurrent": 1324,
+      "downloads": 52223,
+      "installsAllTime": 1348,
+      "installsCurrent": 1327,
       "stars": 118,
       "summary": "Edit PDFs with natural-language instructions using the nano-pdf CLI.",
       "description": "Edit PDFs with natural-language instructions using the nano-pdf CLI.",
@@ -361,8 +373,9 @@
       "ownerDisplayName": "Peter Steinberger",
       "moderation": null,
       "category": "通用工具",
+      "domain": "通用场景",
       "chineseIntro": "一个通用型技能，适合放进常用工具箱，帮助你提升日常 Agent 工作效率。",
-      "progress": 82.7025618210468,
+      "progress": 82.70993595815865,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -377,9 +390,9 @@
       "author": "steipete",
       "publisher": "notion",
       "link": "https://clawhub.ai/steipete/notion",
-      "downloads": 50824,
-      "installsAllTime": 1384,
-      "installsCurrent": 1367,
+      "downloads": 50925,
+      "installsAllTime": 1385,
+      "installsCurrent": 1368,
       "stars": 176,
       "summary": "Notion API for creating and managing pages, databases, and blocks.",
       "description": "Notion API for creating and managing pages, databases, and blocks.",
@@ -388,8 +401,9 @@
       "ownerDisplayName": "Peter Steinberger",
       "moderation": null,
       "category": "知识库与数据",
+      "domain": "办公协作",
       "chineseIntro": "一个偏知识库、数据库或结构化数据处理的技能，适合记忆、检索和数据工作流。",
-      "progress": 82.51812595564157,
+      "progress": 82.51830997575787,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -404,10 +418,10 @@
       "author": "biostartechnology",
       "publisher": "humanizer",
       "link": "https://clawhub.ai/biostartechnology/humanizer",
-      "downloads": 47710,
-      "installsAllTime": 557,
-      "installsCurrent": 544,
-      "stars": 361,
+      "downloads": 47893,
+      "installsAllTime": 559,
+      "installsCurrent": 546,
+      "stars": 363,
       "summary": "Remove signs of AI-generated writing from text. Use when editing or reviewing text to make it sound more natural and human-writte…",
       "description": "Remove signs of AI-generated writing from text. Use when editing or reviewing text to make it sound more natural and human-written. Based on Wikipedia's comprehensive \"Signs of AI writing\" guide. Detects and fixes patte…",
       "updatedAt": "2026-03-10T23:37:17.479Z",
@@ -415,8 +429,9 @@
       "ownerDisplayName": "B*T",
       "moderation": null,
       "category": "写作与内容处理",
+      "domain": "通用场景",
       "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
-      "progress": 82.03665186463796,
+      "progress": 82.05095519200704,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -431,9 +446,9 @@
       "author": "steipete",
       "publisher": "obsidian",
       "link": "https://clawhub.ai/steipete/obsidian",
-      "downloads": 46256,
-      "installsAllTime": 1354,
-      "installsCurrent": 1331,
+      "downloads": 46370,
+      "installsAllTime": 1358,
+      "installsCurrent": 1335,
       "stars": 185,
       "summary": "Work with Obsidian vaults (plain Markdown notes) and automate via obsidian-cli.",
       "description": "Work with Obsidian vaults (plain Markdown notes) and automate via obsidian-cli.",
@@ -442,8 +457,9 @@
       "ownerDisplayName": "Peter Steinberger",
       "moderation": null,
       "category": "通用工具",
+      "domain": "通用场景",
       "chineseIntro": "一个通用型技能，适合放进常用工具箱，帮助你提升日常 Agent 工作效率。",
-      "progress": 81.80097134576302,
+      "progress": 81.80491093418395,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -458,7 +474,7 @@
       "author": "steipete",
       "publisher": "nano-banana-pro",
       "link": "https://clawhub.ai/steipete/nano-banana-pro",
-      "downloads": 44762,
+      "downloads": 44874,
       "installsAllTime": 1108,
       "installsCurrent": 1094,
       "stars": 188,
@@ -469,8 +485,9 @@
       "ownerDisplayName": "Peter Steinberger",
       "moderation": null,
       "category": "多媒体与音视频",
+      "domain": "内容媒体",
       "chineseIntro": "一个偏多媒体处理的技能，适合语音、图片、视频和其他内容生成场景。",
-      "progress": 81.55096135045548,
+      "progress": 81.55523154928382,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -485,10 +502,10 @@
       "author": "steipete",
       "publisher": "openai-whisper",
       "link": "https://clawhub.ai/steipete/openai-whisper",
-      "downloads": 41109,
+      "downloads": 41204,
       "installsAllTime": 1164,
       "installsCurrent": 1140,
-      "stars": 193,
+      "stars": 194,
       "summary": "Local speech-to-text with the Whisper CLI (no API key).",
       "description": "Local speech-to-text with the Whisper CLI (no API key).",
       "updatedAt": "2026-02-26T00:30:40.450Z",
@@ -496,8 +513,9 @@
       "ownerDisplayName": "Peter Steinberger",
       "moderation": null,
       "category": "多媒体与音视频",
+      "domain": "内容媒体",
       "chineseIntro": "一个偏多媒体处理的技能，适合语音、图片、视频和其他内容生成场景。",
-      "progress": 80.90268555045958,
+      "progress": 80.9056208560324,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -512,9 +530,9 @@
       "author": "byungkyu",
       "publisher": "api-gateway",
       "link": "https://clawhub.ai/byungkyu/api-gateway",
-      "downloads": 40136,
-      "installsAllTime": 219,
-      "installsCurrent": 212,
+      "downloads": 40211,
+      "installsAllTime": 220,
+      "installsCurrent": 213,
       "stars": 202,
       "summary": "Connect to 100+ APIs (Google Workspace, Microsoft 365, GitHub, Notion, Slack, Airtable, HubSpot, etc.) with managed OAuth. Use th…",
       "description": "Connect to 100+ APIs (Google Workspace, Microsoft 365, GitHub, Notion, Slack, Airtable, HubSpot, etc.) with managed OAuth. Use this skill when users want to...",
@@ -523,8 +541,9 @@
       "ownerDisplayName": "byungkyu",
       "moderation": null,
       "category": "协作与系统集成",
+      "domain": "办公协作",
       "chineseIntro": "一个偏外部系统集成的技能，适合连接协作工具、业务系统和第三方服务。",
-      "progress": 80.7202830159235,
+      "progress": 80.7198910103208,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -539,10 +558,10 @@
       "author": "gpyAngyoujun",
       "publisher": "multi-search-engine",
       "link": "https://clawhub.ai/gpyAngyoujun/multi-search-engine",
-      "downloads": 39223,
-      "installsAllTime": 470,
-      "installsCurrent": 461,
-      "stars": 222,
+      "downloads": 39579,
+      "installsAllTime": 475,
+      "installsCurrent": 466,
+      "stars": 223,
       "summary": "Multi search engine integration with 17 engines (8 CN + 9 Global). Supports advanced search operators, time filters, site search,…",
       "description": "Multi search engine integration with 17 engines (8 CN + 9 Global). Supports advanced search operators, time filters, site search, privacy engines, and WolframAlpha knowledge queries. No API keys required.",
       "updatedAt": "2026-02-25T23:55:41.465Z",
@@ -550,8 +569,9 @@
       "ownerDisplayName": "g_pyAng",
       "moderation": null,
       "category": "搜索与信息检索",
+      "domain": "法律合规",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 80.54506151118002,
+      "progress": 80.59927837155264,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -566,10 +586,10 @@
       "author": "maximeprades",
       "publisher": "auto-updater",
       "link": "https://clawhub.ai/maximeprades/auto-updater",
-      "downloads": 38900,
-      "installsAllTime": 613,
-      "installsCurrent": 588,
-      "stars": 246,
+      "downloads": 39013,
+      "installsAllTime": 616,
+      "installsCurrent": 591,
+      "stars": 247,
       "summary": "Automatically update Clawdbot and all installed skills once daily. Runs via cron, checks for updates, applies them, and messages…",
       "description": "Automatically update Clawdbot and all installed skills once daily. Runs via cron, checks for updates, applies them, and messages the user with a summary of what changed.",
       "updatedAt": "2026-02-26T03:02:12.947Z",
@@ -577,8 +597,9 @@
       "ownerDisplayName": "maximeprades",
       "moderation": null,
       "category": "写作与内容处理",
+      "domain": "法律合规",
       "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
-      "progress": 80.48209355962545,
+      "progress": 80.48961526204153,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -593,9 +614,9 @@
       "author": "steipete",
       "publisher": "brave-search",
       "link": "https://clawhub.ai/steipete/brave-search",
-      "downloads": 36144,
-      "installsAllTime": 480,
-      "installsCurrent": 457,
+      "downloads": 36216,
+      "installsAllTime": 481,
+      "installsCurrent": 458,
       "stars": 141,
       "summary": "Web search and content extraction via Brave Search API. Use for searching documentation, facts, or any web content. Lightweight,…",
       "description": "Web search and content extraction via Brave Search API. Use for searching documentation, facts, or any web content. Lightweight, no browser required.",
@@ -604,8 +625,9 @@
       "ownerDisplayName": "Peter Steinberger",
       "moderation": null,
       "category": "搜索与信息检索",
+      "domain": "通用场景",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 79.92252717593846,
+      "progress": 79.92321706207774,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -620,9 +642,9 @@
       "author": "chindden",
       "publisher": "skill-creator",
       "link": "https://clawhub.ai/chindden/skill-creator",
-      "downloads": 35382,
-      "installsAllTime": 1166,
-      "installsCurrent": 1146,
+      "downloads": 35538,
+      "installsAllTime": 1170,
+      "installsCurrent": 1150,
       "stars": 120,
       "summary": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill…",
       "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integr…",
@@ -641,8 +663,9 @@
         "updatedAt": 1773284926090
       },
       "category": "前端与设计",
+      "domain": "通用场景",
       "chineseIntro": "一个偏前端页面与设计规范的技能，适合做界面搭建、视觉优化和组件实现。",
-      "progress": 79.76027149237439,
+      "progress": 79.77933375644184,
       "crossListed": true,
       "crossSources": [
         "ClawHub",
@@ -658,9 +681,9 @@
       "author": "JK-0001",
       "publisher": "automation-workflows",
       "link": "https://clawhub.ai/JK-0001/automation-workflows",
-      "downloads": 34213,
-      "installsAllTime": 423,
-      "installsCurrent": 412,
+      "downloads": 34336,
+      "installsAllTime": 425,
+      "installsCurrent": 414,
       "stars": 150,
       "summary": "Design and implement automation workflows to save time and scale operations as a solopreneur. Use when identifying repetitive tas…",
       "description": "Design and implement automation workflows to save time and scale operations as a solopreneur. Use when identifying repetitive tasks to automate, building workflows across tools, setting up triggers and actions, or optim…",
@@ -669,8 +692,9 @@
       "ownerDisplayName": "Jatin Khatri",
       "moderation": null,
       "category": "前端与设计",
+      "domain": "通用场景",
       "chineseIntro": "一个偏前端页面与设计规范的技能，适合做界面搭建、视觉优化和组件实现。",
-      "progress": 79.50443090842178,
+      "progress": 79.517367542701,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -685,9 +709,9 @@
       "author": "steipete",
       "publisher": "mcporter",
       "link": "https://clawhub.ai/steipete/mcporter",
-      "downloads": 34116,
-      "installsAllTime": 1152,
-      "installsCurrent": 1133,
+      "downloads": 34177,
+      "installsAllTime": 1153,
+      "installsCurrent": 1134,
       "stars": 98,
       "summary": "Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio), including ad-hoc servers, con…",
       "description": "Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio), including ad-hoc servers, config edits, and CLI/type generation.",
@@ -696,8 +720,9 @@
       "ownerDisplayName": "Peter Steinberger",
       "moderation": null,
       "category": "通用工具",
+      "domain": "通用场景",
       "chineseIntro": "一个通用型技能，适合放进常用工具箱，帮助你提升日常 Agent 工作效率。",
-      "progress": 79.48281075117947,
+      "progress": 79.4820298449875,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -712,9 +737,9 @@
       "author": "ide-rea",
       "publisher": "baidu-search",
       "link": "https://clawhub.ai/ide-rea/baidu-search",
-      "downloads": 33921,
-      "installsAllTime": 289,
-      "installsCurrent": 281,
+      "downloads": 34049,
+      "installsAllTime": 290,
+      "installsCurrent": 282,
       "stars": 78,
       "summary": "Search the web using Baidu AI Search Engine (BDSE). Use for live information, documentation, or research topics.",
       "description": "Search the web using Baidu AI Search Engine (BDSE). Use for live information, documentation, or research topics.",
@@ -723,8 +748,9 @@
       "ownerDisplayName": "ide-rea",
       "moderation": null,
       "category": "搜索与信息检索",
+      "domain": "科研学术",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 79.43916092915728,
+      "progress": 79.45346223896368,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -739,9 +765,9 @@
       "author": "Shaivpidadi",
       "publisher": "free-ride",
       "link": "https://clawhub.ai/Shaivpidadi/free-ride",
-      "downloads": 33087,
-      "installsAllTime": 195,
-      "installsCurrent": 192,
+      "downloads": 33159,
+      "installsAllTime": 197,
+      "installsCurrent": 194,
       "stars": 250,
       "summary": "Manages free AI models from OpenRouter for OpenClaw. Automatically ranks models by quality, configures fallbacks for rate-limit h…",
       "description": "Manages free AI models from OpenRouter for OpenClaw. Automatically ranks models by quality, configures fallbacks for rate-limit handling, and updates opencla...",
@@ -750,8 +776,9 @@
       "ownerDisplayName": "Shaishav Pidadi",
       "moderation": null,
       "category": "通用工具",
+      "domain": "法律合规",
       "chineseIntro": "一个通用型技能，适合放进常用工具箱，帮助你提升日常 Agent 工作效率。",
-      "progress": 79.24959797981634,
+      "progress": 79.251807929503,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -766,7 +793,7 @@
       "author": "YoavRez",
       "publisher": "openclaw-youtube-transcript",
       "link": "https://clawhub.ai/YoavRez/openclaw-youtube-transcript",
-      "downloads": 31268,
+      "downloads": 31275,
       "installsAllTime": 21,
       "installsCurrent": 20,
       "stars": 16,
@@ -788,8 +815,9 @@
         "updatedAt": 1773227211438
       },
       "category": "多媒体与音视频",
+      "domain": "法律合规",
       "chineseIntro": "一个偏多媒体处理的技能，适合语音、图片、视频和其他内容生成场景。",
-      "progress": 78.81901466753217,
+      "progress": 78.80645723144394,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -804,7 +832,7 @@
       "author": "c36025251-pixel",
       "publisher": "outlook-graph",
       "link": "https://clawhub.ai/c36025251-pixel/outlook-graph",
-      "downloads": 30366,
+      "downloads": 30375,
       "installsAllTime": 0,
       "installsCurrent": 0,
       "stars": 2,
@@ -825,8 +853,9 @@
         "updatedAt": 1773208983216
       },
       "category": "协作与系统集成",
+      "domain": "法律合规",
       "chineseIntro": "一个偏外部系统集成的技能，适合连接协作工具、业务系统和第三方服务。",
-      "progress": 78.59611588522881,
+      "progress": 78.5841507105835,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -841,9 +870,9 @@
       "author": "moltbro",
       "publisher": "humanize-ai-text",
       "link": "https://clawhub.ai/moltbro/humanize-ai-text",
-      "downloads": 28976,
-      "installsAllTime": 146,
-      "installsCurrent": 140,
+      "downloads": 29014,
+      "installsAllTime": 147,
+      "installsCurrent": 141,
       "stars": 131,
       "summary": "Humanize AI-generated text to bypass detection. This humanizer rewrites ChatGPT, Claude, and GPT content to sound natural and pas…",
       "description": "Humanize AI-generated text to bypass detection. This humanizer rewrites ChatGPT, Claude, and GPT content to sound natural and pass AI detectors like GPTZero,...",
@@ -852,8 +881,9 @@
       "ownerDisplayName": "moltbro",
       "moderation": null,
       "category": "写作与内容处理",
+      "domain": "通用场景",
       "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
-      "progress": 78.23931820376777,
+      "progress": 78.23513937236534,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -868,9 +898,9 @@
       "author": "Michaelgathara",
       "publisher": "youtube-watcher",
       "link": "https://clawhub.ai/Michaelgathara/youtube-watcher",
-      "downloads": 27890,
-      "installsAllTime": 287,
-      "installsCurrent": 280,
+      "downloads": 27945,
+      "installsAllTime": 289,
+      "installsCurrent": 282,
       "stars": 203,
       "summary": "Fetch and read transcripts from YouTube videos. Use when you need to summarize a video, answer questions about its content, or ex…",
       "description": "Fetch and read transcripts from YouTube videos. Use when you need to summarize a video, answer questions about its content, or extract information from it.",
@@ -879,8 +909,9 @@
       "ownerDisplayName": "Michaelgathara",
       "moderation": null,
       "category": "写作与内容处理",
+      "domain": "内容媒体",
       "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
-      "progress": 77.94843458003218,
+      "progress": 77.94932957975101,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -895,10 +926,10 @@
       "author": "byteroverinc",
       "publisher": "byterover",
       "link": "https://clawhub.ai/byteroverinc/byterover",
-      "downloads": 27872,
-      "installsAllTime": 122,
-      "installsCurrent": 112,
-      "stars": 93,
+      "downloads": 27907,
+      "installsAllTime": 123,
+      "installsCurrent": 113,
+      "stars": 92,
       "summary": "You MUST use this for gathering contexts before any work. This is a Knowledge management for AI agents. Use `brv` to store and re…",
       "description": "You MUST use this for gathering contexts before any work. This is a Knowledge management for AI agents. Use `brv` to store and retrieve project patterns, dec...",
       "updatedAt": "2026-03-02T03:24:46.918Z",
@@ -906,8 +937,9 @@
       "ownerDisplayName": "byteroverinc",
       "moderation": null,
       "category": "搜索与信息检索",
+      "domain": "通用场景",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 77.94351845182348,
+      "progress": 77.93896968382859,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -922,9 +954,9 @@
       "author": "NextFrontierBuilds",
       "publisher": "elite-longterm-memory",
       "link": "https://clawhub.ai/NextFrontierBuilds/elite-longterm-memory",
-      "downloads": 27392,
-      "installsAllTime": 225,
-      "installsCurrent": 213,
+      "downloads": 27487,
+      "installsAllTime": 227,
+      "installsCurrent": 215,
       "stars": 118,
       "summary": "Ultimate AI agent memory system for Cursor, Claude, ChatGPT & Copilot. WAL protocol + vector search + git-notes + cloud backup. N…",
       "description": "Ultimate AI agent memory system for Cursor, Claude, ChatGPT & Copilot. WAL protocol + vector search + git-notes + cloud backup. Never lose context again. Vibe-coding ready.",
@@ -943,8 +975,9 @@
         "updatedAt": 1773285733180
       },
       "category": "搜索与信息检索",
+      "domain": "开发工程",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 77.81123706968711,
+      "progress": 77.8235166857718,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -959,9 +992,9 @@
       "author": "udiedrichsen",
       "publisher": "stock-analysis",
       "link": "https://clawhub.ai/udiedrichsen/stock-analysis",
-      "downloads": 27284,
-      "installsAllTime": 238,
-      "installsCurrent": 225,
+      "downloads": 27360,
+      "installsAllTime": 240,
+      "installsCurrent": 227,
       "stars": 141,
       "summary": "Analyze stocks and cryptocurrencies using Yahoo Finance data. Supports portfolio management, watchlists with alerts, dividend ana…",
       "description": "Analyze stocks and cryptocurrencies using Yahoo Finance data. Supports portfolio management, watchlists with alerts, dividend analysis, 8-dimension stock scoring, viral trend detection (Hot Scanner), and rumor/early sig…",
@@ -981,8 +1014,9 @@
         "updatedAt": 1773284544305
       },
       "category": "运维与工程效率",
+      "domain": "金融投资",
       "chineseIntro": "一个偏工程效率和运维流程的技能，适合部署、自动化、脚本和基础设施工作。",
-      "progress": 77.78115440531477,
+      "progress": 77.78825835135821,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -994,20 +1028,23 @@
       "name": "Clawdbot Documentation Expert",
       "source": "ClawHub",
       "sourceKey": "clawhub",
-      "author": "",
+      "author": "NicholasSpisak",
       "publisher": "clawddocs",
-      "link": "https://clawhub.ai/clawddocs",
-      "downloads": 27088,
-      "installsAllTime": 358,
-      "installsCurrent": 345,
+      "link": "https://clawhub.ai/NicholasSpisak/clawddocs",
+      "downloads": 27115,
+      "installsAllTime": 359,
+      "installsCurrent": 346,
       "stars": 247,
       "summary": "Clawdbot documentation expert with decision tree navigation, search scripts, doc fetching, version tracking, and config snippets…",
       "description": "Clawdbot documentation expert with decision tree navigation, search scripts, doc fetching, version tracking, and config snippets for all Clawdbot features",
       "updatedAt": "2026-02-26T00:30:36.042Z",
-      "detailError": "429 Too Many Requests for https://wry-manatee-359.convex.site/api/v1/skills/clawddocs: Rate limit exceeded",
+      "ownerHandle": "NicholasSpisak",
+      "ownerDisplayName": "NicholasSpisak",
+      "moderation": null,
       "category": "搜索与信息检索",
+      "domain": "法律合规",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 77.72625454135589,
+      "progress": 77.71977549934729,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -1019,22 +1056,21 @@
       "name": "Himalaya",
       "source": "ClawHub",
       "sourceKey": "clawhub",
-      "author": "lamelas",
+      "author": "",
       "publisher": "himalaya",
-      "link": "https://clawhub.ai/lamelas/himalaya",
-      "downloads": 26060,
+      "link": "https://clawhub.ai/himalaya",
+      "downloads": 26090,
       "installsAllTime": 950,
-      "installsCurrent": 935,
+      "installsCurrent": 934,
       "stars": 49,
       "summary": "CLI to manage emails via IMAP/SMTP. Use `himalaya` to list, read, write, reply, forward, search, and organize emails from the ter…",
       "description": "CLI to manage emails via IMAP/SMTP. Use `himalaya` to list, read, write, reply, forward, search, and organize emails from the terminal. Supports multiple accounts and message composition with MML (MIME Meta Language).",
       "updatedAt": "2026-02-26T00:30:36.042Z",
-      "ownerHandle": "lamelas",
-      "ownerDisplayName": "André Lamelas",
-      "moderation": null,
+      "detailError": "429 Too Many Requests for https://wry-manatee-359.convex.site/api/v1/skills/himalaya: Rate limit exceeded",
       "category": "搜索与信息检索",
+      "domain": "通用场景",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 77.43164377835276,
+      "progress": 77.4263925733721,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -1049,9 +1085,9 @@
       "author": "matagul",
       "publisher": "desktop-control",
       "link": "https://clawhub.ai/matagul/desktop-control",
-      "downloads": 25171,
-      "installsAllTime": 203,
-      "installsCurrent": 192,
+      "downloads": 25272,
+      "installsAllTime": 205,
+      "installsCurrent": 194,
       "stars": 181,
       "summary": "Advanced desktop automation with mouse, keyboard, and screen control",
       "description": "Advanced desktop automation with mouse, keyboard, and screen control",
@@ -1070,8 +1106,9 @@
         "updatedAt": 1773286199057
       },
       "category": "通用工具",
+      "domain": "通用场景",
       "chineseIntro": "一个通用型技能，适合放进常用工具箱，帮助你提升日常 Agent 工作效率。",
-      "progress": 77.16734195073009,
+      "progress": 77.18386719232475,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -1086,9 +1123,9 @@
       "author": "steipete",
       "publisher": "slack",
       "link": "https://clawhub.ai/steipete/slack",
-      "downloads": 25170,
-      "installsAllTime": 859,
-      "installsCurrent": 846,
+      "downloads": 25219,
+      "installsAllTime": 860,
+      "installsCurrent": 847,
       "stars": 87,
       "summary": "Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in…",
       "description": "Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.",
@@ -1097,8 +1134,9 @@
       "ownerDisplayName": "Peter Steinberger",
       "moderation": null,
       "category": "前端与设计",
+      "domain": "法律合规",
       "chineseIntro": "一个偏前端页面与设计规范的技能，适合做界面搭建、视觉优化和组件实现。",
-      "progress": 77.16703942277856,
+      "progress": 77.16788372991967,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -1113,9 +1151,9 @@
       "author": "steipete",
       "publisher": "video-frames",
       "link": "https://clawhub.ai/steipete/video-frames",
-      "downloads": 24478,
-      "installsAllTime": 923,
-      "installsCurrent": 909,
+      "downloads": 24536,
+      "installsAllTime": 924,
+      "installsCurrent": 910,
       "stars": 67,
       "summary": "Extract frames or short clips from videos using ffmpeg.",
       "description": "Extract frames or short clips from videos using ffmpeg.",
@@ -1124,8 +1162,9 @@
       "ownerDisplayName": "Peter Steinberger",
       "moderation": null,
       "category": "多媒体与音视频",
+      "domain": "内容媒体",
       "chineseIntro": "一个偏多媒体处理的技能，适合语音、图片、视频和其他内容生成场景。",
-      "progress": 76.95475429763721,
+      "progress": 76.95884834676144,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -1140,7 +1179,7 @@
       "author": "steipete",
       "publisher": "blogwatcher",
       "link": "https://clawhub.ai/steipete/blogwatcher",
-      "downloads": 23352,
+      "downloads": 23385,
       "installsAllTime": 918,
       "installsCurrent": 903,
       "stars": 40,
@@ -1151,8 +1190,9 @@
       "ownerDisplayName": "Peter Steinberger",
       "moderation": null,
       "category": "写作与内容处理",
+      "domain": "通用场景",
       "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
-      "progress": 76.59615891610292,
+      "progress": 76.5930507361911,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -1167,7 +1207,7 @@
       "author": "ShawnPana",
       "publisher": "browser-use",
       "link": "https://clawhub.ai/ShawnPana/browser-use",
-      "downloads": 23154,
+      "downloads": 23220,
       "installsAllTime": 204,
       "installsCurrent": 201,
       "stars": 59,
@@ -1189,8 +1229,9 @@
         "updatedAt": 1773284777448
       },
       "category": "搜索与信息检索",
+      "domain": "通用场景",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 76.53131865588621,
+      "progress": 76.5391418177327,
       "crossListed": true,
       "crossSources": [
         "ClawHub",
@@ -1206,9 +1247,9 @@
       "author": "steipete",
       "publisher": "model-usage",
       "link": "https://clawhub.ai/steipete/model-usage",
-      "downloads": 22923,
-      "installsAllTime": 1025,
-      "installsCurrent": 1006,
+      "downloads": 22962,
+      "installsAllTime": 1027,
+      "installsCurrent": 1008,
       "stars": 83,
       "summary": "Use CodexBar CLI local cost usage to summarize per-model usage for Codex or Claude, including the current (most recent) model or…",
       "description": "Use CodexBar CLI local cost usage to summarize per-model usage for Codex or Claude, including the current (most recent) model or a full model breakdown. Trigger when asked for model-level usage/cost data from codexbar,…",
@@ -1217,8 +1258,9 @@
       "ownerDisplayName": "Peter Steinberger",
       "moderation": null,
       "category": "写作与内容处理",
+      "domain": "开发工程",
       "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
-      "progress": 76.45496722661208,
+      "progress": 76.45407529338529,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -1229,7 +1271,7 @@
     {
       "category": "搜索与信息检索",
       "count": 12,
-      "downloads": 673894,
+      "downloads": 676548,
       "sources": [
         "ClawHub"
       ]
@@ -1237,7 +1279,7 @@
     {
       "category": "AI Agent 能力增强",
       "count": 3,
-      "downloads": 331707,
+      "downloads": 333768,
       "sources": [
         "ClawHub"
       ]
@@ -1245,7 +1287,7 @@
     {
       "category": "写作与内容处理",
       "count": 7,
-      "downloads": 323036,
+      "downloads": 324222,
       "sources": [
         "ClawHub"
       ]
@@ -1253,7 +1295,7 @@
     {
       "category": "通用工具",
       "count": 5,
-      "downloads": 190700,
+      "downloads": 191201,
       "sources": [
         "ClawHub"
       ]
@@ -1261,7 +1303,7 @@
     {
       "category": "前端与设计",
       "count": 4,
-      "downloads": 178217,
+      "downloads": 178841,
       "sources": [
         "ClawHub"
       ]
@@ -1269,7 +1311,7 @@
     {
       "category": "协作与系统集成",
       "count": 3,
-      "downloads": 175186,
+      "downloads": 175497,
       "sources": [
         "ClawHub"
       ]
@@ -1277,7 +1319,7 @@
     {
       "category": "多媒体与音视频",
       "count": 4,
-      "downloads": 141617,
+      "downloads": 141889,
       "sources": [
         "ClawHub"
       ]
@@ -1285,7 +1327,7 @@
     {
       "category": "运维与工程效率",
       "count": 2,
-      "downloads": 124546,
+      "downloads": 124921,
       "sources": [
         "ClawHub"
       ]
@@ -1293,7 +1335,73 @@
     {
       "category": "知识库与数据",
       "count": 2,
-      "downloads": 104119,
+      "downloads": 104638,
+      "sources": [
+        "ClawHub"
+      ]
+    }
+  ],
+  "domains": [
+    {
+      "label": "通用场景",
+      "count": 19,
+      "downloads": 1047604,
+      "sources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "label": "法律合规",
+      "count": 8,
+      "downloads": 294532,
+      "sources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "label": "办公协作",
+      "count": 4,
+      "downloads": 293608,
+      "sources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "label": "内容媒体",
+      "count": 5,
+      "downloads": 272569,
+      "sources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "label": "金融投资",
+      "count": 2,
+      "downloads": 205001,
+      "sources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "label": "教育培训",
+      "count": 1,
+      "downloads": 53713,
+      "sources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "label": "开发工程",
+      "count": 2,
+      "downloads": 50449,
+      "sources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "label": "科研学术",
+      "count": 1,
+      "downloads": 34049,
       "sources": [
         "ClawHub"
       ]
@@ -1302,15 +1410,15 @@
   "sources": {
     "all": {
       "count": 90,
-      "downloads": 6968066
+      "downloads": 6985618
     },
     "clawhub": {
       "count": 42,
-      "downloads": 2243022
+      "downloads": 2251525
     },
     "skillssh": {
       "count": 48,
-      "downloads": 4725044
+      "downloads": 4734093
     }
   }
 }

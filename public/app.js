@@ -153,6 +153,17 @@ function buildChineseIntro(item) {
   return categoryText[item.category] || categoryText['通用工具'];
 }
 
+function buildDomains(items) {
+  const map = new Map();
+  for (const item of items) {
+    const current = map.get(item.domain) || { label: item.domain, count: 0, downloads: 0 };
+    current.count += 1;
+    current.downloads += item.downloads || 0;
+    map.set(item.domain, current);
+  }
+  return [...map.values()].sort((a, b) => b.downloads - a.downloads || b.count - a.count);
+}
+
 function renderEmpty(message) {
   cardsElement.innerHTML = '';
   emptyState.textContent = message;
@@ -223,6 +234,7 @@ function renderInsights() {
   const allItems = state.source === 'all' ? state.items : state.items.filter((item) => item.sourceKey === state.source);
   const visibleItems = getFilteredItems();
   const directions = buildDirections(allItems);
+  const domains = buildDomains(allItems);
   const topItem = visibleItems[0];
   const sourceCount = new Set(allItems.map((item) => item.source)).size;
   const crossCount = allItems.filter((item) => item.crossListed).length;
@@ -246,11 +258,20 @@ function renderInsights() {
       `,
     },
     {
-      title: '方向聚类',
+      title: '能力方向',
       tone: 'green',
       content: `
         <ul class="insight-list">
-          ${directions.slice(0, 4).map((item) => `<li>${escapeHtml(item.category)} · <strong>${item.count}</strong></li>`).join('')}
+          ${directions.slice(0, 5).map((item) => `<li>${escapeHtml(item.category)} · <strong>${item.count}</strong></li>`).join('')}
+        </ul>
+      `,
+    },
+    {
+      title: '垂直领域',
+      tone: 'violet',
+      content: `
+        <ul class="insight-list">
+          ${domains.slice(0, 5).map((item) => `<li>${escapeHtml(item.label)} · <strong>${item.count}</strong></li>`).join('')}
         </ul>
       `,
     },
@@ -302,6 +323,7 @@ function renderRankBars() {
         <div class="rank-bar-head">
           <div class="rank-bar-title-wrap">
             <a class="rank-bar-title" href="${item.link}" target="_blank" rel="noreferrer">${escapeHtml(item.name)}</a>
+            <div class="rank-bar-meta">${escapeHtml(item.source)} · ${escapeHtml(item.category)} · ${escapeHtml(item.domain || '通用场景')}</div>
             <div class="rank-bar-desc">${escapeHtml(buildChineseIntro(item))}</div>
           </div>
           <div class="rank-bar-value">${escapeHtml(formatCompact(item.downloads))}</div>
@@ -367,10 +389,11 @@ function renderCards() {
     zh.textContent = item.description || item.summary || '暂无英文原始介绍';
     who.innerHTML = `作者：<a class="inline-link" href="${item.link}" target="_blank" rel="noreferrer">${escapeHtml(item.author || 'Unknown')}</a> · 来源：${escapeHtml(item.source)}`;
     highlight.textContent = item.crossListed
-      ? `双榜上榜 · ${item.crossSources.join(' / ')}`
-      : `分类：${item.category}`;
+      ? `双榜上榜 · ${item.crossSources.join(' / ')} · 领域：${item.domain || '通用场景'}`
+      : `分类：${item.category} · 领域：${item.domain || '通用场景'}`;
 
     metaGrid.appendChild(createMetaLink('分类', item.category));
+    metaGrid.appendChild(createMetaLink('领域', item.domain || '通用场景'));
     metaGrid.appendChild(createMetaLink('作者', item.author || 'Unknown'));
     metaGrid.appendChild(createMetaLink('总下载', formatCompact(item.downloads)));
     metaGrid.appendChild(createMetaLink('全部安装', formatCompact(item.installsAllTime)));

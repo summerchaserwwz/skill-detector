@@ -172,6 +172,60 @@ function inferChineseIntro(item) {
   return truncateText(categoryText[item.category] || categoryText['通用工具'], 72);
 }
 
+function inferVerticalDomain(item) {
+  const text = [
+    item.name,
+    item.author,
+    item.publisher,
+    item.description,
+    item.summary,
+    item.slug,
+  ]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
+
+  const rules = [
+    { pattern: /(stock|stocks|finance|financial|crypto|trading|portfolio|investment|dividend|earnings|yahoo finance|quant)/, label: '金融投资' },
+    { pattern: /(medical|medicine|health|healthcare|clinical|doctor|patient|hospital|biotech|pharma)/, label: '医疗健康' },
+    { pattern: /(legal|law|contract|compliance|policy|regulation|gdpr|privacy)/, label: '法律合规' },
+    { pattern: /(sales|marketing|seo|ads|growth|brand|campaign|crm|shopify|ecommerce|commerce)/, label: '营销与商业' },
+    { pattern: /(education|learning|course|teach|school|student|training|curriculum)/, label: '教育培训' },
+    { pattern: /(research|science|scientific|paper|academic|lab|experiment)/, label: '科研学术' },
+    { pattern: /(github|gitlab|slack|discord|notion|jira|calendar|gmail|google workspace|docs|drive|trello)/, label: '办公协作' },
+    { pattern: /(code|dev|developer|engineering|frontend|backend|react|next|vue|typescript|python|docker|kubernetes)/, label: '开发工程' },
+    { pattern: /(image|video|audio|voice|tts|speech|music|media|youtube)/, label: '内容媒体' },
+  ];
+
+  return rules.find((rule) => rule.pattern.test(text))?.label || '通用场景';
+}
+
+function buildClusterSummary(items, field) {
+  const map = new Map();
+  for (const item of items) {
+    const key = item[field] || '未分类';
+    const current = map.get(key) || {
+      label: key,
+      count: 0,
+      downloads: 0,
+      sources: new Set(),
+    };
+    current.count += 1;
+    current.downloads += item.downloads || 0;
+    current.sources.add(item.source);
+    map.set(key, current);
+  }
+
+  return [...map.values()]
+    .map((entry) => ({
+      label: entry.label,
+      count: entry.count,
+      downloads: entry.downloads,
+      sources: [...entry.sources],
+    }))
+    .sort((a, b) => b.downloads - a.downloads || b.count - a.count || a.label.localeCompare(b.label, 'zh-CN'));
+}
+
 function buildDirectionSummary(items) {
   const map = new Map();
   for (const item of items) {
@@ -316,6 +370,7 @@ async function fetchSkillsShLeaderboard(limit = 48) {
     .map((item) => ({
       ...item,
       category: inferCategory(item),
+      domain: inferVerticalDomain(item),
       chineseIntro: inferChineseIntro({ ...item, category: inferCategory(item) }),
     }))
     .sort((a, b) => b.downloads - a.downloads);
@@ -383,6 +438,7 @@ async function fetchClawhubLeaderboard(limit = 48) {
     .map((item) => ({
       ...item,
       category: inferCategory(item),
+      domain: inferVerticalDomain(item),
       chineseIntro: inferChineseIntro({ ...item, category: inferCategory(item) }),
     }))
     .sort((a, b) => b.downloads - a.downloads);
@@ -412,6 +468,7 @@ async function getLeaderboardData(options = {}) {
 
   const visibleItems = filterBySource(allItems, source).slice(0, topN);
   const directions = buildDirectionSummary(filterBySource(allItems, source));
+  const domains = buildClusterSummary(filterBySource(allItems, source), 'domain');
 
   return {
     ok: true,
@@ -421,6 +478,7 @@ async function getLeaderboardData(options = {}) {
     maxPerSource,
     items: visibleItems,
     directions,
+    domains,
     sources: {
       all: {
         count: allItems.length,
