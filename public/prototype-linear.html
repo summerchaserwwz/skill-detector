@@ -3,29 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Skill Detector · Linear Prototype</title>
-    <meta name="description" content="Skill Detector 的 Linear 风格 HTML 原型图。" />
+    <title>Skill Detector · Dark Prototype</title>
+    <meta name="description" content="Skill Detector 的深色产品控制台风格 HTML 原型图。" />
     <style>
       :root {
-        --bg: #f7f8fb;
-        --panel: rgba(255, 255, 255, 0.82);
-        --panel-strong: #ffffff;
-        --border: rgba(19, 23, 33, 0.08);
-        --border-strong: rgba(19, 23, 33, 0.12);
-        --text: #101218;
-        --text-soft: #5e6678;
-        --text-dim: #8b93a7;
-        --brand: #5e6ad2;
-        --brand-soft: rgba(94, 106, 210, 0.1);
-        --success: #33b074;
-        --orange: #ef8f32;
-        --red: #f26d6d;
-        --shadow: 0 20px 60px rgba(24, 32, 56, 0.08);
+        --bg: #050816;
+        --bg-2: #081021;
+        --panel: rgba(8, 18, 40, 0.88);
+        --panel-2: rgba(12, 24, 50, 0.94);
+        --panel-3: rgba(18, 30, 58, 0.96);
+        --border: rgba(115, 140, 196, 0.16);
+        --border-strong: rgba(115, 140, 196, 0.24);
+        --text: #eef4ff;
+        --text-2: #c6d3ee;
+        --text-3: #7e91ba;
+        --blue: #78a7ff;
+        --violet: #9d82ff;
+        --cyan: #63d2ff;
+        --green: #4ed8a1;
+        --orange: #f1a24f;
+        --red: #f07d7d;
+        --shadow: 0 24px 80px rgba(1, 5, 17, 0.48);
         --radius-xl: 28px;
         --radius-lg: 22px;
         --radius-md: 16px;
         --radius-sm: 12px;
-        --max: 1280px;
       }
 
       * { box-sizing: border-box; }
@@ -36,86 +38,94 @@
         color: var(--text);
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         background:
-          radial-gradient(circle at top center, rgba(94, 106, 210, 0.1), transparent 30%),
-          linear-gradient(180deg, #fbfbfd 0%, #f4f6fa 100%);
+          radial-gradient(circle at top center, rgba(111, 136, 255, 0.22), transparent 24%),
+          radial-gradient(circle at 20% 0%, rgba(32, 88, 255, 0.12), transparent 28%),
+          linear-gradient(180deg, #040714 0%, #071126 100%);
       }
 
       a { color: inherit; text-decoration: none; }
       button, input, select { font: inherit; }
 
       .shell {
-        width: min(var(--max), calc(100vw - 32px));
+        width: min(1200px, calc(100vw - 32px));
         margin: 0 auto;
         padding: 22px 0 56px;
       }
 
-      .glass,
       .panel {
-        background: var(--panel);
-        backdrop-filter: blur(16px);
+        background: linear-gradient(180deg, rgba(10, 20, 42, 0.96), rgba(7, 15, 31, 0.94));
         border: 1px solid var(--border);
         box-shadow: var(--shadow);
+        backdrop-filter: blur(18px);
       }
 
       .topbar {
         position: sticky;
-        top: 14px;
+        top: 16px;
         z-index: 30;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 18px;
-        padding: 12px 16px;
-        border-radius: 20px;
+        padding: 14px 16px;
+        border-radius: 22px;
       }
 
       .brand {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 14px;
       }
 
       .brand-icon {
-        width: 36px;
-        height: 36px;
+        width: 42px;
+        height: 42px;
         display: grid;
         place-items: center;
-        border-radius: 11px;
-        color: white;
+        border-radius: 14px;
+        color: #fff;
         font-size: 14px;
-        font-weight: 700;
-        background: linear-gradient(135deg, #5e6ad2, #7f89e8);
+        font-weight: 800;
+        background: linear-gradient(135deg, #79a8ff, #9c83ff);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24), 0 10px 24px rgba(102, 130, 255, 0.28);
       }
 
       .brand-title {
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 800;
       }
 
       .brand-subtitle,
-      .subtle,
-      .meta,
       .helper,
+      .meta,
+      .metric-note,
+      .field label,
       .row-sub,
       .detail-copy,
-      .stat-label,
-      .chip.soft {
-        color: var(--text-soft);
+      .direction-copy,
+      .small-note {
+        color: var(--text-3);
       }
 
       .brand-subtitle { font-size: 12px; }
 
-      .nav {
+      .nav,
+      .topbar-actions,
+      .hero-actions,
+      .metric-grid,
+      .chip-row,
+      .detail-chips,
+      .detail-actions {
         display: flex;
-        align-items: center;
-        gap: 8px;
+        flex-wrap: wrap;
+        gap: 10px;
       }
 
       .nav-link,
       .ghost-btn,
-      .filter-chip,
       .tab,
-      .detail-action {
+      .chip,
+      .detail-link {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -124,7 +134,7 @@
         padding: 0 14px;
         border-radius: 12px;
         border: 1px solid transparent;
-        color: #30384a;
+        color: var(--text-2);
         background: transparent;
         transition: 160ms ease;
         cursor: pointer;
@@ -132,33 +142,36 @@
 
       .nav-link:hover,
       .ghost-btn:hover,
-      .filter-chip:hover,
       .tab:hover,
-      .detail-action:hover {
-        background: rgba(255, 255, 255, 0.78);
-        border-color: var(--border);
+      .chip:hover,
+      .detail-link:hover,
+      .row:hover,
+      .direction-card:hover {
+        transform: translateY(-1px);
       }
 
-      .topbar-actions {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+      .ghost-btn,
+      .tab,
+      .chip,
+      .detail-link {
+        border-color: var(--border);
+        background: rgba(255, 255, 255, 0.02);
       }
 
       .primary-btn {
         height: 38px;
         padding: 0 16px;
-        border: 1px solid rgba(94, 106, 210, 0.18);
+        color: #fff;
+        border: 1px solid rgba(120, 167, 255, 0.22);
         border-radius: 12px;
-        color: white;
-        background: linear-gradient(180deg, #5e6ad2, #5662c6);
-        box-shadow: 0 10px 20px rgba(94, 106, 210, 0.18);
+        background: linear-gradient(135deg, #6e97ff, #8777ff);
+        box-shadow: 0 10px 20px rgba(108, 127, 255, 0.22);
         cursor: pointer;
       }
 
       .hero {
         display: grid;
-        grid-template-columns: minmax(0, 1.1fr) minmax(380px, 0.9fr);
+        grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.78fr);
         gap: 18px;
         margin-top: 18px;
       }
@@ -166,13 +179,12 @@
       .hero-card,
       .hero-preview,
       .toolbar,
-      .stats-grid,
-      .main-grid,
       .list-card,
       .detail-card,
       .direction-card,
-      .footer-note {
-        border-radius: 24px;
+      .footer-note,
+      .metric-card {
+        border-radius: 26px;
       }
 
       .hero-card,
@@ -180,7 +192,6 @@
       .toolbar,
       .list-card,
       .detail-card,
-      .direction-card,
       .footer-note {
         padding: 24px;
       }
@@ -191,152 +202,118 @@
         gap: 8px;
         padding: 8px 12px;
         border-radius: 999px;
+        color: var(--cyan);
+        background: rgba(99, 210, 255, 0.1);
+        border: 1px solid rgba(99, 210, 255, 0.14);
         font-size: 12px;
-        font-weight: 600;
-        color: var(--brand);
-        background: var(--brand-soft);
+        font-weight: 700;
+        letter-spacing: 0.04em;
       }
 
       .hero-title {
         margin: 16px 0 12px;
-        font-size: clamp(36px, 5vw, 64px);
+        font-size: clamp(34px, 5vw, 58px);
         line-height: 1.02;
         letter-spacing: -0.05em;
       }
 
       .hero-title .muted {
         display: block;
-        color: #6a7387;
+        color: var(--text-2);
       }
 
       .hero-copy {
         max-width: 680px;
         margin: 0 0 18px;
-        font-size: 16px;
         line-height: 1.8;
-        color: var(--text-soft);
+        color: var(--text-3);
       }
 
-      .hero-actions {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .hero-preview {
-        position: relative;
-        overflow: hidden;
-      }
-
-      .preview-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 18px;
+      .preview-label {
+        color: var(--text-3);
+        font-size: 12px;
+        margin-bottom: 14px;
       }
 
       .preview-window {
         padding: 16px;
-        border-radius: 18px;
-        background: linear-gradient(180deg, #fcfcfe, #f4f6fb);
-        border: 1px solid rgba(19, 23, 33, 0.06);
+        border-radius: 20px;
+        background: linear-gradient(180deg, rgba(16, 28, 56, 0.96), rgba(12, 21, 42, 0.96));
+        border: 1px solid rgba(115, 140, 196, 0.14);
       }
 
-      .preview-toolbar {
+      .preview-topline {
         display: flex;
+        gap: 8px;
         align-items: center;
-        gap: 10px;
-        margin-bottom: 14px;
+        margin-bottom: 16px;
       }
 
       .dot {
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background: #d7ddea;
+        background: rgba(198, 211, 238, 0.22);
       }
 
-      .preview-search {
-        flex: 1;
-        height: 34px;
-        border-radius: 10px;
-        background: white;
-        border: 1px solid rgba(19, 23, 33, 0.07);
+      .preview-block,
+      .preview-item,
+      .preview-bar,
+      .preview-pill {
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.06);
       }
 
-      .preview-pane {
-        display: grid;
-        grid-template-columns: 110px minmax(0, 1fr);
-        gap: 14px;
-      }
-
-      .preview-sidebar,
-      .preview-main {
-        border-radius: 14px;
-        background: white;
-        border: 1px solid rgba(19, 23, 33, 0.07);
-      }
-
-      .preview-sidebar {
-        min-height: 220px;
-        padding: 12px;
-      }
-
-      .preview-main {
-        padding: 14px;
-      }
-
-      .preview-line,
-      .preview-pill,
-      .preview-row,
-      .preview-bar {
-        border-radius: 10px;
-        background: #eef2f8;
-      }
-
-      .preview-line { height: 12px; margin-bottom: 10px; }
-      .preview-line.short { width: 56%; }
-      .preview-line.mid { width: 72%; }
-      .preview-pill { height: 26px; width: 78px; margin-bottom: 10px; }
-      .preview-row { height: 72px; margin-top: 12px; }
+      .preview-pill { height: 28px; width: 88px; }
+      .preview-block { height: 22px; margin-top: 10px; }
+      .preview-block.short { width: 62%; }
+      .preview-block.mid { width: 78%; }
+      .preview-item { height: 74px; margin-top: 12px; }
       .preview-bar { height: 8px; margin-top: 12px; }
 
-      .stats-grid {
+      .metric-grid {
+        margin-top: 18px;
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 12px;
-        margin-top: 18px;
       }
 
-      .stat-card {
+      .metric-card {
         padding: 18px;
-        border-radius: 20px;
       }
 
-      .stat-value {
+      .metric-kicker {
+        color: var(--cyan);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .metric-value {
         margin-top: 10px;
-        font-size: 28px;
-        font-weight: 750;
-        letter-spacing: -0.03em;
-      }
-
-      .stat-label {
-        font-size: 13px;
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing: -0.04em;
       }
 
       .toolbar {
         margin-top: 18px;
       }
 
-      .toolbar-head {
+      .section-head,
+      .toolbar-head,
+      .row-head,
+      .detail-head,
+      .direction-head {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 12px;
       }
 
-      .toolbar-head h2,
       .section-head h2,
+      .toolbar-head h2,
       .row-title,
       .detail-title,
       .direction-title {
@@ -345,7 +322,7 @@
 
       .toolbar-grid {
         display: grid;
-        grid-template-columns: 1.4fr 170px 1fr;
+        grid-template-columns: 1.3fr 170px 1fr;
         gap: 12px;
         margin-top: 16px;
       }
@@ -358,8 +335,7 @@
 
       .field label {
         font-size: 13px;
-        font-weight: 600;
-        color: #3e4658;
+        font-weight: 700;
       }
 
       .input,
@@ -368,111 +344,83 @@
         height: 46px;
         border-radius: 14px;
         border: 1px solid var(--border);
-        background: white;
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--text);
       }
 
       .input,
       .select {
-        width: 100%;
         padding: 0 14px;
-        color: var(--text);
       }
 
       .tab-group {
         display: inline-flex;
-        align-items: center;
         gap: 4px;
         padding: 4px;
       }
 
       .tab.active {
-        color: var(--brand);
-        background: var(--brand-soft);
+        color: #fff;
+        background: linear-gradient(135deg, rgba(120, 167, 255, 0.24), rgba(157, 130, 255, 0.22));
+        border-color: rgba(120, 167, 255, 0.12);
       }
 
-      .toolbar-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 16px;
-      }
+      .chip-row { margin-top: 16px; }
 
-      .filter-chip {
-        height: 34px;
-        border-color: var(--border);
-        background: white;
-      }
-
-      .filter-chip.active {
-        color: var(--brand);
-        border-color: rgba(94, 106, 210, 0.18);
-        background: var(--brand-soft);
+      .chip.active {
+        color: #fff;
+        border-color: rgba(120, 167, 255, 0.16);
+        background: rgba(120, 167, 255, 0.1);
       }
 
       .main-grid {
         display: grid;
-        grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.64fr);
+        grid-template-columns: minmax(0, 1.06fr) minmax(340px, 0.68fr);
         gap: 18px;
         margin-top: 18px;
       }
 
-      .section-head,
-      .row-head,
-      .detail-head,
-      .direction-head,
-      .detail-actions {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-      }
-
-      .list {
-        display: grid;
-        gap: 12px;
-        margin-top: 18px;
-      }
+      .list { display: grid; gap: 12px; margin-top: 18px; }
 
       .row {
+        --row-accent: var(--blue);
         display: grid;
-        grid-template-columns: 64px minmax(0, 1fr) 100px;
+        grid-template-columns: 72px minmax(0, 1fr) 116px;
         gap: 14px;
         align-items: center;
-        padding: 16px;
-        border-radius: 18px;
-        border: 1px solid transparent;
-        background: rgba(255, 255, 255, 0.5);
+        padding: 14px;
+        border-radius: 20px;
+        border: 1px solid rgba(115, 140, 196, 0.08);
+        background: linear-gradient(180deg, rgba(19, 30, 58, 0.82), rgba(14, 24, 48, 0.92));
         transition: 160ms ease;
       }
 
-      .row:hover,
       .row.active {
-        border-color: rgba(94, 106, 210, 0.16);
-        background: white;
-        box-shadow: 0 8px 24px rgba(20, 28, 46, 0.06);
+        border-color: rgba(120, 167, 255, 0.2);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03), 0 14px 30px rgba(2, 8, 22, 0.22);
       }
 
       .rank-pill {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 48px;
-        height: 48px;
-        border-radius: 14px;
-        font-size: 18px;
-        font-weight: 750;
-        color: var(--row-accent, var(--brand));
-        background: color-mix(in srgb, var(--row-accent, var(--brand)) 12%, white);
+        display: grid;
+        place-items: center;
+        width: 58px;
+        height: 58px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.04);
+        color: color-mix(in srgb, var(--row-accent) 72%, white);
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.04em;
       }
 
       .row-title {
         font-size: 18px;
-        font-weight: 700;
+        font-weight: 800;
         letter-spacing: -0.02em;
       }
 
       .row-sub {
-        margin-top: 4px;
+        margin-top: 6px;
         font-size: 13px;
       }
 
@@ -480,22 +428,24 @@
         width: 100%;
         height: 10px;
         margin-top: 12px;
-        overflow: hidden;
         border-radius: 999px;
-        background: #eef2f8;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.08);
       }
 
       .bar-fill {
+        width: 60%;
         height: 100%;
         border-radius: inherit;
-        background: linear-gradient(90deg, var(--row-accent, var(--brand)), color-mix(in srgb, var(--row-accent, var(--brand)) 76%, white));
+        background: linear-gradient(90deg, var(--row-accent), color-mix(in srgb, var(--row-accent) 72%, white));
+        box-shadow: 0 0 24px color-mix(in srgb, var(--row-accent) 36%, transparent);
       }
 
       .download {
         text-align: right;
-        font-size: 22px;
-        font-weight: 750;
-        letter-spacing: -0.03em;
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing: -0.05em;
       }
 
       .detail-card {
@@ -504,84 +454,63 @@
         height: fit-content;
       }
 
-      .detail-head {
-        margin-bottom: 16px;
-      }
-
       .detail-title {
-        font-size: 28px;
-        letter-spacing: -0.04em;
+        font-size: 30px;
+        letter-spacing: -0.05em;
       }
 
       .detail-source {
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        height: 28px;
-        padding: 0 10px;
+        height: 30px;
+        padding: 0 12px;
         border-radius: 999px;
-        color: var(--brand);
-        background: var(--brand-soft);
+        color: var(--cyan);
+        background: rgba(99, 210, 255, 0.08);
+        border: 1px solid rgba(99, 210, 255, 0.14);
         font-size: 12px;
-        font-weight: 600;
+        font-weight: 700;
       }
 
       .detail-copy {
-        margin: 0 0 18px;
+        margin: 16px 0 18px;
         line-height: 1.8;
       }
 
-      .detail-meta-grid {
+      .detail-metrics {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
-        margin-bottom: 18px;
       }
 
-      .meta-card {
+      .detail-metric {
         padding: 14px;
         border-radius: 16px;
-        border: 1px solid var(--border);
-        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(115, 140, 196, 0.12);
+        background: rgba(255, 255, 255, 0.03);
       }
 
-      .meta-card strong {
+      .detail-metric strong {
         display: block;
         margin-top: 8px;
         font-size: 18px;
       }
 
-      .chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 18px;
+      .detail-chips {
+        margin-top: 16px;
+        margin-bottom: 16px;
       }
 
-      .chip {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        height: 32px;
-        padding: 0 12px;
-        border-radius: 999px;
-        font-size: 12px;
-        font-weight: 600;
-        border: 1px solid var(--border);
-        background: white;
+      .detail-actions { justify-content: flex-start; }
+
+      .detail-link.primary {
+        color: #fff;
+        border-color: rgba(120, 167, 255, 0.18);
+        background: linear-gradient(135deg, rgba(120, 167, 255, 0.22), rgba(157, 130, 255, 0.22));
       }
 
-      .detail-actions {
-        justify-content: flex-start;
-      }
-
-      .detail-action.primary {
-        color: white;
-        border-color: rgba(94, 106, 210, 0.18);
-        background: linear-gradient(180deg, #5e6ad2, #5662c6);
-      }
-
-      .directions {
+      .direction-grid {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 12px;
@@ -590,6 +519,7 @@
 
       .direction-card {
         padding: 18px;
+        border-radius: 22px;
       }
 
       .direction-badge {
@@ -598,162 +528,137 @@
         height: 28px;
         padding: 0 10px;
         border-radius: 999px;
+        color: var(--text-2);
+        background: rgba(255, 255, 255, 0.06);
         font-size: 12px;
-        font-weight: 600;
-        color: var(--brand);
-        background: var(--brand-soft);
+        font-weight: 700;
+      }
+
+      .direction-copy {
+        margin: 12px 0 0;
+        line-height: 1.7;
       }
 
       .footer-note {
         margin-top: 18px;
         padding: 18px 20px;
-        font-size: 14px;
+        border-radius: 22px;
       }
 
-      @media (max-width: 1100px) {
+      @media (max-width: 1080px) {
         .hero,
-        .main-grid,
+        .metric-grid,
         .toolbar-grid,
-        .stats-grid,
-        .directions {
+        .main-grid,
+        .direction-grid {
           grid-template-columns: 1fr;
         }
 
-        .detail-card {
-          position: static;
-        }
+        .detail-card { position: static; }
       }
 
       @media (max-width: 760px) {
-        .shell {
-          width: min(var(--max), calc(100vw - 18px));
-        }
-
+        .shell { width: min(1200px, calc(100vw - 18px)); }
         .topbar,
-        .toolbar-head,
         .section-head,
-        .row-head,
+        .toolbar-head,
         .detail-head,
-        .direction-head {
+        .direction-head,
+        .row-head {
           flex-direction: column;
           align-items: flex-start;
         }
-
-        .nav,
-        .topbar-actions {
-          flex-wrap: wrap;
-        }
-
-        .row {
-          grid-template-columns: 1fr;
-        }
-
-        .download {
-          text-align: left;
-        }
+        .row { grid-template-columns: 1fr; }
+        .download { text-align: left; }
       }
     </style>
   </head>
   <body>
     <div class="shell">
-      <header class="topbar glass">
+      <header class="topbar panel">
         <div class="brand">
           <div class="brand-icon">SD</div>
           <div>
             <div class="brand-title">Skill Detector</div>
-            <div class="brand-subtitle">Linear 风格 HTML 原型</div>
+            <div class="brand-subtitle">重新校正后的深色原型</div>
           </div>
         </div>
         <nav class="nav">
-          <a class="nav-link" href="#prototype-list">榜单</a>
-          <a class="nav-link" href="#prototype-detail">详情</a>
-          <a class="nav-link" href="#prototype-directions">方向</a>
+          <a class="nav-link" href="#list">榜单</a>
+          <a class="nav-link" href="#detail">详情</a>
+          <a class="nav-link" href="#directions">方向</a>
         </nav>
         <div class="topbar-actions">
           <button class="ghost-btn">切换来源</button>
-          <button class="primary-btn">进入正式重构</button>
+          <button class="primary-btn">确认这个方向</button>
         </div>
       </header>
 
       <section class="hero">
-        <div class="hero-card glass">
-          <div class="hero-kicker">Prototype / Linear-like</div>
+        <div class="hero-card panel">
+          <div class="hero-kicker">Dark Product Prototype</div>
           <h1 class="hero-title">
-            更克制、更精密，
-            <span class="muted">像 Linear 一样把技能榜做成产品界面。</span>
+            不是做活动页，
+            <span class="muted">而是做一个真正像产品的技能排行榜。</span>
           </h1>
           <p class="hero-copy">
-            这个原型不追求花哨，而是先把层级、节奏、留白、信息密度和交互状态理顺。
-            首页重点只保留四件事：看榜、筛选、理解一个技能、切换方向。
+            这次回到你更接近喜欢的深色方向，但把比例、留白、字体权重和交互层级重新整理。主列表只强调三件事：排名、名称、下载量。右侧再展开看完整信息。
           </p>
           <div class="hero-actions">
-            <button class="primary-btn">预览榜单样式</button>
-            <button class="ghost-btn">查看卡片信息层</button>
+            <button class="primary-btn">看主列表</button>
+            <button class="ghost-btn">看右侧详情</button>
           </div>
         </div>
 
-        <div class="hero-preview glass">
-          <div class="preview-top">
-            <div>
-              <div class="brand-title">界面预览</div>
-              <div class="brand-subtitle">更像真正产品，而不是活动海报</div>
-            </div>
-            <div class="detail-source">Prototype</div>
-          </div>
+        <div class="hero-preview panel">
+          <div class="preview-label">右侧是界面预览，不是花里胡哨的装饰图</div>
           <div class="preview-window">
-            <div class="preview-toolbar">
+            <div class="preview-topline">
               <div class="dot"></div>
               <div class="dot"></div>
               <div class="dot"></div>
-              <div class="preview-search"></div>
+              <div class="preview-pill"></div>
             </div>
-            <div class="preview-pane">
-              <div class="preview-sidebar">
-                <div class="preview-pill"></div>
-                <div class="preview-line"></div>
-                <div class="preview-line short"></div>
-                <div class="preview-line"></div>
-                <div class="preview-line mid"></div>
-              </div>
-              <div class="preview-main">
-                <div class="preview-line mid"></div>
-                <div class="preview-line short"></div>
-                <div class="preview-row"></div>
-                <div class="preview-bar"></div>
-                <div class="preview-row"></div>
-                <div class="preview-bar"></div>
-              </div>
-            </div>
+            <div class="preview-block mid"></div>
+            <div class="preview-block short"></div>
+            <div class="preview-item"></div>
+            <div class="preview-bar"></div>
+            <div class="preview-item"></div>
+            <div class="preview-bar"></div>
           </div>
         </div>
       </section>
 
-      <section class="stats-grid">
-        <article class="stat-card glass">
-          <div class="stat-label">当前视图</div>
-          <div class="stat-value">Top 12</div>
+      <section class="metric-grid">
+        <article class="metric-card panel">
+          <div class="metric-kicker">显示范围</div>
+          <div class="metric-value">12 / 96</div>
+          <div class="metric-note">按来源、分类与搜索过滤</div>
         </article>
-        <article class="stat-card glass">
-          <div class="stat-label">来源组合</div>
-          <div class="stat-value">2 个</div>
+        <article class="metric-card panel">
+          <div class="metric-kicker">累计下载</div>
+          <div class="metric-value">710.9万</div>
+          <div class="metric-note">当前筛选结果的总量</div>
         </article>
-        <article class="stat-card glass">
-          <div class="stat-label">主导方向</div>
-          <div class="stat-value">Agent</div>
+        <article class="metric-card panel">
+          <div class="metric-kicker">双榜技能</div>
+          <div class="metric-value">8</div>
+          <div class="metric-note">两个来源都出现过</div>
         </article>
-        <article class="stat-card glass">
-          <div class="stat-label">双榜重合</div>
-          <div class="stat-value">9</div>
+        <article class="metric-card panel">
+          <div class="metric-kicker">热门方向</div>
+          <div class="metric-value">前端设计</div>
+          <div class="metric-note">更适合做二级聚合页</div>
         </article>
       </section>
 
-      <section class="toolbar glass">
+      <section class="toolbar panel">
         <div class="toolbar-head">
           <div>
-            <div class="brand-title">筛选条原型</div>
-            <div class="helper">像 Linear 那样克制、明确、低噪音。</div>
+            <h2>筛选条原型</h2>
+            <div class="helper">这层只负责控制，不承担视觉主角。</div>
           </div>
-          <div class="helper">把交互密度集中在一行，不要花里胡哨。</div>
+          <div class="small-note">让视线优先落在榜单，而不是控件本身。</div>
         </div>
         <div class="toolbar-grid">
           <div class="field">
@@ -774,33 +679,32 @@
           </div>
           <div class="field">
             <label>搜索</label>
-            <input class="input" placeholder="搜索技能、作者、方向" />
+            <input class="input" placeholder="搜索技能 / 作者 / 分类" />
           </div>
         </div>
-        <div class="toolbar-tags">
-          <button class="filter-chip active">全部方向</button>
-          <button class="filter-chip">Agent 增强</button>
-          <button class="filter-chip">搜索与检索</button>
-          <button class="filter-chip">前端与设计</button>
-          <button class="filter-chip">浏览器自动化</button>
-          <button class="filter-chip">知识库与数据</button>
+        <div class="chip-row">
+          <button class="chip active">全部方向</button>
+          <button class="chip">前端与设计</button>
+          <button class="chip">Agent 增强</button>
+          <button class="chip">搜索与检索</button>
+          <button class="chip">知识库与数据</button>
+          <button class="chip">浏览器自动化</button>
         </div>
       </section>
 
       <section class="main-grid">
-        <section id="prototype-list" class="list-card glass">
+        <section id="list" class="list-card panel">
           <div class="section-head">
             <div>
               <h2>榜单主列表</h2>
-              <div class="helper">下载量是第一视觉重点，名称和作者第二，简介先隐藏。</div>
+              <div class="helper">这里先解决“第一眼就想点哪个”的问题。</div>
             </div>
-            <div class="helper">显示前 12 个技能</div>
+            <div class="small-note">Top 12 skills</div>
           </div>
-
-          <div class="list" id="list"></div>
+          <div class="list" id="skill-list"></div>
         </section>
 
-        <aside id="prototype-detail" class="detail-card glass">
+        <aside id="detail" class="detail-card panel">
           <div class="detail-head">
             <div>
               <div class="detail-source" id="detail-source">ClawHub</div>
@@ -808,154 +712,81 @@
             </div>
           </div>
           <p class="detail-copy" id="detail-copy">
-            帮用户快速发现并安装可复用的 agent skill。适合放在产品入口、命令面板或新手引导里，作为“能力发现层”。
+            帮用户快速发现、安装和匹配适合任务的 agent skill。适合作为能力发现入口，也适合放在 onboarding 或命令面板里。
           </p>
-
-          <div class="detail-meta-grid">
-            <div class="meta-card">
+          <div class="detail-metrics">
+            <div class="detail-metric">
               <div class="meta">作者</div>
               <strong id="detail-author">JimLiuxinghai</strong>
             </div>
-            <div class="meta-card">
+            <div class="detail-metric">
               <div class="meta">分类</div>
               <strong id="detail-category">搜索与信息检索</strong>
             </div>
-            <div class="meta-card">
+            <div class="detail-metric">
               <div class="meta">下载量</div>
-              <strong id="detail-downloads">17.0 万</strong>
+              <strong id="detail-downloads">17.0万</strong>
             </div>
-            <div class="meta-card">
-              <div class="meta">双榜状态</div>
-              <strong id="detail-cross">双榜重合</strong>
+            <div class="detail-metric">
+              <div class="meta">状态</div>
+              <strong id="detail-status">双榜重合</strong>
             </div>
           </div>
-
-          <div class="chips" id="detail-chips">
-            <span class="chip">双榜上榜</span>
-            <span class="chip soft">作者可信</span>
-            <span class="chip soft">适合做首页入口</span>
-          </div>
-
+          <div class="detail-chips" id="detail-chips"></div>
           <div class="detail-actions">
-            <a class="detail-action primary" href="#">查看原 Skill</a>
-            <a class="detail-action" href="#prototype-directions">看相似方向</a>
+            <a class="detail-link primary" href="#">查看原 Skill</a>
+            <a class="detail-link" href="#directions">看同类方向</a>
           </div>
         </aside>
       </section>
 
-      <section id="prototype-directions" class="directions">
-        <article class="direction-card glass">
-          <div class="direction-head">
-            <h3 class="direction-title">Agent 增强</h3>
-            <span class="direction-badge">14 个</span>
-          </div>
-          <p class="detail-copy">优先展示自我改进、任务流、记忆、工作流编排等技能。</p>
-        </article>
-        <article class="direction-card glass">
+      <section id="directions" class="direction-grid">
+        <article class="direction-card panel">
           <div class="direction-head">
             <h3 class="direction-title">搜索与检索</h3>
             <span class="direction-badge">9 个</span>
           </div>
-          <p class="detail-copy">偏发现、网页搜索、文档检索、查找安装能力的技能集合。</p>
+          <p class="direction-copy">适合保留在首页主导航下，做高频入口方向。</p>
         </article>
-        <article class="direction-card glass">
+        <article class="direction-card panel">
+          <div class="direction-head">
+            <h3 class="direction-title">Agent 增强</h3>
+            <span class="direction-badge">14 个</span>
+          </div>
+          <p class="direction-copy">适合用更浓的产品语言，而不是工具列表语言。</p>
+        </article>
+        <article class="direction-card panel">
           <div class="direction-head">
             <h3 class="direction-title">前端与设计</h3>
             <span class="direction-badge">11 个</span>
           </div>
-          <p class="detail-copy">保留视觉精致感，但不让设计语言压过信息本身。</p>
+          <p class="direction-copy">更适合做卡片式分组，不适合做太重的图像装饰。</p>
         </article>
-        <article class="direction-card glass">
+        <article class="direction-card panel">
           <div class="direction-head">
-            <h3 class="direction-title">浏览器自动化</h3>
-            <span class="direction-badge">7 个</span>
+            <h3 class="direction-title">知识库与数据</h3>
+            <span class="direction-badge">6 个</span>
           </div>
-          <p class="detail-copy">适合做单独场景页，也适合在总榜中作为稳定高频分类出现。</p>
+          <p class="direction-copy">可以做成更专业、更系统化的二级内容页。</p>
         </article>
       </section>
 
-      <div class="footer-note glass">
-        这个原型的核心目标：更像 Linear 的“产品界面”，而不是“宣传海报”。如果这个方向对了，下一步我就把正式页重构成这一套。
+      <div class="footer-note panel">
+        这版原型的目标是：保留你更能接受的深色产品感，但去掉“像营销页”和“像乱堆卡片”的问题，把重点收回到榜单本身。
       </div>
     </div>
 
     <script>
-      const sampleSkills = [
-        {
-          rank: 1,
-          name: 'Find Skills',
-          source: 'ClawHub',
-          author: 'JimLiuxinghai',
-          category: '搜索与信息检索',
-          downloads: '17.0 万',
-          ratio: 100,
-          accent: '#5e6ad2',
-          description: '帮用户快速发现并安装可复用的 agent skill，适合作为能力发现层。',
-          chips: ['双榜上榜', '高频入口', '新手友好'],
-        },
-        {
-          rank: 2,
-          name: 'self-improving-agent',
-          source: 'ClawHub',
-          author: 'pskoett',
-          category: 'Agent 增强',
-          downloads: '17.4 万',
-          ratio: 96,
-          accent: '#7d64d8',
-          description: '让代理记录失误、学习策略和纠偏经验，用于持续改进。',
-          chips: ['高复用', '工作流核心', '双榜重合'],
-        },
-        {
-          rank: 3,
-          name: 'web-design-guidelines',
-          source: 'Skills.sh',
-          author: 'vercel-labs',
-          category: '前端与设计',
-          downloads: '15.5 万',
-          ratio: 88,
-          accent: '#4b9eff',
-          description: '网页设计规范类技能，适合落地页面结构、视觉层级和组件节奏。',
-          chips: ['页面搭建', '设计规范'],
-        },
-        {
-          rank: 4,
-          name: 'Agent Browser',
-          source: 'ClawHub',
-          author: 'steipete',
-          category: '浏览器自动化',
-          downloads: '10.9 万',
-          ratio: 72,
-          accent: '#27b27e',
-          description: '偏浏览器自动化和页面操控，适合需要真实网页交互的任务。',
-          chips: ['高频执行', '自动化'],
-        },
-        {
-          rank: 5,
-          name: 'ontology',
-          source: 'ClawHub',
-          author: 'oswalpalash',
-          category: '知识库与数据',
-          downloads: '9.4 万',
-          ratio: 62,
-          accent: '#f0a03a',
-          description: '偏结构化知识图谱和长周期记忆，非常适合做 agent memory 层。',
-          chips: ['长期记忆', '数据结构'],
-        },
-        {
-          rank: 6,
-          name: 'summarize',
-          source: 'Skills.sh',
-          author: 'vercel-labs',
-          category: '写作与内容处理',
-          downloads: '13.1 万',
-          ratio: 81,
-          accent: '#f26d6d',
-          description: '总结 URL、文档、PDF、图片和音频，是很稳的内容处理基建能力。',
-          chips: ['内容处理', '高频通用'],
-        },
+      const skills = [
+        { rank: 1, name: 'Find Skills', source: 'ClawHub', author: 'JimLiuxinghai', category: '搜索与信息检索', downloads: '17.0万', ratio: 100, accent: '#78a7ff', description: '帮用户快速发现、安装和匹配适合任务的 agent skill。适合作为能力发现入口，也适合放在 onboarding 或命令面板里。', tags: ['双榜重合', '高频入口', '适合首页'] },
+        { rank: 2, name: 'self-improving-agent', source: 'ClawHub', author: 'pskoett', category: 'Agent 增强', downloads: '17.4万', ratio: 96, accent: '#9d82ff', description: '让代理记录错误、纠偏、复盘与学习结果，形成持续改进回路。', tags: ['能力增强', '高复用', '双榜重合'] },
+        { rank: 3, name: 'web-design-guidelines', source: 'Skills.sh', author: 'vercel-labs', category: '前端与设计', downloads: '15.5万', ratio: 88, accent: '#63d2ff', description: '适合沉淀页面结构、组件节奏、布局系统和视觉层级。', tags: ['设计规范', '前端常用'] },
+        { rank: 4, name: 'Agent Browser', source: 'ClawHub', author: 'steipete', category: '浏览器自动化', downloads: '10.9万', ratio: 72, accent: '#4ed8a1', description: '适合需要操作真实网页、抓取内容和完成界面动作的任务。', tags: ['自动化', '执行型'] },
+        { rank: 5, name: 'ontology', source: 'ClawHub', author: 'oswalpalash', category: '知识库与数据', downloads: '9.4万', ratio: 61, accent: '#f1a24f', description: '偏结构化知识图谱和长周期记忆，更适合做系统型能力模块。', tags: ['知识图谱', '长期记忆'] },
+        { rank: 6, name: 'summarize', source: 'Skills.sh', author: 'vercel-labs', category: '写作与内容处理', downloads: '13.1万', ratio: 79, accent: '#f07d7d', description: '总结文档、网页、PDF、图片和音频，是内容处理的通用基建。', tags: ['内容处理', '稳定通用'] },
       ];
 
-      const list = document.getElementById('list');
+      const list = document.getElementById('skill-list');
       const detail = {
         source: document.getElementById('detail-source'),
         title: document.getElementById('detail-title'),
@@ -963,7 +794,7 @@
         author: document.getElementById('detail-author'),
         category: document.getElementById('detail-category'),
         downloads: document.getElementById('detail-downloads'),
-        cross: document.getElementById('detail-cross'),
+        status: document.getElementById('detail-status'),
         chips: document.getElementById('detail-chips'),
       };
 
@@ -974,14 +805,14 @@
         detail.author.textContent = item.author;
         detail.category.textContent = item.category;
         detail.downloads.textContent = item.downloads;
-        detail.cross.textContent = item.chips.includes('双榜重合') || item.chips.includes('双榜上榜') ? '双榜重合' : '单源上榜';
-        detail.chips.innerHTML = item.chips.map((chip) => `<span class="chip">${chip}</span>`).join('');
+        detail.status.textContent = item.tags.includes('双榜重合') ? '双榜重合' : '单源上榜';
+        detail.chips.innerHTML = item.tags.map((tag) => `<span class="chip">${tag}</span>`).join('');
       }
 
-      sampleSkills.forEach((item, index) => {
+      skills.forEach((item, index) => {
         const row = document.createElement('button');
-        row.className = `row ${index === 0 ? 'active' : ''}`;
         row.type = 'button';
+        row.className = `row ${index === 0 ? 'active' : ''}`;
         row.style.setProperty('--row-accent', item.accent);
         row.innerHTML = `
           <div class="rank-pill">#${item.rank}</div>
@@ -989,7 +820,7 @@
             <div class="row-head">
               <div>
                 <div class="row-title">${item.name}</div>
-                <div class="row-sub">${item.author} · ${item.source} · ${item.category}</div>
+                <div class="row-sub">${item.author} · ${item.category} · ${item.source}</div>
               </div>
             </div>
             <div class="bar-track">
@@ -998,17 +829,15 @@
           </div>
           <div class="download">${item.downloads}</div>
         `;
-
         row.addEventListener('click', () => {
           [...list.querySelectorAll('.row')].forEach((node) => node.classList.remove('active'));
           row.classList.add('active');
           renderDetail(item);
         });
-
         list.appendChild(row);
       });
 
-      renderDetail(sampleSkills[0]);
+      renderDetail(skills[0]);
     </script>
   </body>
 </html>
