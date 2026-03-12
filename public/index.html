@@ -23,7 +23,6 @@
         </div>
         <nav class="topnav page-tabs">
           <a class="page-tab active" href="./index.html">技能榜</a>
-          <a class="page-tab" href="./prototype-linear.html">Linear 原型</a>
         </nav>
       </header>
 
@@ -99,6 +98,17 @@
         <div id="insightsGrid" class="insights-grid"></div>
       </section>
 
+      <section class="rank-panel">
+        <div class="rank-head">
+          <div>
+            <h2>下载量排行</h2>
+            <p id="rankIntro" class="rank-intro"></p>
+          </div>
+          <div class="rank-note">按当前筛选条件实时排序</div>
+        </div>
+        <div id="rankBars" class="rank-bars"></div>
+      </section>
+
       <section id="toolbarSection" class="toolbar">
         <div class="toolbar-head">
           <div>
@@ -160,6 +170,10 @@
               <span class="preview-source-badge"></span>
               <span class="preview-category-badge"></span>
             </div>
+            <div class="preview-copy">
+              <div class="preview-copy-title"></div>
+              <div class="preview-copy-subtitle"></div>
+            </div>
             <div class="preview-artboard">
               <div class="preview-poster">
                 <div class="preview-poster-title"></div>
@@ -183,6 +197,7 @@
         </div>
         <div class="summary-grid">
           <p class="summary-item summary-what"></p>
+          <p class="summary-item summary-zh"></p>
           <p class="summary-item summary-who"></p>
           <p class="summary-item summary-highlight"></p>
         </div>

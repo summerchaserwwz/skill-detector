@@ -20,6 +20,8 @@ const insightsGrid = document.querySelector('#insightsGrid');
 const insightNote = document.querySelector('#insightNote');
 const generatedAtElement = document.querySelector('#generatedAt');
 const emptyState = document.querySelector('#emptyState');
+const rankBarsElement = document.querySelector('#rankBars');
+const rankIntroElement = document.querySelector('#rankIntro');
 const heroMetricSkills = document.querySelector('#heroMetricSkills');
 const heroMetricCross = document.querySelector('#heroMetricCross');
 const heroMetricCategory = document.querySelector('#heroMetricCategory');
@@ -131,6 +133,24 @@ function createMetaLink(label, value, href = '', className = '') {
     element.rel = 'noreferrer';
   }
   return element;
+}
+
+function buildChineseIntro(item) {
+  if (item.chineseIntro) return item.chineseIntro;
+  const categoryText = {
+    '搜索与信息检索': '适合做搜索、资料发现和能力查找，是偏高频入口型的技能。',
+    '写作与内容处理': '适合做改写、总结、润色和内容生成，是偏内容处理的常用技能。',
+    '前端与设计': '适合做页面搭建、视觉优化和组件实现，是偏前端设计类技能。',
+    '浏览器自动化': '适合网页交互、自动化操作和流程执行，是偏浏览器执行类技能。',
+    '知识库与数据': '适合数据库、知识库和结构化数据处理，是偏数据工作流类技能。',
+    'AI Agent 能力增强': '适合智能体工作流、自我改进和任务编排，是偏 Agent 增强类技能。',
+    '运维与工程效率': '适合脚本、部署和工程自动化，是偏运维效率类技能。',
+    '协作与系统集成': '适合连接协作工具与外部服务，是偏系统集成类技能。',
+    '多媒体与音视频': '适合图片、音频、视频等内容处理，是偏多媒体类技能。',
+    '安全与质量': '适合检测、审查、评测和质量保障，是偏安全质量类技能。',
+    '通用工具': '适合放进日常工具箱，帮助你提升通用任务处理效率。',
+  };
+  return categoryText[item.category] || categoryText['通用工具'];
 }
 
 function renderEmpty(message) {
@@ -258,6 +278,41 @@ function renderInsights() {
   });
 }
 
+function renderRankBars() {
+  const items = getFilteredItems().slice(0, 6);
+  rankBarsElement.innerHTML = '';
+
+  if (!items.length) {
+    rankIntroElement.textContent = '当前筛选下暂无可展示的下载排行。';
+    return;
+  }
+
+  const maxDownloads = Math.max(...items.map((item) => item.downloads || 0), 1);
+  const scopeText = state.category === 'all' ? '总榜' : `分类榜 · ${state.category}`;
+  rankIntroElement.textContent = `当前展示 ${scopeText} Top ${items.length}，按下载量降序排列。`;
+
+  items.forEach((item, index) => {
+    const theme = getCategoryTheme(item.category);
+    const row = document.createElement('article');
+    row.className = 'rank-bar-card';
+    row.style.setProperty('--rank-color', theme.color);
+    row.innerHTML = `
+      <div class="rank-bar-index">#${index + 1}</div>
+      <div class="rank-bar-main">
+        <div class="rank-bar-head">
+          <div class="rank-bar-title-wrap">
+            <a class="rank-bar-title" href="${item.link}" target="_blank" rel="noreferrer">${escapeHtml(item.name)}</a>
+            <div class="rank-bar-desc">${escapeHtml(buildChineseIntro(item))}</div>
+          </div>
+          <div class="rank-bar-value">${escapeHtml(formatCompact(item.downloads))}</div>
+        </div>
+        <div class="rank-bar-track"><div class="rank-bar-fill" style="width:${Math.max(14, ((item.downloads || 0) / maxDownloads) * 100)}%"></div></div>
+      </div>
+    `;
+    rankBarsElement.appendChild(row);
+  });
+}
+
 function renderCards() {
   const items = getFilteredItems();
   cardsElement.innerHTML = '';
@@ -282,6 +337,7 @@ function renderCards() {
     const rank = fragment.querySelector('.rank');
     const badge = fragment.querySelector('.stars-today');
     const what = fragment.querySelector('.summary-what');
+    const zh = fragment.querySelector('.summary-zh');
     const who = fragment.querySelector('.summary-who');
     const highlight = fragment.querySelector('.summary-highlight');
     const metaGrid = fragment.querySelector('.meta-grid');
@@ -297,6 +353,8 @@ function renderCards() {
     previewSourceBadge.style.setProperty('--badge-soft', theme.soft);
     previewCategoryBadge.style.setProperty('--badge-color', theme.color);
     previewCategoryBadge.style.setProperty('--badge-soft', 'rgba(255,255,255,0.08)');
+    fragment.querySelector('.preview-copy-title').textContent = item.name;
+    fragment.querySelector('.preview-copy-subtitle').textContent = buildChineseIntro(item);
     previewProgressFill.style.width = `${Math.max(16, ((item.downloads || 0) / maxDownloads) * 100)}%`;
     previewProgressFill.style.background = `linear-gradient(90deg, ${theme.color}, color-mix(in srgb, ${theme.color} 70%, white))`;
 
@@ -305,7 +363,8 @@ function renderCards() {
     repoLink.textContent = item.name;
     badge.textContent = `${formatCompact(item.downloads)} 下载`;
 
-    what.textContent = item.description || item.summary || '暂无介绍';
+    what.textContent = buildChineseIntro(item);
+    zh.textContent = item.description || item.summary || '暂无英文原始介绍';
     who.innerHTML = `作者：<a class="inline-link" href="${item.link}" target="_blank" rel="noreferrer">${escapeHtml(item.author || 'Unknown')}</a> · 来源：${escapeHtml(item.source)}`;
     highlight.textContent = item.crossListed
       ? `双榜上榜 · ${item.crossSources.join(' / ')}`
@@ -346,6 +405,7 @@ function renderPage() {
   renderSourceButtons();
   renderCategoryChips();
   renderInsights();
+  renderRankBars();
   renderCards();
 }
 

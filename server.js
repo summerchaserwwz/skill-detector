@@ -149,6 +149,29 @@ function inferCategory(item) {
   return rules.find((rule) => rule.pattern.test(text))?.label || '通用工具';
 }
 
+function inferChineseIntro(item) {
+  const rawText = normalizeSpace(item.description || item.summary || '');
+  if (/[\u4e00-\u9fa5]/.test(rawText)) {
+    return truncateText(rawText, 72);
+  }
+
+  const categoryText = {
+    '搜索与信息检索': '一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。',
+    '写作与内容处理': '一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。',
+    '前端与设计': '一个偏前端页面与设计规范的技能，适合做界面搭建、视觉优化和组件实现。',
+    '浏览器自动化': '一个偏浏览器自动化的技能，适合网页操作、表单填写、抓取和 UI 流程执行。',
+    '知识库与数据': '一个偏知识库、数据库或结构化数据处理的技能，适合记忆、检索和数据工作流。',
+    'AI Agent 能力增强': '一个偏 Agent 能力增强的技能，适合自我改进、任务编排、反思和智能体工作流。',
+    '运维与工程效率': '一个偏工程效率和运维流程的技能，适合部署、自动化、脚本和基础设施工作。',
+    '协作与系统集成': '一个偏外部系统集成的技能，适合连接协作工具、业务系统和第三方服务。',
+    '多媒体与音视频': '一个偏多媒体处理的技能，适合语音、图片、视频和其他内容生成场景。',
+    '安全与质量': '一个偏安全和质量保障的技能，适合评测、审查、检测和问题发现。',
+    '通用工具': '一个通用型技能，适合放进常用工具箱，帮助你提升日常 Agent 工作效率。',
+  };
+
+  return truncateText(categoryText[item.category] || categoryText['通用工具'], 72);
+}
+
 function buildDirectionSummary(items) {
   const map = new Map();
   for (const item of items) {
@@ -293,6 +316,7 @@ async function fetchSkillsShLeaderboard(limit = 48) {
     .map((item) => ({
       ...item,
       category: inferCategory(item),
+      chineseIntro: inferChineseIntro({ ...item, category: inferCategory(item) }),
     }))
     .sort((a, b) => b.downloads - a.downloads);
 
@@ -359,6 +383,7 @@ async function fetchClawhubLeaderboard(limit = 48) {
     .map((item) => ({
       ...item,
       category: inferCategory(item),
+      chineseIntro: inferChineseIntro({ ...item, category: inferCategory(item) }),
     }))
     .sort((a, b) => b.downloads - a.downloads);
 
