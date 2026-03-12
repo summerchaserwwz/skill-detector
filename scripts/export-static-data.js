@@ -7,9 +7,9 @@ async function main() {
   await fs.mkdir(outputDir, { recursive: true });
 
   const [allPayload, clawhubPayload, skillsShPayload] = await Promise.all([
-    getLeaderboardData({ source: 'all', topN: 96, maxPerSource: 48 }),
-    getLeaderboardData({ source: 'clawhub', topN: 48, maxPerSource: 48 }),
-    getLeaderboardData({ source: 'skillssh', topN: 48, maxPerSource: 48 }),
+    getLeaderboardData({ source: 'all', topN: 200, maxPerSource: 100 }),
+    getLeaderboardData({ source: 'clawhub', topN: 100, maxPerSource: 100 }),
+    getLeaderboardData({ source: 'skillssh', topN: 100, maxPerSource: 100 }),
   ]);
 
   await Promise.all([

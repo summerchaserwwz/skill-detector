@@ -2,7 +2,7 @@
   payload: null,
   items: [],
   source: 'all',
-  topN: 12,
+  topN: 100,
   query: '',
   category: 'all',
 };
@@ -79,8 +79,8 @@ function escapeHtml(value = '') {
 
 async function loadPayload(forceRefresh = false) {
   const targets = forceRefresh
-    ? [`/api/leaderboard?source=all&topN=96&maxPerSource=48&ts=${Date.now()}`, './data/leaderboard.json']
-    : ['/api/leaderboard?source=all&topN=96&maxPerSource=48', './data/leaderboard.json'];
+    ? [`/api/leaderboard?source=all&topN=200&maxPerSource=100&ts=${Date.now()}`, './data/leaderboard.json']
+    : ['/api/leaderboard?source=all&topN=200&maxPerSource=100', './data/leaderboard.json'];
 
   for (const url of targets) {
     try {

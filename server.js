@@ -454,8 +454,8 @@ function filterBySource(items, source) {
 
 async function getLeaderboardData(options = {}) {
   const source = String(options.source || 'all').toLowerCase();
-  const requestedTopN = Number(options.topN || 24);
-  const maxPerSource = Math.max(requestedTopN, Number(options.maxPerSource || 48));
+  const requestedTopN = Number(options.topN || 100);
+  const maxPerSource = Math.max(requestedTopN, Number(options.maxPerSource || 100));
   const topN = clamp(requestedTopN, 1, maxPerSource * 2);
 
   const [clawhubItems, skillsShItems] = await Promise.all([
@@ -515,7 +515,7 @@ async function serveStaticFile(requestPath, response) {
   }
 }
 
-async function readStaticPayloadFallback(source = 'all', topN = 48) {
+async function readStaticPayloadFallback(source = 'all', topN = 100) {
   const fileMap = {
     all: 'leaderboard.json',
     clawhub: 'clawhub.json',
@@ -538,6 +538,9 @@ async function readStaticPayloadFallback(source = 'all', topN = 48) {
 }
 
 function parseNumberParam(value, fallback) {
+  if (value == null || value === '') {
+    return fallback;
+  }
   const numeric = Number(value);
   return Number.isFinite(numeric) ? numeric : fallback;
 }
@@ -549,8 +552,8 @@ function createServer() {
 
       if (requestUrl.pathname === '/api/leaderboard') {
         const source = requestUrl.searchParams.get('source') || 'all';
-        const topN = parseNumberParam(requestUrl.searchParams.get('topN'), 48);
-        const maxPerSource = parseNumberParam(requestUrl.searchParams.get('maxPerSource'), 48);
+        const topN = parseNumberParam(requestUrl.searchParams.get('topN'), 100);
+        const maxPerSource = parseNumberParam(requestUrl.searchParams.get('maxPerSource'), 100);
         let payload;
 
         try {

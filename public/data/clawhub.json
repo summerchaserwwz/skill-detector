@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-03-12T05:59:18.590Z",
+  "generatedAt": "2026-03-12T06:24:52.063Z",
   "source": "clawhub",
-  "topN": 48,
-  "maxPerSource": 48,
+  "topN": 100,
+  "maxPerSource": 100,
   "items": [
     {
       "id": "clawhub:self-improving-agent",
@@ -27,7 +27,7 @@
       "category": "AI Agent 能力增强",
       "domain": "金融投资",
       "chineseIntro": "一个偏 Agent 能力增强的技能，适合自我改进、任务编排、反思和智能体工作流。",
-      "progress": 92.03084710730222,
+      "progress": 92.02526857533566,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -55,7 +55,7 @@
       "category": "搜索与信息检索",
       "domain": "通用场景",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 91.85007829685841,
+      "progress": 91.84451072235468,
       "crossListed": true,
       "crossSources": [
         "ClawHub",
@@ -84,7 +84,7 @@
       "category": "写作与内容处理",
       "domain": "内容媒体",
       "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
-      "progress": 89.8849366698476,
+      "progress": 89.87948821415816,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -122,7 +122,7 @@
       "category": "搜索与信息检索",
       "domain": "通用场景",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 88.4515382888264,
+      "progress": 88.44617671985961,
       "crossListed": true,
       "crossSources": [
         "ClawHub",
@@ -151,7 +151,7 @@
       "category": "协作与系统集成",
       "domain": "办公协作",
       "chineseIntro": "一个偏外部系统集成的技能，适合连接协作工具、业务系统和第三方服务。",
-      "progress": 88.0211019548901,
+      "progress": 88.01576647720603,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -179,7 +179,7 @@
       "category": "运维与工程效率",
       "domain": "办公协作",
       "chineseIntro": "一个偏工程效率和运维流程的技能，适合部署、自动化、脚本和基础设施工作。",
-      "progress": 87.46808943943786,
+      "progress": 87.46278748310115,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -207,7 +207,7 @@
       "category": "搜索与信息检索",
       "domain": "通用场景",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 87.3078381750629,
+      "progress": 87.30254593249965,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -235,7 +235,7 @@
       "category": "AI Agent 能力增强",
       "domain": "通用场景",
       "chineseIntro": "一个偏 Agent 能力增强的技能，适合自我改进、任务编排、反思和智能体工作流。",
-      "progress": 86.62462364723179,
+      "progress": 86.61937281832715,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -263,7 +263,7 @@
       "category": "前端与设计",
       "domain": "通用场景",
       "chineseIntro": "一个偏前端页面与设计规范的技能，适合做界面搭建、视觉优化和组件实现。",
-      "progress": 86.30575205984003,
+      "progress": 86.30052055962139,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -291,7 +291,7 @@
       "category": "AI Agent 能力增强",
       "domain": "法律合规",
       "chineseIntro": "一个偏 Agent 能力增强的技能，适合自我改进、任务编排、反思和智能体工作流。",
-      "progress": 84.80852046500735,
+      "progress": 84.80337972081861,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -319,7 +319,7 @@
       "category": "搜索与信息检索",
       "domain": "通用场景",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 83.08637894944016,
+      "progress": 83.081342594397,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -347,7 +347,7 @@
       "category": "知识库与数据",
       "domain": "教育培训",
       "chineseIntro": "一个偏知识库、数据库或结构化数据处理的技能，适合记忆、检索和数据工作流。",
-      "progress": 82.92412100518544,
+      "progress": 82.91909448555244,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -375,7 +375,7 @@
       "category": "通用工具",
       "domain": "通用场景",
       "chineseIntro": "一个通用型技能，适合放进常用工具箱，帮助你提升日常 Agent 工作效率。",
-      "progress": 82.70993595815865,
+      "progress": 82.7049224215435,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -403,7 +403,7 @@
       "category": "知识库与数据",
       "domain": "办公协作",
       "chineseIntro": "一个偏知识库、数据库或结构化数据处理的技能，适合记忆、检索和数据工作流。",
-      "progress": 82.51830997575787,
+      "progress": 82.51330805472274,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -431,7 +431,7 @@
       "category": "写作与内容处理",
       "domain": "通用场景",
       "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
-      "progress": 82.05095519200704,
+      "progress": 82.0459816000994,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -459,7 +459,7 @@
       "category": "通用工具",
       "domain": "通用场景",
       "chineseIntro": "一个通用型技能，适合放进常用工具箱，帮助你提升日常 Agent 工作效率。",
-      "progress": 81.80491093418395,
+      "progress": 81.79995225646867,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -487,7 +487,7 @@
       "category": "多媒体与音视频",
       "domain": "内容媒体",
       "chineseIntro": "一个偏多媒体处理的技能，适合语音、图片、视频和其他内容生成场景。",
-      "progress": 81.55523154928382,
+      "progress": 81.55028800610738,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -515,7 +515,7 @@
       "category": "多媒体与音视频",
       "domain": "内容媒体",
       "chineseIntro": "一个偏多媒体处理的技能，适合语音、图片、视频和其他内容生成场景。",
-      "progress": 80.9056208560324,
+      "progress": 80.90071668958814,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -543,7 +543,7 @@
       "category": "协作与系统集成",
       "domain": "办公协作",
       "chineseIntro": "一个偏外部系统集成的技能，适合连接协作工具、业务系统和第三方服务。",
-      "progress": 80.7198910103208,
+      "progress": 80.71499810205697,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -571,7 +571,7 @@
       "category": "搜索与信息检索",
       "domain": "法律合规",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 80.59927837155264,
+      "progress": 80.5943927743316,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -599,7 +599,7 @@
       "category": "写作与内容处理",
       "domain": "法律合规",
       "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
-      "progress": 80.48961526204153,
+      "progress": 80.48473631214777,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -627,7 +627,7 @@
       "category": "搜索与信息检索",
       "domain": "通用场景",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 79.92321706207774,
+      "progress": 79.91837244491657,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -639,9 +639,9 @@
       "name": "Skill Creator",
       "source": "ClawHub",
       "sourceKey": "clawhub",
-      "author": "chindden",
+      "author": "",
       "publisher": "skill-creator",
-      "link": "https://clawhub.ai/chindden/skill-creator",
+      "link": "https://clawhub.ai/skill-creator",
       "downloads": 35538,
       "installsAllTime": 1170,
       "installsCurrent": 1150,
@@ -649,23 +649,11 @@
       "summary": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill…",
       "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integr…",
       "updatedAt": "2026-03-12T03:08:46.090Z",
-      "ownerHandle": "chindden",
-      "ownerDisplayName": "chindden",
-      "moderation": {
-        "isSuspicious": true,
-        "isMalwareBlocked": false,
-        "verdict": "suspicious",
-        "reasonCodes": [
-          "suspicious.vt_suspicious"
-        ],
-        "summary": "Detected: suspicious.vt_suspicious",
-        "engineVersion": "v2.1.1",
-        "updatedAt": 1773284926090
-      },
+      "detailError": "429 Too Many Requests for https://wry-manatee-359.convex.site/api/v1/skills/skill-creator: Rate limit exceeded",
       "category": "前端与设计",
       "domain": "通用场景",
       "chineseIntro": "一个偏前端页面与设计规范的技能，适合做界面搭建、视觉优化和组件实现。",
-      "progress": 79.77933375644184,
+      "progress": 79.77449786089572,
       "crossListed": true,
       "crossSources": [
         "ClawHub",
@@ -694,7 +682,7 @@
       "category": "前端与设计",
       "domain": "通用场景",
       "chineseIntro": "一个偏前端页面与设计规范的技能，适合做界面搭建、视觉优化和组件实现。",
-      "progress": 79.517367542701,
+      "progress": 79.5125475264708,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -722,7 +710,7 @@
       "category": "通用工具",
       "domain": "通用场景",
       "chineseIntro": "一个通用型技能，适合放进常用工具箱，帮助你提升日常 Agent 工作效率。",
-      "progress": 79.4820298449875,
+      "progress": 79.4772119707834,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -750,7 +738,7 @@
       "category": "搜索与信息检索",
       "domain": "科研学术",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 79.45346223896368,
+      "progress": 79.44864609641054,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -778,7 +766,7 @@
       "category": "通用工具",
       "domain": "法律合规",
       "chineseIntro": "一个通用型技能，适合放进常用工具箱，帮助你提升日常 Agent 工作效率。",
-      "progress": 79.251807929503,
+      "progress": 79.24700401040589,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -817,7 +805,7 @@
       "category": "多媒体与音视频",
       "domain": "法律合规",
       "chineseIntro": "一个偏多媒体处理的技能，适合语音、图片、视频和其他内容生成场景。",
-      "progress": 78.80645723144394,
+      "progress": 78.80168030767702,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -838,7 +826,7 @@
       "stars": 2,
       "summary": "Connect OpenClaw to Outlook and Microsoft Graph for email, calendar, contacts, and folder operations using a pre-provided access…",
       "description": "Connect OpenClaw to Outlook and Microsoft Graph for email, calendar, contacts, and folder operations using a pre-provided access token. Use when the user ask...",
-      "updatedAt": "2026-03-11T06:03:03.216Z",
+      "updatedAt": "2026-03-12T06:21:05.952Z",
       "ownerHandle": "c36025251-pixel",
       "ownerDisplayName": "c36025251-pixel",
       "moderation": {
@@ -849,13 +837,13 @@
           "suspicious.vt_suspicious"
         ],
         "summary": "Detected: suspicious.vt_suspicious",
-        "engineVersion": "v2.0.0",
-        "updatedAt": 1773208983216
+        "engineVersion": "v2.1.1",
+        "updatedAt": 1773296465952
       },
       "category": "协作与系统集成",
       "domain": "法律合规",
       "chineseIntro": "一个偏外部系统集成的技能，适合连接协作工具、业务系统和第三方服务。",
-      "progress": 78.5841507105835,
+      "progress": 78.57938726212481,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -883,7 +871,7 @@
       "category": "写作与内容处理",
       "domain": "通用场景",
       "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
-      "progress": 78.23513937236534,
+      "progress": 78.23039707954052,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -911,7 +899,7 @@
       "category": "写作与内容处理",
       "domain": "内容媒体",
       "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
-      "progress": 77.94932957975101,
+      "progress": 77.94460461154198,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -939,7 +927,7 @@
       "category": "搜索与信息检索",
       "domain": "通用场景",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 77.93896968382859,
+      "progress": 77.93424534359389,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -977,7 +965,7 @@
       "category": "搜索与信息检索",
       "domain": "开发工程",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 77.8235166857718,
+      "progress": 77.81879934382367,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -1016,7 +1004,7 @@
       "category": "运维与工程效率",
       "domain": "金融投资",
       "chineseIntro": "一个偏工程效率和运维流程的技能，适合部署、自动化、脚本和基础设施工作。",
-      "progress": 77.78825835135821,
+      "progress": 77.78354314662549,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -1044,7 +1032,7 @@
       "category": "搜索与信息检索",
       "domain": "法律合规",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 77.71977549934729,
+      "progress": 77.71506444576379,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -1072,7 +1060,7 @@
       "category": "搜索与信息检索",
       "domain": "通用场景",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 77.4263925733721,
+      "progress": 77.4216993034566,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -1110,7 +1098,7 @@
       "category": "通用工具",
       "domain": "通用场景",
       "chineseIntro": "一个通用型技能，适合放进常用工具箱，帮助你提升日常 Agent 工作效率。",
-      "progress": 77.18386719232475,
+      "progress": 77.17918862330177,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -1138,7 +1126,7 @@
       "category": "前端与设计",
       "domain": "法律合规",
       "chineseIntro": "一个偏前端页面与设计规范的技能，适合做界面搭建、视觉优化和组件实现。",
-      "progress": 77.16788372991967,
+      "progress": 77.16320612974852,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -1166,7 +1154,7 @@
       "category": "多媒体与音视频",
       "domain": "内容媒体",
       "chineseIntro": "一个偏多媒体处理的技能，适合语音、图片、视频和其他内容生成场景。",
-      "progress": 76.95884834676144,
+      "progress": 76.95418341745669,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -1194,7 +1182,7 @@
       "category": "写作与内容处理",
       "domain": "通用场景",
       "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
-      "progress": 76.5930507361911,
+      "progress": 76.58840798003511,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -1233,7 +1221,7 @@
       "category": "搜索与信息检索",
       "domain": "通用场景",
       "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
-      "progress": 76.5391418177327,
+      "progress": 76.53450232931394,
       "crossListed": true,
       "crossSources": [
         "ClawHub",
@@ -1262,7 +1250,1366 @@
       "category": "写作与内容处理",
       "domain": "开发工程",
       "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
-      "progress": 76.45407529338529,
+      "progress": 76.44944096134984,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:gmail",
+      "slug": "gmail",
+      "name": "Gmail",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "byungkyu",
+      "publisher": "gmail",
+      "link": "https://clawhub.ai/byungkyu/gmail",
+      "downloads": 22887,
+      "installsAllTime": 201,
+      "installsCurrent": 189,
+      "stars": 60,
+      "summary": "Gmail API integration with managed OAuth. Read, send, and manage emails, threads, labels, and drafts. Use this skill when users w…",
+      "description": "Gmail API integration with managed OAuth. Read, send, and manage emails, threads, labels, and drafts. Use this skill when users want to interact with Gmail. For other third party apps, use the api-gateway skill (https:/…",
+      "updatedAt": "2026-02-26T00:30:36.042Z",
+      "ownerHandle": "byungkyu",
+      "ownerDisplayName": "byungkyu",
+      "moderation": null,
+      "category": "写作与内容处理",
+      "domain": "营销与商业",
+      "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
+      "progress": 76.42453447167573,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:trello",
+      "slug": "trello",
+      "name": "Trello",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "steipete",
+      "publisher": "trello",
+      "link": "https://clawhub.ai/steipete/trello",
+      "downloads": 22397,
+      "installsAllTime": 842,
+      "installsCurrent": 825,
+      "stars": 99,
+      "summary": "Manage Trello boards, lists, and cards via the Trello REST API.",
+      "description": "Manage Trello boards, lists, and cards via the Trello REST API.",
+      "updatedAt": "2026-02-26T00:30:40.450Z",
+      "ownerHandle": "steipete",
+      "ownerDisplayName": "Peter Steinberger",
+      "moderation": null,
+      "category": "协作与系统集成",
+      "domain": "办公协作",
+      "chineseIntro": "一个偏外部系统集成的技能，适合连接协作工具、业务系统和第三方服务。",
+      "progress": 76.25977562221195,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:imap-smtp-email",
+      "slug": "imap-smtp-email",
+      "name": "imap-smtp-email",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "gzlicanyi",
+      "publisher": "imap-smtp-email",
+      "link": "https://clawhub.ai/gzlicanyi/imap-smtp-email",
+      "downloads": 22085,
+      "installsAllTime": 191,
+      "installsCurrent": 186,
+      "stars": 54,
+      "summary": "Read and send email via IMAP/SMTP. Check for new/unread messages, fetch content, search mailboxes, mark as read/unread, and send…",
+      "description": "Read and send email via IMAP/SMTP. Check for new/unread messages, fetch content, search mailboxes, mark as read/unread, and send emails with attachments. Wor...",
+      "updatedAt": "2026-03-03T08:07:39.571Z",
+      "ownerHandle": "gzlicanyi",
+      "ownerDisplayName": "gzlicanyi",
+      "moderation": null,
+      "category": "搜索与信息检索",
+      "domain": "通用场景",
+      "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
+      "progress": 76.15297898768594,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:youtube-api-skill",
+      "slug": "youtube-api-skill",
+      "name": "YouTube",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "byungkyu",
+      "publisher": "youtube-api-skill",
+      "link": "https://clawhub.ai/byungkyu/youtube-api-skill",
+      "downloads": 21829,
+      "installsAllTime": 64,
+      "installsCurrent": 61,
+      "stars": 114,
+      "summary": "YouTube Data API integration with managed OAuth. Search videos, manage playlists, access channel data, and interact with comments…",
+      "description": "YouTube Data API integration with managed OAuth. Search videos, manage playlists, access channel data, and interact with comments. Use this skill when users want to interact with YouTube. For other third party apps, use…",
+      "updatedAt": "2026-02-26T00:30:40.450Z",
+      "ownerHandle": "byungkyu",
+      "ownerDisplayName": "byungkyu",
+      "moderation": null,
+      "category": "搜索与信息检索",
+      "domain": "内容媒体",
+      "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
+      "progress": 76.06421806835284,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:news-summary",
+      "slug": "news-summary",
+      "name": "News Summary",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "joargp",
+      "publisher": "news-summary",
+      "link": "https://clawhub.ai/joargp/news-summary",
+      "downloads": 21281,
+      "installsAllTime": 181,
+      "installsCurrent": 175,
+      "stars": 67,
+      "summary": "This skill should be used when the user asks for news updates, daily briefings, or what's happening in the world. Fetches news fr…",
+      "description": "This skill should be used when the user asks for news updates, daily briefings, or what's happening in the world. Fetches news from trusted international RSS feeds and can create voice summaries.",
+      "updatedAt": "2026-02-27T03:01:04.358Z",
+      "ownerHandle": "joargp",
+      "ownerDisplayName": "joargp",
+      "moderation": null,
+      "category": "写作与内容处理",
+      "domain": "内容媒体",
+      "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
+      "progress": 75.87066259225575,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:gemini",
+      "slug": "gemini",
+      "name": "Gemini",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "steipete",
+      "publisher": "gemini",
+      "link": "https://clawhub.ai/steipete/gemini",
+      "downloads": 20497,
+      "installsAllTime": 918,
+      "installsCurrent": 904,
+      "stars": 42,
+      "summary": "Gemini CLI for one-shot Q&A, summaries, and generation.",
+      "description": "Gemini CLI for one-shot Q&A, summaries, and generation.",
+      "updatedAt": "2026-03-03T18:16:26.306Z",
+      "ownerHandle": "steipete",
+      "ownerDisplayName": "Peter Steinberger",
+      "moderation": null,
+      "category": "写作与内容处理",
+      "domain": "通用场景",
+      "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
+      "progress": 75.58490466077559,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:playwright-mcp",
+      "slug": "playwright-mcp",
+      "name": "Playwright MCP",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "Spiceman161",
+      "publisher": "playwright-mcp",
+      "link": "https://clawhub.ai/Spiceman161/playwright-mcp",
+      "downloads": 20083,
+      "installsAllTime": 292,
+      "installsCurrent": 279,
+      "stars": 70,
+      "summary": "Browser automation via Playwright MCP server. Navigate websites, click elements, fill forms, extract data, take screenshots, and…",
+      "description": "Browser automation via Playwright MCP server. Navigate websites, click elements, fill forms, extract data, take screenshots, and perform full browser automation workflows.",
+      "updatedAt": "2026-02-26T00:30:36.042Z",
+      "ownerHandle": "Spiceman161",
+      "ownerDisplayName": "Spiceman161",
+      "moderation": null,
+      "category": "搜索与信息检索",
+      "domain": "通用场景",
+      "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
+      "progress": 75.42956525311546,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:lnbits-with-qrcode",
+      "slug": "lnbits-with-qrcode",
+      "name": "LNBits Wallet wtih QR Code",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "JamesTsetsekas",
+      "publisher": "lnbits-with-qrcode",
+      "link": "https://clawhub.ai/JamesTsetsekas/lnbits-with-qrcode",
+      "downloads": 19578,
+      "installsAllTime": 6,
+      "installsCurrent": 6,
+      "stars": 6,
+      "summary": "Manage LNbits Lightning Wallet (Balance, Pay, Invoice)",
+      "description": "Manage LNbits Lightning Wallet (Balance, Pay, Invoice)",
+      "updatedAt": "2026-02-26T03:51:31.531Z",
+      "ownerHandle": "JamesTsetsekas",
+      "ownerDisplayName": "JamesTsetsekas",
+      "moderation": null,
+      "category": "多媒体与音视频",
+      "domain": "开发工程",
+      "chineseIntro": "一个偏多媒体处理的技能，适合语音、图片、视频和其他内容生成场景。",
+      "progress": 75.235687056561,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:qmd",
+      "slug": "qmd",
+      "name": "Qmd",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "steipete",
+      "publisher": "qmd",
+      "link": "https://clawhub.ai/steipete/qmd",
+      "downloads": 19285,
+      "installsAllTime": 219,
+      "installsCurrent": 214,
+      "stars": 70,
+      "summary": "Local search/indexing CLI (BM25 + vectors + rerank) with MCP mode.",
+      "description": "Local search/indexing CLI (BM25 + vectors + rerank) with MCP mode.",
+      "updatedAt": "2026-02-26T00:30:36.042Z",
+      "ownerHandle": "steipete",
+      "ownerDisplayName": "Peter Steinberger",
+      "moderation": null,
+      "category": "搜索与信息检索",
+      "domain": "通用场景",
+      "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
+      "progress": 75.1208936722595,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:browser-automation",
+      "slug": "browser-automation",
+      "name": "Browser Automation",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "peytoncasper",
+      "publisher": "browser-automation",
+      "link": "https://clawhub.ai/peytoncasper/browser-automation",
+      "downloads": 19244,
+      "installsAllTime": 232,
+      "installsCurrent": 224,
+      "stars": 26,
+      "summary": "Automate web browser interactions using natural language via CLI commands. Use when the user asks to browse websites, navigate we…",
+      "description": "Automate web browser interactions using natural language via CLI commands. Use when the user asks to browse websites, navigate web pages, extract data from websites, take screenshots, fill forms, click buttons, or inter…",
+      "updatedAt": "2026-03-12T03:33:33.314Z",
+      "ownerHandle": "peytoncasper",
+      "ownerDisplayName": "peytoncasper",
+      "moderation": {
+        "isSuspicious": true,
+        "isMalwareBlocked": false,
+        "verdict": "suspicious",
+        "reasonCodes": [
+          "suspicious.llm_suspicious",
+          "suspicious.vt_suspicious"
+        ],
+        "summary": "Detected: suspicious.llm_suspicious, suspicious.vt_suspicious",
+        "engineVersion": "v2.1.1",
+        "updatedAt": 1773286413314
+      },
+      "category": "搜索与信息检索",
+      "domain": "通用场景",
+      "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
+      "progress": 75.10469149334126,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:markdown-converter",
+      "slug": "markdown-converter",
+      "name": "Markdown Converter",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "steipete",
+      "publisher": "markdown-converter",
+      "link": "https://clawhub.ai/steipete/markdown-converter",
+      "downloads": 19048,
+      "installsAllTime": 179,
+      "installsCurrent": 173,
+      "stars": 101,
+      "summary": "Convert documents and files to Markdown using markitdown. Use when converting PDF, Word (.docx), PowerPoint (.pptx), Excel (.xlsx…",
+      "description": "Convert documents and files to Markdown using markitdown. Use when converting PDF, Word (.docx), PowerPoint (.pptx), Excel (.xlsx, .xls), HTML, CSV, JSON, XML, images (with EXIF/OCR), audio (with transcription), ZIP arc…",
+      "updatedAt": "2026-02-26T00:25:39.606Z",
+      "ownerHandle": "steipete",
+      "ownerDisplayName": "Peter Steinberger",
+      "moderation": null,
+      "category": "多媒体与音视频",
+      "domain": "内容媒体",
+      "chineseIntro": "一个偏多媒体处理的技能，适合语音、图片、视频和其他内容生成场景。",
+      "progress": 75.02675716186074,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:apple-notes",
+      "slug": "apple-notes",
+      "name": "Apple Notes",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "steipete",
+      "publisher": "apple-notes",
+      "link": "https://clawhub.ai/steipete/apple-notes",
+      "downloads": 19002,
+      "installsAllTime": 830,
+      "installsCurrent": 821,
+      "stars": 37,
+      "summary": "Manage Apple Notes via the `memo` CLI on macOS (create, view, edit, delete, search, move, and export notes). Use when a user asks…",
+      "description": "Manage Apple Notes via the `memo` CLI on macOS (create, view, edit, delete, search, move, and export notes). Use when a user asks Clawdbot to add a note, list notes, search notes, or manage note folders.",
+      "updatedAt": "2026-02-26T00:30:40.450Z",
+      "ownerHandle": "steipete",
+      "ownerDisplayName": "Peter Steinberger",
+      "moderation": null,
+      "category": "搜索与信息检索",
+      "domain": "法律合规",
+      "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
+      "progress": 75.00835027941636,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:web-search-exa",
+      "slug": "web-search-exa",
+      "name": "Web Search by Exa",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "theishangoswami",
+      "publisher": "web-search-exa",
+      "link": "https://clawhub.ai/theishangoswami/web-search-exa",
+      "downloads": 18677,
+      "installsAllTime": 4,
+      "installsCurrent": 4,
+      "stars": 15,
+      "summary": "Neural web search, content extraction, company and people research, code search, and deep research via the Exa MCP server. Use wh…",
+      "description": "Neural web search, content extraction, company and people research, code search, and deep research via the Exa MCP server. Use when you need to: (1) search t...",
+      "updatedAt": "2026-03-11T17:41:52.475Z",
+      "ownerHandle": "theishangoswami",
+      "ownerDisplayName": "Ishan Goswami",
+      "moderation": null,
+      "category": "搜索与信息检索",
+      "domain": "科研学术",
+      "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
+      "progress": 74.87701802652522,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:stock-market-pro",
+      "slug": "stock-market-pro",
+      "name": "Stock Market Pro",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "kys42",
+      "publisher": "stock-market-pro",
+      "link": "https://clawhub.ai/kys42/stock-market-pro",
+      "downloads": 18667,
+      "installsAllTime": 133,
+      "installsCurrent": 127,
+      "stars": 120,
+      "summary": "Yahoo Finance (yfinance) powered stock analysis skill: quotes, fundamentals, ASCII trends, high-resolution charts (RSI/MACD/BB/VW…",
+      "description": "Yahoo Finance (yfinance) powered stock analysis skill: quotes, fundamentals, ASCII trends, high-resolution charts (RSI/MACD/BB/VWAP/ATR), plus optional web a...",
+      "updatedAt": "2026-02-26T00:05:36.021Z",
+      "ownerHandle": "kys42",
+      "ownerDisplayName": "ClawMaker",
+      "moderation": null,
+      "category": "运维与工程效率",
+      "domain": "金融投资",
+      "chineseIntro": "一个偏工程效率和运维流程的技能，适合部署、自动化、脚本和基础设施工作。",
+      "progress": 74.87294088674467,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:outlook-api",
+      "slug": "outlook-api",
+      "name": "Outlook",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "byungkyu",
+      "publisher": "outlook-api",
+      "link": "https://clawhub.ai/byungkyu/outlook-api",
+      "downloads": 18649,
+      "installsAllTime": 35,
+      "installsCurrent": 34,
+      "stars": 29,
+      "summary": "Microsoft Outlook API integration with managed OAuth. Read, send, and manage emails, folders, calendar events, and contacts via M…",
+      "description": "Microsoft Outlook API integration with managed OAuth. Read, send, and manage emails, folders, calendar events, and contacts via Microsoft Graph. Use this skill when users want to interact with Outlook. For other third p…",
+      "updatedAt": "2026-02-26T00:25:35.894Z",
+      "ownerHandle": "byungkyu",
+      "ownerDisplayName": "byungkyu",
+      "moderation": null,
+      "category": "协作与系统集成",
+      "domain": "办公协作",
+      "chineseIntro": "一个偏外部系统集成的技能，适合连接协作工具、业务系统和第三方服务。",
+      "progress": 74.8655965283454,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:discord",
+      "slug": "discord",
+      "name": "Discord",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "steipete",
+      "publisher": "discord",
+      "link": "https://clawhub.ai/steipete/discord",
+      "downloads": 18573,
+      "installsAllTime": 775,
+      "installsCurrent": 767,
+      "stars": 47,
+      "summary": "Use when you need to control Discord from Clawdbot via the discord tool: send messages, react, post or upload stickers, upload em…",
+      "description": "Use when you need to control Discord from Clawdbot via the discord tool: send messages, react, post or upload stickers, upload emojis, run polls, manage threads/pins/search, fetch permissions or member/role/channel info…",
+      "updatedAt": "2026-03-12T03:00:13.499Z",
+      "ownerHandle": "steipete",
+      "ownerDisplayName": "Peter Steinberger",
+      "moderation": null,
+      "category": "搜索与信息检索",
+      "domain": "法律合规",
+      "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
+      "progress": 74.83450866746657,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:caldav-calendar",
+      "slug": "caldav-calendar",
+      "name": "Caldav Calendar",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "Asleep123",
+      "publisher": "caldav-calendar",
+      "link": "https://clawhub.ai/Asleep123/caldav-calendar",
+      "downloads": 18224,
+      "installsAllTime": 160,
+      "installsCurrent": 160,
+      "stars": 169,
+      "summary": "Sync and query CalDAV calendars (iCloud, Google, Fastmail, Nextcloud, etc.) using vdirsyncer + khal. Works on Linux.",
+      "description": "Sync and query CalDAV calendars (iCloud, Google, Fastmail, Nextcloud, etc.) using vdirsyncer + khal. Works on Linux.",
+      "updatedAt": "2026-02-26T03:00:35.576Z",
+      "ownerHandle": "Asleep123",
+      "ownerDisplayName": "Asleep",
+      "moderation": null,
+      "category": "搜索与信息检索",
+      "domain": "办公协作",
+      "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
+      "progress": 74.69009705577993,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:superdesign",
+      "slug": "superdesign",
+      "name": "SuperDesign",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "mpociot",
+      "publisher": "superdesign",
+      "link": "https://clawhub.ai/mpociot/superdesign",
+      "downloads": 18177,
+      "installsAllTime": 149,
+      "installsCurrent": 147,
+      "stars": 108,
+      "summary": "Expert frontend design guidelines for creating beautiful, modern UIs. Use when building landing pages, dashboards, or any user in…",
+      "description": "Expert frontend design guidelines for creating beautiful, modern UIs. Use when building landing pages, dashboards, or any user interface.",
+      "updatedAt": "2026-02-26T00:30:36.042Z",
+      "ownerHandle": "mpociot",
+      "ownerDisplayName": "mpociot",
+      "moderation": null,
+      "category": "前端与设计",
+      "domain": "开发工程",
+      "chineseIntro": "一个偏前端页面与设计规范的技能，适合做界面搭建、视觉优化和组件实现。",
+      "progress": 74.67043809269748,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:whatsapp-business",
+      "slug": "whatsapp-business",
+      "name": "WhatsApp Business",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "byungkyu",
+      "publisher": "whatsapp-business",
+      "link": "https://clawhub.ai/byungkyu/whatsapp-business",
+      "downloads": 18079,
+      "installsAllTime": 40,
+      "installsCurrent": 39,
+      "stars": 44,
+      "summary": "WhatsApp Business API integration with managed OAuth. Send messages, manage templates, and handle conversations. Use this skill w…",
+      "description": "WhatsApp Business API integration with managed OAuth. Send messages, manage templates, and handle conversations. Use this skill when users want to interact with WhatsApp Business. For other third party apps, use the api…",
+      "updatedAt": "2026-02-26T00:30:36.042Z",
+      "ownerHandle": "byungkyu",
+      "ownerDisplayName": "byungkyu",
+      "moderation": null,
+      "category": "协作与系统集成",
+      "domain": "通用场景",
+      "chineseIntro": "一个偏外部系统集成的技能，适合连接协作工具、业务系统和第三方服务。",
+      "progress": 74.62928305800045,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:docker-essentials",
+      "slug": "docker-essentials",
+      "name": "Docker Essentials",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "Arnarsson",
+      "publisher": "docker-essentials",
+      "link": "https://clawhub.ai/Arnarsson/docker-essentials",
+      "downloads": 18065,
+      "installsAllTime": 174,
+      "installsCurrent": 171,
+      "stars": 20,
+      "summary": "Essential Docker commands and workflows for container management, image operations, and debugging.",
+      "description": "Essential Docker commands and workflows for container management, image operations, and debugging.",
+      "updatedAt": "2026-02-26T03:13:23.415Z",
+      "ownerHandle": "Arnarsson",
+      "ownerDisplayName": "Arnarsson",
+      "moderation": null,
+      "category": "运维与工程效率",
+      "domain": "开发工程",
+      "chineseIntro": "一个偏工程效率和运维流程的技能，适合部署、自动化、脚本和基础设施工作。",
+      "progress": 74.62338556415034,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:stripe-api",
+      "slug": "stripe-api",
+      "name": "Stripe",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "byungkyu",
+      "publisher": "stripe-api",
+      "link": "https://clawhub.ai/byungkyu/stripe-api",
+      "downloads": 18051,
+      "installsAllTime": 18,
+      "installsCurrent": 17,
+      "stars": 23,
+      "summary": "Stripe API integration with managed OAuth. Manage customers, subscriptions, invoices, products, prices, and payments. Use this sk…",
+      "description": "Stripe API integration with managed OAuth. Manage customers, subscriptions, invoices, products, prices, and payments. Use this skill when users want to process payments, manage billing, or handle subscriptions with Stri…",
+      "updatedAt": "2026-02-26T00:25:39.606Z",
+      "ownerHandle": "byungkyu",
+      "ownerDisplayName": "byungkyu",
+      "moderation": null,
+      "category": "协作与系统集成",
+      "domain": "内容媒体",
+      "chineseIntro": "一个偏外部系统集成的技能，适合连接协作工具、业务系统和第三方服务。",
+      "progress": 74.61748349834593,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:tavily",
+      "slug": "tavily",
+      "name": "Tavily AI Search",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "bert-builder",
+      "publisher": "tavily",
+      "link": "https://clawhub.ai/bert-builder/tavily",
+      "downloads": 17989,
+      "installsAllTime": 227,
+      "installsCurrent": 213,
+      "stars": 24,
+      "summary": "AI-optimized web search using Tavily Search API. Use when you need comprehensive web research, current events lookup, domain-spec…",
+      "description": "AI-optimized web search using Tavily Search API. Use when you need comprehensive web research, current events lookup, domain-specific search, or AI-generated answer summaries. Tavily is optimized for LLM consumption wit…",
+      "updatedAt": "2026-03-12T03:04:52.573Z",
+      "ownerHandle": "bert-builder",
+      "ownerDisplayName": "bert-builder",
+      "moderation": {
+        "isSuspicious": true,
+        "isMalwareBlocked": false,
+        "verdict": "suspicious",
+        "reasonCodes": [
+          "suspicious.llm_suspicious",
+          "suspicious.vt_suspicious"
+        ],
+        "summary": "Detected: suspicious.llm_suspicious, suspicious.vt_suspicious",
+        "engineVersion": "v2.1.1",
+        "updatedAt": 1773284692573
+      },
+      "category": "搜索与信息检索",
+      "domain": "科研学术",
+      "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
+      "progress": 74.59129063850082,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:agent-browser-clawdbot",
+      "slug": "agent-browser-clawdbot",
+      "name": "Agent Browser",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "MaTriXy",
+      "publisher": "agent-browser-clawdbot",
+      "link": "https://clawhub.ai/MaTriXy/agent-browser-clawdbot",
+      "downloads": 17871,
+      "installsAllTime": 127,
+      "installsCurrent": 117,
+      "stars": 33,
+      "summary": "Headless browser automation CLI optimized for AI agents with accessibility tree snapshots and ref-based element selection",
+      "description": "Headless browser automation CLI optimized for AI agents with accessibility tree snapshots and ref-based element selection",
+      "updatedAt": "2026-03-11T03:03:12.990Z",
+      "ownerHandle": "MaTriXy",
+      "ownerDisplayName": "MaTriXy",
+      "moderation": null,
+      "category": "搜索与信息检索",
+      "domain": "法律合规",
+      "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
+      "progress": 74.54118936652024,
+      "crossListed": true,
+      "crossSources": [
+        "ClawHub",
+        "Skills.sh"
+      ]
+    },
+    {
+      "id": "clawhub:clawdhub",
+      "slug": "clawdhub",
+      "name": "Clawdhub",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "steipete",
+      "publisher": "clawdhub",
+      "link": "https://clawhub.ai/steipete/clawdhub",
+      "downloads": 17676,
+      "installsAllTime": 281,
+      "installsCurrent": 262,
+      "stars": 164,
+      "summary": "Use the ClawdHub CLI to search, install, update, and publish agent skills from clawdhub.com. Use when you need to fetch new skill…",
+      "description": "Use the ClawdHub CLI to search, install, update, and publish agent skills from clawdhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/update…",
+      "updatedAt": "2026-03-12T03:00:10.665Z",
+      "ownerHandle": "steipete",
+      "ownerDisplayName": "Peter Steinberger",
+      "moderation": null,
+      "category": "搜索与信息检索",
+      "domain": "法律合规",
+      "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
+      "progress": 74.45766537080934,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:pdf",
+      "slug": "pdf",
+      "name": "Pdf",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "awspace",
+      "publisher": "pdf",
+      "link": "https://clawhub.ai/awspace/pdf",
+      "downloads": 17261,
+      "installsAllTime": 272,
+      "installsCurrent": 269,
+      "stars": 27,
+      "summary": "Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handli…",
+      "description": "Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When Claude needs to fill in a PDF form or programmatically process, generate, o…",
+      "updatedAt": "2026-03-12T03:13:27.792Z",
+      "ownerHandle": "awspace",
+      "ownerDisplayName": "awspace",
+      "moderation": {
+        "isSuspicious": true,
+        "isMalwareBlocked": false,
+        "verdict": "suspicious",
+        "reasonCodes": [
+          "suspicious.vt_suspicious"
+        ],
+        "summary": "Detected: suspicious.vt_suspicious",
+        "engineVersion": "v2.1.1",
+        "updatedAt": 1773285207792
+      },
+      "category": "通用工具",
+      "domain": "通用场景",
+      "chineseIntro": "一个通用型技能，适合放进常用工具箱，帮助你提升日常 Agent 工作效率。",
+      "progress": 74.27679903733997,
+      "crossListed": true,
+      "crossSources": [
+        "ClawHub",
+        "Skills.sh"
+      ]
+    },
+    {
+      "id": "clawhub:web-search",
+      "slug": "web-search",
+      "name": "Web Search",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "billyutw",
+      "publisher": "web-search",
+      "link": "https://clawhub.ai/billyutw/web-search",
+      "downloads": 16986,
+      "installsAllTime": 271,
+      "installsCurrent": 260,
+      "stars": 21,
+      "summary": "This skill should be used when users need to search the web for information, find current content, look up news articles, search…",
+      "description": "This skill should be used when users need to search the web for information, find current content, look up news articles, search for images, or find videos. It uses DuckDuckGo's search API to return results in clean, fo…",
+      "updatedAt": "2026-03-12T03:11:14.645Z",
+      "ownerHandle": "billyutw",
+      "ownerDisplayName": "billyutw",
+      "moderation": {
+        "isSuspicious": true,
+        "isMalwareBlocked": false,
+        "verdict": "suspicious",
+        "reasonCodes": [
+          "suspicious.vt_suspicious"
+        ],
+        "summary": "Detected: suspicious.vt_suspicious",
+        "engineVersion": "v2.1.1",
+        "updatedAt": 1773285074645
+      },
+      "category": "搜索与信息检索",
+      "domain": "内容媒体",
+      "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
+      "progress": 74.15453638434818,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:shopify",
+      "slug": "shopify",
+      "name": "Shopify",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "byungkyu",
+      "publisher": "shopify",
+      "link": "https://clawhub.ai/byungkyu/shopify",
+      "downloads": 16979,
+      "installsAllTime": 15,
+      "installsCurrent": 13,
+      "stars": 4,
+      "summary": "Shopify integration - currently under maintenance. Contact founders@maton.ai for assistance.",
+      "description": "Shopify integration - currently under maintenance. Contact founders@maton.ai for assistance.",
+      "updatedAt": "2026-02-28T03:20:16.234Z",
+      "ownerHandle": "byungkyu",
+      "ownerDisplayName": "byungkyu",
+      "moderation": null,
+      "category": "协作与系统集成",
+      "domain": "营销与商业",
+      "chineseIntro": "一个偏外部系统集成的技能，适合连接协作工具、业务系统和第三方服务。",
+      "progress": 74.15139847394889,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:markdown-convert",
+      "slug": "markdown-convert",
+      "name": "Markdown.new Skill",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "joelchance",
+      "publisher": "markdown-convert",
+      "link": "https://clawhub.ai/joelchance/markdown-convert",
+      "downloads": 16840,
+      "installsAllTime": 15,
+      "installsCurrent": 15,
+      "stars": 38,
+      "summary": "Convert public web pages into clean Markdown with markdown.new for AI workflows. Use when tasks require URL-to-Markdown conversio…",
+      "description": "Convert public web pages into clean Markdown with markdown.new for AI workflows. Use when tasks require URL-to-Markdown conversion for summarization, RAG ing...",
+      "updatedAt": "2026-03-12T04:39:29.318Z",
+      "ownerHandle": "joelchance",
+      "ownerDisplayName": "joelchance",
+      "moderation": {
+        "isSuspicious": true,
+        "isMalwareBlocked": false,
+        "verdict": "suspicious",
+        "reasonCodes": [
+          "suspicious.vt_suspicious"
+        ],
+        "summary": "Detected: suspicious.vt_suspicious",
+        "engineVersion": "v2.1.1",
+        "updatedAt": 1773290369318
+      },
+      "category": "写作与内容处理",
+      "domain": "通用场景",
+      "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
+      "progress": 74.088819205114,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:xero",
+      "slug": "xero",
+      "name": "Xero",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "byungkyu",
+      "publisher": "xero",
+      "link": "https://clawhub.ai/byungkyu/xero",
+      "downloads": 16838,
+      "installsAllTime": 6,
+      "installsCurrent": 6,
+      "stars": 10,
+      "summary": "Xero API integration with managed OAuth. Manage contacts, invoices, payments, accounts, and run financial reports. Use this skill…",
+      "description": "Xero API integration with managed OAuth. Manage contacts, invoices, payments, accounts, and run financial reports. Use this skill when users want to interact with Xero accounting data. For other third party apps, use th…",
+      "updatedAt": "2026-02-25T23:15:35.986Z",
+      "ownerHandle": "byungkyu",
+      "ownerDisplayName": "byungkyu",
+      "moderation": null,
+      "category": "运维与工程效率",
+      "domain": "金融投资",
+      "chineseIntro": "一个偏工程效率和运维流程的技能，适合部署、自动化、脚本和基础设施工作。",
+      "progress": 74.08791501949179,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:agentmail",
+      "slug": "agentmail",
+      "name": "AgentMail",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "adboio",
+      "publisher": "agentmail",
+      "link": "https://clawhub.ai/adboio/agentmail",
+      "downloads": 16729,
+      "installsAllTime": 199,
+      "installsCurrent": 189,
+      "stars": 44,
+      "summary": "API-first email platform designed for AI agents. Create and manage dedicated email inboxes, send and receive emails programmatica…",
+      "description": "API-first email platform designed for AI agents. Create and manage dedicated email inboxes, send and receive emails programmatically, and handle email-based workflows with webhooks and real-time events. Use when you nee…",
+      "updatedAt": "2026-02-26T00:30:36.042Z",
+      "ownerHandle": "adboio",
+      "ownerDisplayName": "adboio",
+      "moderation": null,
+      "category": "前端与设计",
+      "domain": "通用场景",
+      "chineseIntro": "一个偏前端页面与设计规范的技能，适合做界面搭建、视觉优化和组件实现。",
+      "progress": 74.03847378526717,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:google-slides",
+      "slug": "google-slides",
+      "name": "Google Slides",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "",
+      "publisher": "google-slides",
+      "link": "https://clawhub.ai/google-slides",
+      "downloads": 16657,
+      "installsAllTime": 39,
+      "installsCurrent": 39,
+      "stars": 33,
+      "summary": "Google Slides API integration with managed OAuth. Create presentations, add slides, insert content, and manage slide formatting.…",
+      "description": "Google Slides API integration with managed OAuth. Create presentations, add slides, insert content, and manage slide formatting. Use this skill when users want to interact with Google Slides. For other third party apps,…",
+      "updatedAt": "2026-02-26T00:20:40.363Z",
+      "detailError": "429 Too Many Requests for https://wry-manatee-359.convex.site/api/v1/skills/google-slides: Rate limit exceeded",
+      "category": "写作与内容处理",
+      "domain": "通用场景",
+      "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
+      "progress": 74.00563837489939,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:session-logs",
+      "slug": "session-logs",
+      "name": "Session-logs",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "guogang1024",
+      "publisher": "session-logs",
+      "link": "https://clawhub.ai/guogang1024/session-logs",
+      "downloads": 16616,
+      "installsAllTime": 820,
+      "installsCurrent": 808,
+      "stars": 14,
+      "summary": "Search and analyze your own session logs (older/parent conversations) using jq.",
+      "description": "Search and analyze your own session logs (older/parent conversations) using jq.",
+      "updatedAt": "2026-02-26T03:31:16.886Z",
+      "ownerHandle": "guogang1024",
+      "ownerDisplayName": "guogang1024",
+      "moderation": null,
+      "category": "搜索与信息检索",
+      "domain": "通用场景",
+      "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
+      "progress": 73.98687695532877,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:feishu-evolver-wrapper",
+      "slug": "feishu-evolver-wrapper",
+      "name": "Feishu Evolver Wrapper",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "autogame-17",
+      "publisher": "feishu-evolver-wrapper",
+      "link": "https://clawhub.ai/autogame-17/feishu-evolver-wrapper",
+      "downloads": 16597,
+      "installsAllTime": 66,
+      "installsCurrent": 63,
+      "stars": 4,
+      "summary": "Feishu-integrated wrapper for the capability-evolver. Manages the evolution loop lifecycle (start/stop/ensure), sends rich Feishu…",
+      "description": "Feishu-integrated wrapper for the capability-evolver. Manages the evolution loop lifecycle (start/stop/ensure), sends rich Feishu card reports, and provides...",
+      "updatedAt": "2026-03-12T04:13:10.937Z",
+      "ownerHandle": "autogame-17",
+      "ownerDisplayName": "autogame-17",
+      "moderation": {
+        "isSuspicious": true,
+        "isMalwareBlocked": false,
+        "verdict": "suspicious",
+        "reasonCodes": [
+          "suspicious.llm_suspicious",
+          "suspicious.vt_suspicious"
+        ],
+        "summary": "Detected: suspicious.llm_suspicious, suspicious.vt_suspicious",
+        "engineVersion": "v2.1.1",
+        "updatedAt": 1773288790937
+      },
+      "category": "通用工具",
+      "domain": "通用场景",
+      "chineseIntro": "一个通用型技能，适合放进常用工具箱，帮助你提升日常 Agent 工作效率。",
+      "progress": 73.97816693687611,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:typeform",
+      "slug": "typeform",
+      "name": "Typeform",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "byungkyu",
+      "publisher": "typeform",
+      "link": "https://clawhub.ai/byungkyu/typeform",
+      "downloads": 16570,
+      "installsAllTime": 9,
+      "installsCurrent": 7,
+      "stars": 5,
+      "summary": "Typeform API integration with managed OAuth. Create forms, manage responses, and access insights. Use this skill when users want…",
+      "description": "Typeform API integration with managed OAuth. Create forms, manage responses, and access insights. Use this skill when users want to interact with Typeform surveys and responses. For other third party apps, use the api-g…",
+      "updatedAt": "2026-02-25T23:40:35.980Z",
+      "ownerHandle": "byungkyu",
+      "ownerDisplayName": "byungkyu",
+      "moderation": null,
+      "category": "协作与系统集成",
+      "domain": "通用场景",
+      "chineseIntro": "一个偏外部系统集成的技能，适合连接协作工具、业务系统和第三方服务。",
+      "progress": 73.96577237541699,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:salesforce-api",
+      "slug": "salesforce-api",
+      "name": "Salesforce",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "",
+      "publisher": "salesforce-api",
+      "link": "https://clawhub.ai/salesforce-api",
+      "downloads": 16549,
+      "installsAllTime": 4,
+      "installsCurrent": 4,
+      "stars": 7,
+      "summary": "Salesforce CRM API integration with managed OAuth. Query records with SOQL, manage sObjects (Contacts, Accounts, Leads, Opportuni…",
+      "description": "Salesforce CRM API integration with managed OAuth. Query records with SOQL, manage sObjects (Contacts, Accounts, Leads, Opportunities), and perform batch operations. Use this skill when users want to interact with Sales…",
+      "updatedAt": "2026-02-25T23:00:35.906Z",
+      "detailError": "429 Too Many Requests for https://wry-manatee-359.convex.site/api/v1/skills/salesforce-api: Rate limit exceeded",
+      "category": "搜索与信息检索",
+      "domain": "营销与商业",
+      "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
+      "progress": 73.95611819088396,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:duckduckgo-search",
+      "slug": "duckduckgo-search",
+      "name": "Performs web searches using DuckDuckGo to retrieve real-time information from the internet. Use when the user needs to search for current events, documentation, tutorials, or any information that requires web search capabilities.",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "",
+      "publisher": "duckduckgo-search",
+      "link": "https://clawhub.ai/duckduckgo-search",
+      "downloads": 16432,
+      "installsAllTime": 171,
+      "installsCurrent": 166,
+      "stars": 36,
+      "summary": "Performs web searches using DuckDuckGo to retrieve real-time information from the internet. Use when the user needs to search for…",
+      "description": "Performs web searches using DuckDuckGo to retrieve real-time information from the internet. Use when the user needs to search for current events, documentation, tutorials, or any information that requires web search cap…",
+      "updatedAt": "2026-02-26T00:30:40.450Z",
+      "detailError": "429 Too Many Requests for https://wry-manatee-359.convex.site/api/v1/skills/duckduckgo-search: Rate limit exceeded",
+      "category": "搜索与信息检索",
+      "domain": "通用场景",
+      "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
+      "progress": 73.90210532613364,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:peekaboo",
+      "slug": "peekaboo",
+      "name": "Peekaboo",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "steipete",
+      "publisher": "peekaboo",
+      "link": "https://clawhub.ai/steipete/peekaboo",
+      "downloads": 16397,
+      "installsAllTime": 824,
+      "installsCurrent": 815,
+      "stars": 45,
+      "summary": "Capture and automate macOS UI with the Peekaboo CLI.",
+      "description": "Capture and automate macOS UI with the Peekaboo CLI.",
+      "updatedAt": "2026-03-12T03:00:26.393Z",
+      "ownerHandle": "steipete",
+      "ownerDisplayName": "Peter Steinberger",
+      "moderation": null,
+      "category": "前端与设计",
+      "domain": "通用场景",
+      "chineseIntro": "一个偏前端页面与设计规范的技能，适合做界面搭建、视觉优化和组件实现。",
+      "progress": 73.88587288706667,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:n8n-workflow-automation",
+      "slug": "n8n-workflow-automation",
+      "name": "n8n workflow automation",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "",
+      "publisher": "n8n-workflow-automation",
+      "link": "https://clawhub.ai/n8n-workflow-automation",
+      "downloads": 16283,
+      "installsAllTime": 122,
+      "installsCurrent": 119,
+      "stars": 82,
+      "summary": "Designs and outputs n8n workflow JSON with robust triggers, idempotency, error handling, logging, retries, and human-in-the-loop…",
+      "description": "Designs and outputs n8n workflow JSON with robust triggers, idempotency, error handling, logging, retries, and human-in-the-loop review queues. Use when you need an auditable automation that won’t silently fail.",
+      "updatedAt": "2026-02-26T00:20:40.363Z",
+      "detailError": "429 Too Many Requests for https://wry-manatee-359.convex.site/api/v1/skills/n8n-workflow-automation: Rate limit exceeded",
+      "category": "前端与设计",
+      "domain": "通用场景",
+      "chineseIntro": "一个偏前端页面与设计规范的技能，适合做界面搭建、视觉优化和组件实现。",
+      "progress": 73.83276027375663,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:apple-reminders",
+      "slug": "apple-reminders",
+      "name": "Apple Reminders",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "",
+      "publisher": "apple-reminders",
+      "link": "https://clawhub.ai/apple-reminders",
+      "downloads": 16276,
+      "installsAllTime": 772,
+      "installsCurrent": 766,
+      "stars": 34,
+      "summary": "Manage Apple Reminders via the `remindctl` CLI on macOS (list, add, edit, complete, delete). Supports lists, date filters, and JS…",
+      "description": "Manage Apple Reminders via the `remindctl` CLI on macOS (list, add, edit, complete, delete). Supports lists, date filters, and JSON/plain output.",
+      "updatedAt": "2026-02-26T00:30:40.450Z",
+      "detailError": "429 Too Many Requests for https://wry-manatee-359.convex.site/api/v1/skills/apple-reminders: Rate limit exceeded",
+      "category": "通用工具",
+      "domain": "通用场景",
+      "chineseIntro": "一个通用型技能，适合放进常用工具箱，帮助你提升日常 Agent 工作效率。",
+      "progress": 73.82948686683838,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:marketing-mode",
+      "slug": "marketing-mode",
+      "name": "Marketing Mode",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "",
+      "publisher": "marketing-mode",
+      "link": "https://clawhub.ai/marketing-mode",
+      "downloads": 16122,
+      "installsAllTime": 121,
+      "installsCurrent": 117,
+      "stars": 110,
+      "summary": "Marketing Mode combines 23 comprehensive marketing skills covering strategy, psychology, content, SEO, conversion optimization, a…",
+      "description": "Marketing Mode combines 23 comprehensive marketing skills covering strategy, psychology, content, SEO, conversion optimization, and paid growth. Use when users need marketing strategy, copywriting, SEO help, conversion…",
+      "updatedAt": "2026-03-12T03:03:42.775Z",
+      "detailError": "429 Too Many Requests for https://wry-manatee-359.convex.site/api/v1/skills/marketing-mode: Rate limit exceeded",
+      "category": "写作与内容处理",
+      "domain": "营销与商业",
+      "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
+      "progress": 73.75711351865549,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:sag",
+      "slug": "sag",
+      "name": "Sag",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "",
+      "publisher": "sag",
+      "link": "https://clawhub.ai/sag",
+      "downloads": 16094,
+      "installsAllTime": 788,
+      "installsCurrent": 776,
+      "stars": 17,
+      "summary": "ElevenLabs text-to-speech with mac-style say UX.",
+      "description": "ElevenLabs text-to-speech with mac-style say UX.",
+      "updatedAt": "2026-02-26T00:30:40.450Z",
+      "detailError": "429 Too Many Requests for https://wry-manatee-359.convex.site/api/v1/skills/sag: Rate limit exceeded",
+      "category": "前端与设计",
+      "domain": "科研学术",
+      "chineseIntro": "一个偏前端页面与设计规范的技能，适合做界面搭建、视觉优化和组件实现。",
+      "progress": 73.74388049017972,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:google-meet",
+      "slug": "google-meet",
+      "name": "Google Meet",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "",
+      "publisher": "google-meet",
+      "link": "https://clawhub.ai/google-meet",
+      "downloads": 15907,
+      "installsAllTime": 8,
+      "installsCurrent": 8,
+      "stars": 14,
+      "summary": "Google Meet API integration with managed OAuth. Create meeting spaces, list conference records, and manage meeting participants.…",
+      "description": "Google Meet API integration with managed OAuth. Create meeting spaces, list conference records, and manage meeting participants. Use this skill when users want to interact with Google Meet. For other third party apps, u…",
+      "updatedAt": "2026-02-26T00:05:36.021Z",
+      "detailError": "429 Too Many Requests for https://wry-manatee-359.convex.site/api/v1/skills/google-meet: Rate limit exceeded",
+      "category": "运维与工程效率",
+      "domain": "通用场景",
+      "chineseIntro": "一个偏工程效率和运维流程的技能，适合部署、自动化、脚本和基础设施工作。",
+      "progress": 73.65490804189947,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:clickup-api",
+      "slug": "clickup-api",
+      "name": "ClickUp",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "",
+      "publisher": "clickup-api",
+      "link": "https://clawhub.ai/clickup-api",
+      "downloads": 15898,
+      "installsAllTime": 5,
+      "installsCurrent": 5,
+      "stars": 10,
+      "summary": "ClickUp API integration with managed OAuth. Access tasks, lists, folders, spaces, workspaces, users, and manage webhooks. Use thi…",
+      "description": "ClickUp API integration with managed OAuth. Access tasks, lists, folders, spaces, workspaces, users, and manage webhooks. Use this skill when users want to manage work items, track projects, or integrate with ClickUp wo…",
+      "updatedAt": "2026-02-25T21:50:35.881Z",
+      "detailError": "429 Too Many Requests for https://wry-manatee-359.convex.site/api/v1/skills/clickup-api: Rate limit exceeded",
+      "category": "协作与系统集成",
+      "domain": "通用场景",
+      "chineseIntro": "一个偏外部系统集成的技能，适合连接协作工具、业务系统和第三方服务。",
+      "progress": 73.6505996073913,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:microsoft-excel",
+      "slug": "microsoft-excel",
+      "name": "Microsoft Excel",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "byungkyu",
+      "publisher": "microsoft-excel",
+      "link": "https://clawhub.ai/byungkyu/microsoft-excel",
+      "downloads": 15895,
+      "installsAllTime": 87,
+      "installsCurrent": 85,
+      "stars": 33,
+      "summary": "Microsoft Excel API integration with managed OAuth. Read and write Excel workbooks, worksheets, ranges, tables, and charts stored…",
+      "description": "Microsoft Excel API integration with managed OAuth. Read and write Excel workbooks, worksheets, ranges, tables, and charts stored in OneDrive. Use this skill when users want to read or modify Excel spreadsheets, manage…",
+      "updatedAt": "2026-02-26T00:25:35.894Z",
+      "ownerHandle": "byungkyu",
+      "ownerDisplayName": "byungkyu",
+      "moderation": null,
+      "category": "写作与内容处理",
+      "domain": "营销与商业",
+      "chineseIntro": "一个偏写作、总结和内容处理的技能，适合做整理、改写、摘要和文档输出。",
+      "progress": 73.64916292056265,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:memory-setup",
+      "slug": "memory-setup",
+      "name": "Memory Setup",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "",
+      "publisher": "memory-setup",
+      "link": "https://clawhub.ai/memory-setup",
+      "downloads": 15890,
+      "installsAllTime": 183,
+      "installsCurrent": 180,
+      "stars": 74,
+      "summary": "Enable and configure Moltbot/Clawdbot memory search for persistent context. Use when setting up memory, fixing \"goldfish brain,\"…",
+      "description": "Enable and configure Moltbot/Clawdbot memory search for persistent context. Use when setting up memory, fixing \"goldfish brain,\" or helping users configure memorySearch in their config. Covers MEMORY.md, daily logs, and…",
+      "updatedAt": "2026-02-26T03:10:47.554Z",
+      "detailError": "429 Too Many Requests for https://wry-manatee-359.convex.site/api/v1/skills/memory-setup: Rate limit exceeded",
+      "category": "搜索与信息检索",
+      "domain": "法律合规",
+      "chineseIntro": "一个偏搜索、发现和检索的技能，适合帮你快速找到资料、能力或可安装的技能。",
+      "progress": 73.64676783987147,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:git-essentials",
+      "slug": "git-essentials",
+      "name": "Git Essentials",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "",
+      "publisher": "git-essentials",
+      "link": "https://clawhub.ai/git-essentials",
+      "downloads": 15873,
+      "installsAllTime": 114,
+      "installsCurrent": 112,
+      "stars": 20,
+      "summary": "Essential Git commands and workflows for version control, branching, and collaboration.",
+      "description": "Essential Git commands and workflows for version control, branching, and collaboration.",
+      "updatedAt": "2026-02-26T03:13:23.999Z",
+      "detailError": "429 Too Many Requests for https://wry-manatee-359.convex.site/api/v1/skills/git-essentials: Rate limit exceeded",
+      "category": "通用工具",
+      "domain": "科研学术",
+      "chineseIntro": "一个通用型技能，适合放进常用工具箱，帮助你提升日常 Agent 工作效率。",
+      "progress": 73.6386189248914,
+      "crossListed": false,
+      "crossSources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "id": "clawhub:calendly-api",
+      "slug": "calendly-api",
+      "name": "Calendly",
+      "source": "ClawHub",
+      "sourceKey": "clawhub",
+      "author": "byungkyu",
+      "publisher": "calendly-api",
+      "link": "https://clawhub.ai/byungkyu/calendly-api",
+      "downloads": 15831,
+      "installsAllTime": 9,
+      "installsCurrent": 9,
+      "stars": 10,
+      "summary": "Calendly API integration with managed OAuth. Access event types, scheduled events, invitees, availability, and manage webhooks. U…",
+      "description": "Calendly API integration with managed OAuth. Access event types, scheduled events, invitees, availability, and manage webhooks. Use this skill when users want to view scheduling data, check availability, book meetings,…",
+      "updatedAt": "2026-02-26T00:25:35.894Z",
+      "ownerHandle": "byungkyu",
+      "ownerDisplayName": "byungkyu",
+      "moderation": null,
+      "category": "协作与系统集成",
+      "domain": "科研学术",
+      "chineseIntro": "一个偏外部系统集成的技能，适合连接协作工具、业务系统和第三方服务。",
+      "progress": 73.61844883783522,
       "crossListed": false,
       "crossSources": [
         "ClawHub"
@@ -1272,8 +2619,16 @@
   "directions": [
     {
       "category": "搜索与信息检索",
-      "count": 12,
-      "downloads": 676548,
+      "count": 29,
+      "downloads": 989559,
+      "sources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "category": "写作与内容处理",
+      "count": 14,
+      "downloads": 454401,
       "sources": [
         "ClawHub"
       ]
@@ -1287,49 +2642,41 @@
       ]
     },
     {
-      "category": "写作与内容处理",
-      "count": 7,
-      "downloads": 324222,
-      "sources": [
-        "ClawHub"
-      ]
-    },
-    {
-      "category": "通用工具",
-      "count": 5,
-      "downloads": 191201,
+      "category": "协作与系统集成",
+      "count": 11,
+      "downloads": 317951,
       "sources": [
         "ClawHub"
       ]
     },
     {
       "category": "前端与设计",
-      "count": 4,
-      "downloads": 178841,
+      "count": 9,
+      "downloads": 262521,
       "sources": [
         "ClawHub"
       ]
     },
     {
-      "category": "协作与系统集成",
-      "count": 3,
-      "downloads": 175497,
-      "sources": [
-        "ClawHub"
-      ]
-    },
-    {
-      "category": "多媒体与音视频",
-      "count": 4,
-      "downloads": 141889,
+      "category": "通用工具",
+      "count": 9,
+      "downloads": 257208,
       "sources": [
         "ClawHub"
       ]
     },
     {
       "category": "运维与工程效率",
-      "count": 2,
-      "downloads": 124921,
+      "count": 6,
+      "downloads": 194398,
+      "sources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "category": "多媒体与音视频",
+      "count": 6,
+      "downloads": 180515,
       "sources": [
         "ClawHub"
       ]
@@ -1346,40 +2693,64 @@
   "domains": [
     {
       "label": "通用场景",
-      "count": 19,
-      "downloads": 1047604,
+      "count": 38,
+      "downloads": 1381340,
       "sources": [
         "ClawHub"
       ]
     },
     {
       "label": "法律合规",
-      "count": 8,
-      "downloads": 294532,
-      "sources": [
-        "ClawHub"
-      ]
-    },
-    {
-      "label": "办公协作",
-      "count": 4,
-      "downloads": 293608,
+      "count": 13,
+      "downloads": 383544,
       "sources": [
         "ClawHub"
       ]
     },
     {
       "label": "内容媒体",
-      "count": 5,
-      "downloads": 272569,
+      "count": 10,
+      "downloads": 369764,
+      "sources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "label": "办公协作",
+      "count": 7,
+      "downloads": 352878,
       "sources": [
         "ClawHub"
       ]
     },
     {
       "label": "金融投资",
-      "count": 2,
-      "downloads": 205001,
+      "count": 4,
+      "downloads": 240506,
+      "sources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "label": "科研学术",
+      "count": 6,
+      "downloads": 118513,
+      "sources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "label": "开发工程",
+      "count": 5,
+      "downloads": 106269,
+      "sources": [
+        "ClawHub"
+      ]
+    },
+    {
+      "label": "营销与商业",
+      "count": 5,
+      "downloads": 88432,
       "sources": [
         "ClawHub"
       ]
@@ -1391,36 +2762,20 @@
       "sources": [
         "ClawHub"
       ]
-    },
-    {
-      "label": "开发工程",
-      "count": 2,
-      "downloads": 50449,
-      "sources": [
-        "ClawHub"
-      ]
-    },
-    {
-      "label": "科研学术",
-      "count": 1,
-      "downloads": 34049,
-      "sources": [
-        "ClawHub"
-      ]
     }
   ],
   "sources": {
     "all": {
-      "count": 90,
-      "downloads": 6985618
+      "count": 189,
+      "downloads": 8943245
     },
     "clawhub": {
-      "count": 42,
-      "downloads": 2251525
+      "count": 89,
+      "downloads": 3094959
     },
     "skillssh": {
-      "count": 48,
-      "downloads": 4734093
+      "count": 100,
+      "downloads": 5848286
     }
   }
 }
